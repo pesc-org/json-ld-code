@@ -1,0 +1,89 @@
+{
+  "@context": {
+    "@vocab": "http://pesc.org/terms/",
+    "pesc": "http://pesc.org/terms/",
+    "uiCourses": "http://uiowa.edu/courses/",
+    "uiSessions": "http://uiowa.edu/sessions/",
+    "uiStudents": "http://uiowa.edu/students/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "startDate": {
+      "@type": "xsd:date"
+    },
+    "endDate": {
+      "@type": "xsd:date"
+    },
+    "course": {
+      "@type": "@id"
+    },
+    "session": {
+      "@type": "@id"
+    },
+    "student": {
+      "@type": "@id"
+    }
+  },
+  "@graph": [
+    {
+      "@type": "StudentCourse",
+      "course": {
+        "@id": "uiCourses:CS-370",
+        "@type": "Course",
+        "courseAcademicGradeScaleCode": "25",
+        "courseCIPCode": "11.0103",
+        "courseCreditBasis": "Regular",
+        "courseCreditLevel": "LowerDivision",
+        "courseCreditUnits": "Semester",
+        "courseCreditValue": 5,
+        "courseGPAApplicabilityCode": "Applicable",
+        "courseInstructionMethodType": "Lecture",
+        "courseLevel": "LowerDivision",
+        "courseNumber": "370",
+        "courseSubjectAbbreviation": "CISC",
+        "courseTitle": "Information Technology 370"
+      },
+      "grade": "C",
+      "numericGrade": 75,
+      "session": {
+        "@id": "uiSessions:FALL20-21",
+        "@type": "Session",
+        "endDate": "2021-12-22",
+        "startDate": "2021-08-16"
+      },
+      "student": {
+        "@id": "uiStudents:20-15674634",
+        "@type": "Student"
+      }
+    },
+    {
+      "@type": "StudentCourse",
+      "course": {
+        "@id": "uiCourses:CS-360",
+        "@type": "Course",
+        "courseAcademicGradeScaleCode": "25X",
+        "courseCIPCode": "11.0101X",
+        "courseCreditBasis": "irregular",
+        "courseCreditLevel": "LowerDivision",
+        "courseCreditUnits": "Semester",
+        "courseCreditValue": 5,
+        "courseGPAApplicabilityCode": "Applicable",
+        "courseInstructionMethodType": "Lecture",
+        "courseLevel": "LowerDivision",
+        "courseNumber": "360",
+        "courseSubjectAbbreviation": "CISC",
+        "courseTitle": "Information Technology 360"
+      },
+      "grade": "C",
+      "numericGrade": 80,
+      "session": {
+        "@id": "uiSessions:SPRING21-22",
+        "@type": "Session",
+        "endDate": "2022-05-23",
+        "startDate": "2022-01-01"
+      },
+      "student": {
+        "@id": "uiStudents:20-15674634",
+        "@type": "Student"
+      }
+    }
+  ]
+}

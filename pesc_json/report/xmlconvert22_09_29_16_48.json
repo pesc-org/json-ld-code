@@ -1,0 +1,41 @@
+{
+  "xmlns:test": "urn:org:pesc:message:test",
+  "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+  "xsi:schemaLocation": "urn:org:pesc:message:test jsontrans.xsd",
+  "element2": [
+    [
+      "a",
+      "b",
+      "c"
+    ]
+  ],
+  "element3": {
+    "attribute1": "text3"
+  },
+  "element4": {
+    "attribute2": 2,
+    "attribute3": "3",
+    "value": "text4"
+  },
+  "element5": 3,
+  "element6": "4",
+  "element7": 3.14,
+  "element8": null,
+  "element9": {
+    "element10": {
+      "xsi:nil": "true"
+    },
+    "element11": [
+      {
+        "xsi:nil": "true"
+      }
+    ],
+    "element12": {
+      "xsi:nil": "true"
+    }
+  },
+  "element13": [
+    null
+  ],
+  "element14": null
+}

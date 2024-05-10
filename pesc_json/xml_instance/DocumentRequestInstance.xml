@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocRequest:DocumentRequest xmlns:DocRequest="urn:org:pesc:message:DocumentRequest:v1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:org:pesc:message:DocumentRequest:v1.0.0 ..\Schema\DocumentRequest_v1.0.0.xsd">
+<TransmissionData>
+	<DocumentID>TO5776_A_200703080930</DocumentID>
+	<CreatedDateTime>2007-03-08T09:30:15-05:00</CreatedDateTime>
+	<DocumentTypeCode>Request</DocumentTypeCode>
+	<TransmissionType>Original</TransmissionType>
+	<Source>
+		<Organization>
+			<DUNS>827034414</DUNS>
+			<OrganizationName>National Student Clearinghouse</OrganizationName>
+		</Organization>
+	</Source>
+	<Destination>
+	<Organization>
+		<OPEID>00123400</OPEID>
+		<OrganizationName>HOMETOWN UNIVERSITY</OrganizationName>
+		</Organization>
+	</Destination>
+	<DocumentProcessCode>PRODUCTION</DocumentProcessCode>
+</TransmissionData>
+<RequestDetails>
+	  <DocumentDescription>
+			<DocumentCategory>Transcript</DocumentCategory>
+			<DocumentFormat>XML</DocumentFormat>
+	</DocumentDescription>
+	<CreatedDateTime>2007-02-28T10:21:00-05:00</CreatedDateTime>
+	<Requestor>
+		<Person>
+			<SSN>123456789</SSN>
+			<Birth>
+				<BirthDate>1972-11-25</BirthDate>
+			</Birth>
+			<Name>
+				<FirstName>JANE</FirstName>
+				<MiddleName>B</MiddleName>
+				<LastName>DOE</LastName>
+			</Name>
+			<Contacts>
+				<Address>
+					<AddressLine>123 MAIN ST</AddressLine>
+					<City>ANYTOWN</City>
+					<StateProvinceCode>VA</StateProvinceCode>
+					<PostalCode>20171</PostalCode>
+				</Address>
+				<Phone>
+					<AreaCityCode>703</AreaCityCode>
+					<PhoneNumber>5551212</PhoneNumber>
+				</Phone>
+				<Email>
+					<EmailAddress>someone@gmail.com</EmailAddress>
+				</Email>
+			</Contacts>
+		</Person>
+	</Requestor>
+	<RequestedStudent>
+		<Person>
+			<SSN>123456789</SSN>
+			<Birth>
+				<BirthDate>1972-11-25</BirthDate>
+			</Birth>
+			<Name>
+				<FirstName>JANE</FirstName>
+				<MiddleName>B</MiddleName>
+				<LastName>DOE</LastName>
+			</Name>
+			<AlternateName>
+				<FirstName>JANE</FirstName>
+				<MiddleName>A</MiddleName>
+				<LastName>BOE</LastName>
+			</AlternateName>
+		</Person>
+		<Attendance>
+			<School>
+				<OrganizationName>HOMETOWN UNIVERSITY</OrganizationName>
+				<OPEID>00123400</OPEID>
+			</School>
+			<EnrollDate>1990-01-01</EnrollDate>
+			<ExitDate>1995-12-31</ExitDate>
+			<AcademicAwardsReported>
+				<AcademicAwardTitle>B.A. Communication</AcademicAwardTitle>
+				<AcademicAwardDate>1995-01-01</AcademicAwardDate>
+			</AcademicAwardsReported>
+		</Attendance>
+		<ReleaseAuthorizedIndicator>true</ReleaseAuthorizedIndicator>
+		<ReleaseAuthorizedMethod>Signature</ReleaseAuthorizedMethod>
+	</RequestedStudent>
+	<DocumentRecipient>
+		<RequestTrackingID>123456-1</RequestTrackingID>
+		<Receiver>
+			<RequestorReceiverOrganization>
+				<OrganizationName>HOMETOWN COMMUNITY COLLEGE</OrganizationName>
+				<Contacts>
+					<Address>
+						<AddressLine>P.O. BOX 31127</AddressLine>
+						<City>ANYTOWN</City>
+						<StateProvinceCode>VA</StateProvinceCode>
+						<PostalCode>20171</PostalCode>
+						<AttentionLine>HCC TRANSCRIPT OFFICE</AttentionLine>
+					</Address>
+					<Phone>
+						<AreaCityCode>703</AreaCityCode>
+						<PhoneNumber>5551212</PhoneNumber>
+					</Phone>
+					<FaxPhone>
+						<AreaCityCode>703</AreaCityCode>
+						<PhoneNumber>5551212</PhoneNumber>
+					</FaxPhone>
+				</Contacts>
+			</RequestorReceiverOrganization>
+		</Receiver>
+		<DocumentPurpose>Admission</DocumentPurpose>
+		<DeliveryMethod>Mail</DeliveryMethod>
+		<DocumentCopies>1</DocumentCopies>
+	</DocumentRecipient>
+</RequestDetails>
+</DocRequest:DocumentRequest>
+ 

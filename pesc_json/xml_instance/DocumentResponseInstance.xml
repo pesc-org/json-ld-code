@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocResponse:DocumentResponse xmlns:DocResponse="urn:org:pesc:message:DocumentResponse:v1.0.0" xmlns:core="urn:org:pesc:core:CoreMain:v1.0.0" xmlns:AcRec="urn:org:pesc:sector:AcademicRecord:v1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:org:pesc:message:DocumentResponse:v1.0.0 ..\Schema\DocumentResponse_v1.0.0.xsd">
+    <TransmissionData>
+         <DocumentID>20061011103019</DocumentID>
+         <CreatedDateTime>2006-10-11T10:30:19-05:00</CreatedDateTime>
+         <DocumentTypeCode>Response</DocumentTypeCode>
+         <TransmissionType>Original</TransmissionType>
+         <Source>
+              <Organization>
+                   <OPEID>00123400</OPEID>
+                   <OrganizationName>HOMETOWN UNIVERSITY</OrganizationName>
+              </Organization>
+         </Source>
+         <Destination>
+              <Organization>
+                   <DUNS>827034414</DUNS>
+                   <OrganizationName>National Student Clearinghouse</OrganizationName>
+              </Organization>
+         </Destination>
+         <DocumentProcessCode>PRODUCTION</DocumentProcessCode>
+    </TransmissionData>
+    <ResponseDetails>
+    	<DocumentDescription>
+			<DocumentCategory>Transcript</DocumentCategory>
+			<DocumentFormat>XML</DocumentFormat>
+		</DocumentDescription>
+         <CreatedDateTime>2006-10-10T10:48:15-05:00</CreatedDateTime>
+         <RequestTrackingID>123456-1</RequestTrackingID>
+         <ResponseStatus>TranscriptSent</ResponseStatus>
+         <RequestedStudent>
+              <Person>
+                   <Name>
+                        <FirstName>JANE</FirstName>
+                        <MiddleName>B</MiddleName>
+                        <LastName>DOE</LastName>
+                   </Name>
+              </Person>
+              <Attendance>
+                   <School>
+                        <OrganizationName>HOMETOWN UNIVERSITY</OrganizationName>
+                        <OPEID>00123400</OPEID>
+                   </School>
+              </Attendance>
+              <ReleaseAuthorizedIndicator>true</ReleaseAuthorizedIndicator>
+         </RequestedStudent>
+    </ResponseDetails>
+</DocResponse:DocumentResponse>

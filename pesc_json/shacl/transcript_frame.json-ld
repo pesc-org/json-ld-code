@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@vocab": "http://pesc.org/terms/",
+    "pesc": "http://pesc.org/terms/",
+    "uiCourses": "http://uiowa.edu/courses/",
+    "uiSessions": "http://uiowa.edu/sessions/",
+    "uiStudents": "http://uiowa.edu/students/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "startDate": {
+      "@type": "xsd:date"
+    },
+    "endDate": {
+      "@type": "xsd:date"
+    },
+    "course": {
+      "@type": "@id"
+    },
+    "session": {
+      "@type": "@id"
+    },
+    "student": {
+      "@type": "@id"
+    }
+  },
+  "@type": "StudentCourse",
+  "@contains": {
+    "@type": "Course",
+    "@type": "Session"
+    "@type": "Student"
+  }
+}

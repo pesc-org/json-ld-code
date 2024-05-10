@@ -1,0 +1,17 @@
+{
+	"@context": { "@vocab": "http://pesc.org/terms/" },
+	"@id": "http://uiowa.edu/courses/360",
+	"@type": "Course",
+	"courseCreditBasis" : "Regular",
+	"courseCreditUnits" : "Semester",
+	"courseCreditLevel" : "LowerDivision",
+	"courseCreditValue" : 4.25,
+	"courseAcademicGradeScaleCode" : 25,
+	"courseCIPCode" : "11.0101",
+	"courseLevel" : "LowerDivision",
+	"courseGPAApplicabilityCode" : "Applicable",
+	"courseSubjectAbbreviation" : "CISC",
+	"courseNumber" : "360",
+	"courseTitle" : "Information Technology 360",
+	"courseInstructionMethodType": "Lecture"
+}

@@ -1,0 +1,1002 @@
+{
+	"TransmissionData": {
+		"DocumentID": "2011-04-04-2316139",
+		"CreatedDateTime": "2011-04-04T09:30:47-05:00",
+		"DocumentTypeCode": "StudentRequest",
+		"TransmissionType": "Original",
+		"Source": {
+			"Organization": {
+				"LocalOrganizationID": {
+					"LocalOrganizationIDCode": 227901002,
+					"LocalOrganizationIDQualifier": "TX"
+				},
+				"OrganizationName": [
+					"Austin High School",
+					"Austin Independent School District"
+				],
+				"Contacts": [
+					{
+						"Address": [
+							{
+								"AddressLine": [
+									"1715 W Cesar Chavez"
+								],
+								"City": "Austin",
+								"StateProvinceCode": "TX",
+								"PostalCode": 78703,
+								"EffectiveDate": "2000-02-20",
+								"ExpirationDate": "2020-01-15"
+							}
+						],
+						"Phone": [
+							{
+								"AreaCityCode": 512,
+								"PhoneNumber": 4142505
+							}
+						],
+						"FaxPhone": [
+							{
+								"AreaCityCode": 512,
+								"PhoneNumber": 4747935
+							}
+						]
+					}
+				],
+				"Accreditation": {
+					"AccreditingBodyCode": "SACS",
+					"AccreditingBodyName": "Southern Association of Colleges and Schools",
+					"NoteMessage": [
+						"Commission on Secondary Schools"
+					]
+				}
+			}
+		},
+		"Destination": {
+			"Organization": {
+				"ATP": "006882",
+				"FICE": 123456,
+				"OrganizationName": [
+					"THE UNIVERSITY OF TEXAS AT AUSTIN"
+				],
+				"Contacts": [
+					{
+						"Address": [
+							{
+								"AddressLine": [
+									"Ofice of Admissions"
+								],
+								"City": "Austin",
+								"StateProvinceCode": "TX",
+								"PostalCode": 78712
+							}
+						],
+						"Phone": [
+							{
+								"AreaCityCode": 512,
+								"PhoneNumber": 4757638
+							}
+						]
+					}
+				]
+			}
+		}
+	},
+	"Student": {
+		"Person": {
+			"SchoolAssignedPersonID": 5555555,
+			"AgencyIdentifier": [
+				{
+					"AgencyAssignedID": 33445566,
+					"AgencyCode": "State",
+					"AgencyName": "Texas Education Agency",
+					"StateProvinceCode": "TX"
+				}
+			],
+			"SSN": 555555555,
+			"Birth": {
+				"BirthDate": "1987-04-03",
+				"BirthState": "TXxx"
+			},
+			"Name": {
+				"NameCode": "Legal",
+				"FirstName": "John",
+				"MiddleName": [
+					"T"
+				],
+				"LastName": "Student",
+				"NameSuffix": "IV"
+			},
+			"ParentGuardian": {
+				"Name": {
+					"NameCode": "Legal",
+					"FirstName": "John",
+					"MiddleName": [
+						"T"
+					],
+					"LastName": "Student",
+					"NameSuffix": "III"
+				},
+				"RelationshipCode": "Father"
+			},
+			"Contacts": [
+				{
+					"Address": [
+						{
+							"AddressLine": [
+								"12345 Alamo Av"
+							],
+							"City": "AUSTIN",
+							"StateProvinceCode": "TX",
+							"PostalCode": 78763,
+							"ExpirationDate": "2012-06-15"
+						}
+					],
+					"Phone": [
+						{
+							"AreaCityCode": 512,
+							"PhoneNumber": 8888888
+						}
+					]
+				}
+			],
+			"Gender": {
+				"GenderCode": "Male"
+			},
+			"EthnicityRace": {
+				"EthnicityCode": "Hispanic",
+				"RaceCode": [
+					"White",
+					"Asian"
+				]
+			}
+		},
+		"AcademicRecord": [
+			{
+				"StudentLevel": {
+					"StudentLevelCode": "TwelfthGradeXXX"
+				},
+				"AcademicAward": [
+					{
+						"AcademicAwardLevel": "B18",
+						"AcademicAwardDate": "2011-06-20",
+						"AcademicAwardTitle": "High School Diploma",
+						"AcademicCompletionIndicator": true
+					}
+				],
+				"AcademicSummary": [
+					{
+						"AcademicSummaryType": "All",
+						"AcademicSummaryLevel": "TwelfthGrade",
+						"GPA": {
+							"GradePointAverage": 4.0583,
+							"GPARangeMinimum": 0,
+							"GPARangeMaximum": 4.5
+						},
+						"AcademicHonors": [
+							{
+								"HonorsTitle": "Distinguished Senior",
+								"HonorsLevel": "FirstHighest"
+							}
+						],
+						"ClassRank": 19,
+						"ClassSize": 357,
+						"HighSchoolCreditSummary": {
+							"HighSchoolSubjectArea": [
+								{
+									"HighSchoolSubjectAreaCode": "English",
+									"HighSchoolSubjectAreaName": "English Comp and\nGrammar",
+									"CourseCreditUnits": "CarnegieUnits",
+									"CreditHoursRequired": 4,
+									"CourseCreditEarned": 3,
+									"CreditHoursDeficient": 1
+								},
+								{
+									"HighSchoolSubjectAreaCode": "Math",
+									"HighSchoolSubjectAreaName": "Algebra, Trig, and\nGeometry",
+									"CourseCreditUnits": "CarnegieUnits",
+									"CreditHoursRequired": 4,
+									"CourseCreditEarned": 3,
+									"CreditHoursDeficient": 1
+								},
+								{
+									"HighSchoolSubjectAreaCode": "Science",
+									"HighSchoolSubjectAreaName": "Biology, Chemistry and\nPhysics",
+									"CourseCreditUnits": "CarnegieUnits",
+									"CreditHoursRequired": 3,
+									"CourseCreditEarned": 2,
+									"CreditHoursDeficient": 1
+								},
+								{
+									"HighSchoolSubjectAreaCode": "HistorySocialScience",
+									"HighSchoolSubjectAreaName": "World Hist, US Hist, U-Const",
+									"CourseCreditUnits": "CarnegieUnits",
+									"CreditHoursRequired": 2,
+									"CourseCreditEarned": 2,
+									"CreditHoursDeficient": 0
+								},
+								{
+									"HighSchoolSubjectAreaCode": "ForeignLanguage",
+									"HighSchoolSubjectAreaName": "Span, Frnch, Grmn, Mand-Chin",
+									"CourseCreditUnits": "CarnegieUnits",
+									"CreditHoursRequired": 2,
+									"CourseCreditEarned": 1.5,
+									"CreditHoursDeficient": 0.5
+								},
+								{
+									"HighSchoolSubjectAreaCode": "AcademicElective",
+									"HighSchoolSubjectAreaName": "General Electives",
+									"CourseCreditUnits": "CarnegieUnits",
+									"CreditHoursRequired": 5,
+									"CourseCreditEarned": 3.5,
+									"CreditHoursDeficient": 1.5
+								}
+							]
+						},
+						"AcademicProgram": {
+							"ProgramSecondarySchoolCode": "General",
+							"AcademicProgramName": "Academic Program for PostsecondaryTransfer"
+						}
+					}
+				],
+				"AcademicSession": [
+					{
+						"AcademicSessionDetail": {
+							"SessionDesignator": "2001-06",
+							"SessionName": "Summer 2001",
+							"SessionType": "Semester"
+						},
+						"StudentLevel": {
+							"StudentLevelCode": "EighthGrade"
+						},
+						"Course": [
+							{
+								"CourseCreditBasis": "Regular",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 1,
+								"CourseCreditEarned": 1,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 90,
+								"CourseAcademicGradeStatusCode": "HonorsGrade",
+								"CourseSubjectAreaCode": "Mathematics",
+								"CourseQualityPointsEarned": 90,
+								"CourseNumber": "013313H",
+								"CourseTitle": "ALG1"
+							},
+							{
+								"CourseCreditBasis": "Regular",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 95,
+								"CourseSubjectAreaCode": "ForeignLanguageLiterature",
+								"CourseQualityPointsEarned": 47.5,
+								"CourseNumber": "012313R",
+								"CourseTitle": "SPAN1"
+							},
+							{
+								"CourseCreditBasis": "Regular",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 98,
+								"CourseSubjectAreaCode": "ForeignLanguageLiterature",
+								"CourseQualityPointsEarned": 49,
+								"CourseNumber": "012313R",
+								"CourseTitle": "SPAN1"
+							}
+						]
+					},
+					{
+						"AcademicSessionDetail": {
+							"SessionDesignator": "2001-09",
+							"SessionName": "Fall2001",
+							"SessionType": "Semester"
+						},
+						"StudentLevel": {
+							"StudentLevelCode": "NinthGrade"
+						},
+						"Course": [
+							{
+								"CourseCreditBasis": "Regular",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 92,
+								"CourseAcademicGradeStatusCode": "HonorsGrade",
+								"CourseSubjectAreaCode": "EnglishLanguageLiterature",
+								"CourseQualityPointsEarned": 46,
+								"CourseNumber": "011013H",
+								"CourseTitle": "ENG1"
+							},
+							{
+								"CourseCreditBasis": "Regular",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 86,
+								"CourseAcademicGradeStatusCode": "HonorsGrade",
+								"CourseSubjectAreaCode": "Mathematics",
+								"CourseQualityPointsEarned": 43,
+								"CourseNumber": "013413H",
+								"CourseTitle": "GEOM"
+							},
+							{
+								"CourseCreditBasis": "Regular",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 91,
+								"CourseAcademicGradeStatusCode": "HonorsGrade",
+								"CourseSubjectAreaCode": "LifePhysicalSciences",
+								"CourseQualityPointsEarned": 45.5,
+								"CourseNumber": "014123H",
+								"CourseTitle": "BIO",
+								"NoteMessage": [
+									"6Science"
+								]
+							},
+							{
+								"CourseCreditBasis": "Regular",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 93,
+								"CourseAcademicGradeStatusCode": "HonorsGrade",
+								"CourseSubjectAreaCode": "SocialSciencesHistory",
+								"CourseQualityPointsEarned": 46.5,
+								"CourseNumber": "014513H",
+								"CourseTitle": "WGEO"
+							},
+							{
+								"CourseCreditBasis": "Regular",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 97,
+								"CourseSubjectAreaCode": "PhysicalHealthSafetyEducation",
+								"CourseQualityPointsEarned": 48.5,
+								"CourseNumber": "016931R",
+								"CourseTitle": "HLTHED"
+							},
+							{
+								"CourseCreditBasis": "Regular",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 100,
+								"CourseSubjectAreaCode": "ForeignLanguageLiterature",
+								"CourseQualityPointsEarned": 50,
+								"CourseNumber": "012323R",
+								"CourseTitle": "SPAN2"
+							},
+							{
+								"CourseCreditBasis": "Regular",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 92,
+								"CourseSubjectAreaCode": "FinePerformingArts",
+								"CourseQualityPointsEarned": 46,
+								"CourseNumber": "011643R",
+								"CourseTitle": "TH1"
+							}
+						]
+					},
+					{
+						"AcademicSessionDetail": {
+							"SessionDesignator": "2002-01",
+							"SessionName": "Spring 2002",
+							"SessionType": "Semester"
+						},
+						"StudentLevel": {
+							"StudentLevelCode": "NinthGrade"
+						},
+						"Course": [
+							{
+								"CourseCreditBasis": "Regular",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 93,
+								"CourseAcademicGradeStatusCode": "HonorsGrade",
+								"CourseSubjectAreaCode": "EnglishLanguageLiterature",
+								"CourseQualityPointsEarned": 46.5,
+								"CourseNumber": "011013H",
+								"CourseTitle": "ENG1"
+							},
+							{
+								"CourseCreditBasis": "Regular",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 79,
+								"CourseAcademicGradeStatusCode": "HonorsGrade",
+								"CourseSubjectAreaCode": "Mathematics",
+								"CourseQualityPointsEarned": 39.5,
+								"CourseNumber": "013413H",
+								"CourseTitle": "GEOM"
+							},
+							{
+								"CourseCreditBasis": "Regular",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 92,
+								"CourseAcademicGradeStatusCode": "HonorsGrade",
+								"CourseSubjectAreaCode": "LifePhysicalSciences",
+								"CourseQualityPointsEarned": 46,
+								"CourseNumber": "014123H",
+								"CourseTitle": "BIO"
+							},
+							{
+								"CourseCreditBasis": "Regular",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 98,
+								"CourseAcademicGradeStatusCode": "HonorsGrade",
+								"CourseSubjectAreaCode": "SocialSciencesHistory",
+								"CourseQualityPointsEarned": 49,
+								"CourseNumber": "014513H",
+								"CourseTitle": "WGEO"
+							},
+							{
+								"CourseCreditBasis": "Regular",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 100,
+								"CourseSubjectAreaCode": "PhysicalHealthSafetyEducation",
+								"CourseQualityPointsEarned": 50,
+								"CourseNumber": "016919R",
+								"CourseTitle": "PEEQ1"
+							},
+							{
+								"CourseCreditBasis": "Regular",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 99,
+								"CourseSubjectAreaCode": "ForeignLanguageLiterature",
+								"CourseQualityPointsEarned": 49.5,
+								"CourseNumber": "012323R",
+								"CourseTitle": "SPAN2"
+							},
+							{
+								"CourseCreditBasis": "Regular",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 90,
+								"CourseSubjectAreaCode": "FinePerformingArts",
+								"CourseQualityPointsEarned": 45,
+								"CourseNumber": "011643R",
+								"CourseTitle": "TH1"
+							}
+						]
+					},
+					{
+						"AcademicSessionDetail": {
+							"SessionDesignator": "2002-09",
+							"SessionName": "Fall2002",
+							"SessionType": "Semester"
+						},
+						"StudentLevel": {
+							"StudentLevelCode": "TenthGrade"
+						},
+						"Course": [
+							{
+								"CourseCreditBasis": "Regular",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 93,
+								"CourseAcademicGradeStatusCode": "HonorsGrade",
+								"CourseSubjectAreaCode": "EnglishLanguageLiterature",
+								"CourseQualityPointsEarned": 46.5,
+								"CourseNumber": "011023H",
+								"CourseTitle": "ENG2"
+							},
+							{
+								"CourseCreditBasis": "Regular",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 85,
+								"CourseAcademicGradeStatusCode": "HonorsGrade",
+								"CourseSubjectAreaCode": "Mathematics",
+								"CourseQualityPointsEarned": 42.5,
+								"CourseNumber": "013323H",
+								"CourseTitle": "ALG2"
+							},
+							{
+								"CourseCreditBasis": "Regular",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 92,
+								"CourseAcademicGradeStatusCode": "HonorsGrade",
+								"CourseSubjectAreaCode": "LifePhysicalSciences",
+								"CourseQualityPointsEarned": 46,
+								"CourseNumber": "014323H",
+								"CourseTitle": "CHEM"
+							},
+							{
+								"CourseCreditBasis": "Regular",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 96,
+								"CourseAcademicGradeStatusCode": "HonorsGrade",
+								"CourseSubjectAreaCode": "SocialSciencesHistory",
+								"CourseQualityPointsEarned": 48,
+								"CourseNumber": "014623H",
+								"CourseTitle": "WHIST"
+							},
+							{
+								"CourseCreditBasis": "Regular",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 100,
+								"CourseSubjectAreaCode": "PhysicalHealthSafetyEducation",
+								"CourseQualityPointsEarned": 50,
+								"CourseNumber": "26919R1",
+								"CourseTitle": "PEEQ3"
+							},
+							{
+								"CourseCreditBasis": "Regular",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 94,
+								"CourseAcademicGradeStatusCode": "HonorsGrade",
+								"CourseSubjectAreaCode": "ForeignLanguageLiterature",
+								"CourseQualityPointsEarned": 47,
+								"CourseNumber": "012333H",
+								"CourseTitle": "SPAN3"
+							},
+							{
+								"CourseCreditBasis": "HighSchoolDualCredit",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 98,
+								"CourseSubjectAreaCode": "EngineeringTechnology",
+								"CourseQualityPointsEarned": 49,
+								"CourseNumber": "28193$0",
+								"CourseTitle": "BEGBCIS1"
+							}
+						]
+					},
+					{
+						"AcademicSessionDetail": {
+							"SessionDesignator": "2003-01",
+							"SessionName": "Spring 2003",
+							"SessionType": "Semester"
+						},
+						"StudentLevel": {
+							"StudentLevelCode": "TenthGrade"
+						},
+						"Course": [
+							{
+								"CourseCreditBasis": "Regular",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 96,
+								"CourseAcademicGradeStatusCode": "HonorsGrade",
+								"CourseSubjectAreaCode": "EnglishLanguageLiterature",
+								"CourseQualityPointsEarned": 48,
+								"CourseNumber": "011023H",
+								"CourseTitle": "ENG2"
+							},
+							{
+								"CourseCreditBasis": "Regular",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 83,
+								"CourseAcademicGradeStatusCode": "HonorsGrade",
+								"CourseSubjectAreaCode": "Mathematics",
+								"CourseQualityPointsEarned": 41.5,
+								"CourseNumber": "013323H",
+								"CourseTitle": "ALG2"
+							},
+							{
+								"CourseCreditBasis": "Regular",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 91,
+								"CourseAcademicGradeStatusCode": "HonorsGrade",
+								"CourseSubjectAreaCode": "LifePhysicalSciences",
+								"CourseQualityPointsEarned": 45.5,
+								"CourseNumber": "014323H",
+								"CourseTitle": "CHEM"
+							},
+							{
+								"CourseCreditBasis": "Regular",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 97,
+								"CourseAcademicGradeStatusCode": "HonorsGrade",
+								"CourseSubjectAreaCode": "SocialSciencesHistory",
+								"CourseQualityPointsEarned": 48.5,
+								"CourseNumber": "014623H",
+								"CourseTitle": "WHIST"
+							},
+							{
+								"CourseCreditBasis": "Regular",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 100,
+								"CourseSubjectAreaCode": "PhysicalHealthSafetyEducation",
+								"CourseQualityPointsEarned": 50,
+								"CourseNumber": "26919R1",
+								"CourseTitle": "PEEQ3",
+								"NoteMessage": [
+									"7P.E./Equivalent"
+								]
+							},
+							{
+								"CourseCreditBasis": "Regular",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 94,
+								"CourseAcademicGradeStatusCode": "HonorsGrade",
+								"CourseSubjectAreaCode": "ForeignLanguageLiterature",
+								"CourseQualityPointsEarned": 47,
+								"CourseNumber": "012333H",
+								"CourseTitle": "SPAN3"
+							},
+							{
+								"CourseCreditBasis": "HighSchoolDualCredit",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 96,
+								"CourseSubjectAreaCode": "EngineeringTechnology",
+								"CourseQualityPointsEarned": 48,
+								"CourseNumber": 2819340,
+								"CourseTitle": "BEGBCIS1"
+							}
+						]
+					},
+					{
+						"AcademicSessionDetail": {
+							"SessionDesignator": "2003-09",
+							"SessionName": "Fall2003",
+							"SessionType": "Semester"
+						},
+						"StudentLevel": {
+							"StudentLevelCode": "EleventhGrade"
+						},
+						"Course": [
+							{
+								"CourseCreditBasis": "AdvancedPlacement",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 93,
+								"CourseSubjectAreaCode": "EnglishLanguageLiterature",
+								"CourseQualityPointsEarned": 46.5,
+								"CourseNumber": "011054P",
+								"CourseTitle": "APENGLAN"
+							},
+							{
+								"CourseCreditBasis": "Regular",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 88,
+								"CourseAcademicGradeStatusCode": "HonorsGrade",
+								"CourseSubjectAreaCode": "Mathematics",
+								"CourseQualityPointsEarned": 44,
+								"CourseNumber": "013633H",
+								"CourseTitle": "PRECALC"
+							},
+							{
+								"CourseCreditBasis": "Regular",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 90,
+								"CourseAcademicGradeStatusCode": "HonorsGrade",
+								"CourseSubjectAreaCode": "LifePhysicalSciences",
+								"CourseQualityPointsEarned": 45,
+								"CourseNumber": "014424H",
+								"CourseTitle": "PHYSICS"
+							},
+							{
+								"CourseCreditBasis": "AdvancedPlacement",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 98,
+								"CourseSubjectAreaCode": "SocialSciencesHistory",
+								"CourseQualityPointsEarned": 49,
+								"CourseNumber": "014735P",
+								"CourseTitle": "APUSHIST"
+							},
+							{
+								"CourseCreditBasis": "AdvancedPlacement",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 97,
+								"CourseSubjectAreaCode": "ForeignLanguageLiterature",
+								"CourseQualityPointsEarned": 48.5,
+								"CourseNumber": "012394P",
+								"CourseTitle": "APSPALAN"
+							},
+							{
+								"CourseCreditBasis": "Regular",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": "P",
+								"CourseSubjectAreaCode": "Miscellaneous",
+								"CourseQualityPointsEarned": 0,
+								"CourseNumber": "011448F",
+								"CourseTitle": "INDENG",
+								"NoteMessage": [
+									"9OtherElectives"
+								]
+							},
+							{
+								"CourseCreditBasis": "AdvancedPlacement",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 99,
+								"CourseSubjectAreaCode": "HumanServices",
+								"CourseQualityPointsEarned": 49.5,
+								"CourseNumber": "014940P",
+								"CourseTitle": "APPSYCH",
+								"NoteMessage": [
+									"9OtherElectives"
+								]
+							}
+						]
+					},
+					{
+						"AcademicSessionDetail": {
+							"SessionDesignator": "2004-01",
+							"SessionName": "Spring2004",
+							"SessionType": "Semester"
+						},
+						"StudentLevel": {
+							"StudentLevelCode": "EleventhGrade"
+						},
+						"Course": [
+							{
+								"CourseCreditBasis": "AdvancedPlacement",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 95,
+								"CourseSubjectAreaCode": "EnglishLanguageLiterature",
+								"CourseQualityPointsEarned": 47.5,
+								"CourseNumber": "011054P",
+								"CourseTitle": "APENGLAN"
+							},
+							{
+								"CourseCreditBasis": "Regular",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 83,
+								"CourseAcademicGradeStatusCode": "HonorsGrade",
+								"CourseSubjectAreaCode": "Mathematics",
+								"CourseQualityPointsEarned": 41.5,
+								"CourseNumber": "013633H",
+								"CourseTitle": "PRECALC"
+							},
+							{
+								"CourseCreditBasis": "Regular",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 95,
+								"CourseAcademicGradeStatusCode": "HonorsGrade",
+								"CourseSubjectAreaCode": "LifePhysicalSciences",
+								"CourseQualityPointsEarned": 47.5,
+								"CourseNumber": "014424H",
+								"CourseTitle": "PHYSICS"
+							},
+							{
+								"CourseCreditBasis": "AdvancedPlacement",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 98,
+								"CourseSubjectAreaCode": "SocialSciencesHistory",
+								"CourseQualityPointsEarned": 49,
+								"CourseNumber": "014735P",
+								"CourseTitle": "APUSHIST"
+							},
+							{
+								"CourseCreditBasis": "AdvancedPlacement",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 98,
+								"CourseSubjectAreaCode": "ForeignLanguageLiterature",
+								"CourseQualityPointsEarned": 49,
+								"CourseNumber": "012394P",
+								"CourseTitle": "APSPALAN"
+							},
+							{
+								"CourseCreditBasis": "Regular",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": "P",
+								"CourseSubjectAreaCode": "SocialSciencesHistory",
+								"CourseQualityPointsEarned": 0,
+								"CourseNumber": "014931F",
+								"CourseTitle": "SOC",
+								"NoteMessage": [
+									"9OtherElectives"
+								]
+							},
+							{
+								"CourseCreditBasis": "Regular",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 96,
+								"CourseSubjectAreaCode": "Miscellaneous",
+								"CourseQualityPointsEarned": 48,
+								"CourseNumber": "24932R2",
+								"CourseTitle": "SPTSS",
+								"NoteMessage": [
+									"9OtherElectives"
+								]
+							}
+						]
+					},
+					{
+						"AcademicSessionDetail": {
+							"SessionDesignator": "2004-09",
+							"SessionName": "Fall2004",
+							"SessionType": "Semester"
+						},
+						"StudentLevel": {
+							"StudentLevelCode": "TwelfthGrade"
+						},
+						"Course": [
+							{
+								"CourseCreditBasis": "AdvancedPlacement",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 91,
+								"CourseSubjectAreaCode": "EnglishLanguageLiterature",
+								"CourseQualityPointsEarned": 45.5,
+								"CourseNumber": "1043.P000.A",
+								"CourseTitle": "APENGLIT"
+							},
+							{
+								"CourseCreditBasis": "Regular",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 95,
+								"CourseSubjectAreaCode": "EnglishLanguageLiterature",
+								"CourseQualityPointsEarned": 47.5,
+								"CourseNumber": "1525.R000.X",
+								"CourseTitle": "COMMAPP",
+								"NoteMessage": [
+									"FSpeech"
+								]
+							},
+							{
+								"CourseCreditBasis": "AdvancedPlacement",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 86,
+								"CourseSubjectAreaCode": "Mathematics",
+								"CourseQualityPointsEarned": 43,
+								"CourseNumber": "3616.P000.A",
+								"CourseTitle": "APCALCBC"
+							},
+							{
+								"CourseCreditBasis": "Regular",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": 96,
+								"CourseAcademicGradeStatusCode": "HonorsGrade",
+								"CourseSubjectAreaCode": "LifePhysicalSciences",
+								"CourseQualityPointsEarned": 48,
+								"CourseNumber": "4135.H000.A",
+								"CourseTitle": "ANAT\\PHY"
+							},
+							{
+								"CourseCreditBasis": "AdvancedPlacement",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": "P",
+								"CourseSubjectAreaCode": "LifePhysicalSciences",
+								"CourseQualityPointsEarned": 0,
+								"CourseNumber": "4137.F000.A",
+								"CourseTitle": "AP-BIO"
+							},
+							{
+								"CourseCreditBasis": "Regular",
+								"CourseCreditUnits": "Semester",
+								"CourseCreditValue": 0.5,
+								"CourseCreditEarned": 0.5,
+								"CourseAcademicGradeScaleCode": 65,
+								"CourseAcademicGrade": "P",
+								"CourseSubjectAreaCode": "PhysicalHealthSafetyEducation",
+								"CourseQualityPointsEarned": 0,
+								"CourseNumber": "6919.F000.X",
+								"CourseTitle": "PEEQ4",
+								"NoteMessage": [
+									"7P.E./Equivalent"
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+}

@@ -1,0 +1,61 @@
+{
+  "@context": {
+    "@vocab": "http://pesc.org/terms/",
+    "uicourse": "http://uiowa.edu/courses/",
+    "uisessions": "http://uiowa.edu/sessions/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "startDate": {
+      "@type": "xsd:date"
+    },
+    "endDate": {
+      "@type": "xsd:date"
+    },
+    "includesCourses": {
+      "@type": "@id"
+    }
+  },
+  "@graph": [
+    {
+      "@id": "uicourse:CS/360",
+      "@type": "Course",
+      "courseCreditBasis": "Regular",
+      "courseCreditUnits": "Semester",
+      "courseCreditLevel": "LowerDivision",
+      "courseCreditValue": 4.25,
+      "courseAcademicGradeScaleCode": "25",
+      "courseCIPCode": "11.0101",
+      "courseLevel": "LowerDivision",
+      "courseGPAApplicabilityCode": "Applicable",
+      "courseSubjectAbbreviation": "CISC",
+      "courseNumber": "360",
+      "courseTitle": "Information Technology 360",
+      "courseInstructionMethodType": "Lecture"
+    },
+    {
+      "@id": "uicourse:CS/370",
+      "@type": "Course",
+      "courseCreditBasis": "Regular",
+      "courseCreditUnits": "Semester",
+      "courseCreditLevel": "LowerDivision",
+      "courseCreditValue": 4.25,
+      "courseAcademicGradeScaleCode": "25",
+      "courseCIPCode": "11.0102",
+      "courseLevel": "LowerDivision",
+      "courseGPAApplicabilityCode": "Applicable",
+      "courseSubjectAbbreviation": "CISC",
+      "courseNumber": "370",
+      "courseTitle": "Information Technology 370",
+      "courseInstructionMethodType": "Lecture"
+    },
+    {
+      "@type": "Session",
+      "@id": "uisessions:FALL20-21",
+      "startDate": "2021-09-01",
+      "endDate": "2022-12-23",
+      "includesCourses": [
+        "uicourse:CS/370",
+        "uicourse:CS/360"
+      ]
+    }
+  ]
+}

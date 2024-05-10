@@ -1,0 +1,133 @@
+
+Date: Fri May 27 15:40:11 2022
+'ProgramCIPCode' is a required property json path: $.Student.AcademicRecord[0].AcademicSummary[0].AcademicProgram
+'ProgramCSISCode' is a required property json path: $.Student.AcademicRecord[0].AcademicSummary[0].AcademicProgram
+'ProgramESISCode' is a required property json path: $.Student.AcademicRecord[0].AcademicSummary[0].AcademicProgram
+'ProgramHEGISCode' is a required property json path: $.Student.AcademicRecord[0].AcademicSummary[0].AcademicProgram
+'ProgramLocalCode' is a required property json path: $.Student.AcademicRecord[0].AcademicSummary[0].AcademicProgram
+'ProgramUSISCode' is a required property json path: $.Student.AcademicRecord[0].AcademicSummary[0].AcademicProgram
+
+Date: Fri May 27 15:54:28 2022
+
+Date: Fri May 27 15:55:09 2022
+
+Date: Fri May 27 15:55:20 2022
+
+Date: Fri May 27 15:56:51 2022
+
+Date: Fri May 27 15:59:41 2022
+
+Date: Fri May 27 16:13:29 2022
+
+Date: Fri May 27 16:19:03 2022
+
+Date: Fri May 27 17:06:10 2022
+
+Date: Fri May 27 17:07:50 2022
+
+Date: Fri May 27 17:08:26 2022
+'' is too short json path: $.TransmissionData.Source.Organization.Contacts[0].Phone[0].AreaCityCode
+
+Date: Fri May 27 17:08:53 2022
+'Texas' is not one of ['AA', 'AB', 'AE', 'AK', 'AL', 'AP', 'AR', 'AS', 'AZ', 'BC', 'CA', 'CO', 'CT', 'CZ', 'DC', 'DE', 'FL', 'FM', 'GA', 'GU', 'HI', 'IA', 'ID', 'IL', 'IN', 'KS', 'KY', 'LA', 'MA', 'MB', 'MD', 'ME', 'MH', 'MI', 'MN', 'MO', 'MP', 'MS', 'MT', 'NB', 'NC', 'ND', 'NE', 'NF', 'NH', 'NJ', 'NL', 'NM', 'NS', 'NT', 'NU', 'NV', 'NY', 'OH', 'OK', 'ON', 'OR', 'PA', 'PE', 'PR', 'PW', 'QC', 'RI', 'SC', 'SD', 'SK', 'TN', 'TX', 'UT', 'VA', 'VI', 'VT', 'WA', 'WI', 'WV', 'WY', 'YT'] json path: $.TransmissionData.Source.Organization.Contacts[0].Address[0].StateProvinceCode
+
+Date: Wed Jun  1 13:52:39 2022
+
+Date: Wed Jun  1 13:52:53 2022
+
+Date: Wed Jun  1 13:57:05 2022
+'TwelfthGrader' is not one of ['SeventhGrade', 'EighthGrade', 'NinthGrade', 'TenthGrade', 'EleventhGrade', 'TwelfthGrade', 'Grade13', 'Dual', 'DualGraduateUndergraduate', 'DualHighSchoolCollege', 'Graduate', 'GraduateProfessional', 'LowerDivision', 'Other', 'Professional', 'Secondary', 'TechnicalPreparatory', 'Undergraduate', 'Ungraded', 'UpperDivision', 'Vocational'] json path: $.Student.AcademicRecord[0].AcademicSummary[0].AcademicSummaryLevel
+
+Date: Wed Jun  1 13:58:35 2022
+'Regularly' is not one of ['Regular', 'AcademicRenewal', 'AdvancedPlacement', 'AdvancedStanding', 'ContinuingEducation', 'Correspondence', 'Exemption', 'Equivalence', 'InternationalBaccalaureate', 'Military', 'Remedial', 'CreditByExam', 'HighSchoolTransferCredit', 'HighSchoolCreditOnly', 'HighSchoolDualCredit', 'JuniorHighSchoolCredit', 'LifeExperience', 'Major', 'AdultBasic'] json path: $.Student.AcademicRecord[0].AcademicSession[1].Course[3].CourseCreditBasis
+
+Date: Wed Jun  1 13:59:07 2022
+
+Date: Wed Jun  1 14:02:49 2022
+
+Date: Wed Jun  1 14:03:56 2022
+'78712o123456789012345' is too long json path: $.TransmissionData.Destination.Organization.Contacts[0].Address[0].PostalCode
+
+Date: Wed Jun  1 15:30:21 2022
+
+Date: Wed Jun  1 15:31:50 2022
+
+Date: Wed Jun  1 15:35:06 2022
+
+Date: Wed Jun  1 15:37:35 2022
+
+Date: Wed Jun  1 15:40:28 2022
+'5555555551234567' does not match '^[0-9]{9}$' json path: $.Student.Person.SSN
+
+Date: Wed Jun  1 15:41:49 2022
+
+Date: Wed Jun  1 17:11:39 2022
+
+Date: Thu Jun  2 08:49:38 2022
+
+Date: Thu Jun  2 08:54:05 2022
+
+Date: Thu Jun  2 10:24:52 2022
+
+Date: Thu Jun  2 14:16:32 2022
+
+Date: Thu Jun  2 14:17:14 2022
+
+Date: Thu Jun  2 14:18:03 2022
+
+Date: Thu Jun  2 14:22:22 2022
+
+Date: Thu Jun  2 14:22:48 2022
+
+Date: Thu Jun  2 14:23:31 2022
+
+Date: Thu Jun  2 14:24:35 2022
+
+Date: Thu Jun  2 14:25:44 2022
+
+Date: Thu Jun  2 14:30:26 2022
+
+Date: Thu Jun  2 14:31:18 2022
+'FirstHighestXXX' is not one of ['FirstHighest', 'SecondHighest', 'ThirdHighest'] json path: $.Student.AcademicRecord[0].AcademicSummary[0].AcademicHonors[0].HonorsLevel
+
+Date: Thu Jun  2 14:31:45 2022
+'HispanicXXX' is not one of ['Hispanic', 'NonHispanic'] json path: $.Student.Person.EthnicityRace.EthnicityCode
+
+Date: Thu Jun  2 14:32:24 2022
+
+Date: Thu Jun  2 14:49:50 2022
+
+Date: Thu Jun  2 15:01:26 2022
+
+Date: Thu Jun  2 15:33:30 2022
+
+Date: Thu Jun  2 15:34:18 2022
+
+Date: Thu Jun  2 15:35:56 2022
+
+Date: Thu Jun  2 15:36:17 2022
+
+Date: Thu Jun  2 15:36:51 2022
+
+Date: Thu Jun  2 15:37:22 2022
+'2000-02' is not a 'date' json path: $.TransmissionData.Source.Organization.Contacts[0].Address[0].EffectiveDate
+
+Date: Thu Jun  2 15:39:38 2022
+'2000-02' is not a 'date' json path: $.TransmissionData.Source.Organization.Contacts[0].Address[0].EffectiveDate
+
+Date: Thu Jun  2 15:40:17 2022
+
+Date: Thu Jun  2 15:43:48 2022
+'4747935xxx' does not match '^[0-9+-]*$' json path: $.TransmissionData.Source.Organization.Contacts[0].FaxPhone[0].PhoneNumber
+
+Date: Thu Jun  2 15:52:00 2022
+
+Date: Thu Jun  2 15:53:15 2022
+
+Date: Thu Jun  2 15:54:01 2022
+
+Date: Thu Jun  2 16:14:23 2022
+65 is not of type 'string' json path: $.Student.AcademicRecord[0].AcademicSession[0].Course[0].CourseAcademicGradeScaleCode
+
+Date: Mon Jun  6 13:43:37 2022
+512 is not of type 'string' json path: $.TransmissionData.Source.Organization.Contacts[0].FaxPhone[0].AreaCityCode
