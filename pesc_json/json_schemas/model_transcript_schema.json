@@ -1,0 +1,210 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pesc.org/transcript/schema",
+  "$vocabulary": {
+    "https://json-schema.org/draft/2020-12/vocab/format-assertion": true,
+    "https://json-schema.org/draft/2020-12/vocab/core": true
+  },
+  "anyOf": [
+    {
+      "$ref": "https://json-schema.org/draft/2020-12/meta/format-assertion"
+    },
+    {
+      "$ref": "https://json-schema.org/draft/2020-12/meta/core"
+    }
+  ],
+  "type": "object",
+  "description": "schema for flat @graph",
+  "properties": {
+    "@context": {
+      "type": "object"
+    },
+    "@graph": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "$ref": "#/$defs/Course"
+          },
+          {
+            "$ref": "#/$defs/Session"
+          },
+          {
+            "$ref": "#/$defs/Student"
+          },
+          {
+            "$ref": "#/$defs/StudentCourse"
+          }
+        ]
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "Session": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "type": "string",
+          "const": "Session"
+        },
+        "startDate": {
+          "$ref": "#/$defs/Date"
+        },
+        "endDate": {
+          "$ref": "#/$defs/Date"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "@id",
+        "@type",
+        "startDate",
+        "endDate"
+      ]
+    },
+    "Course": {
+      "description": "Course information",
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "type": "string",
+          "const": "Course"
+        },
+        "courseCreditBasis": {
+          "type": "string",
+          "enum": [
+            "Regular",
+            "AcademicRenewal",
+            "AdvancedPlacement",
+            "AdvancedStanding",
+            "ContinuingEducation",
+            "Correspondence",
+            "Exemption",
+            "Equivalence",
+            "InternationalBaccalaureate",
+            "Military",
+            "Remedial",
+            "CreditByExam",
+            "HighSchoolTransferCredit",
+            "HighSchoolCreditOnly",
+            "HighSchoolDualCredit",
+            "JuniorHighSchoolCredit",
+            "LifeExperience",
+            "Major",
+            "AdultBasic"
+          ]
+        },
+        "courseCreditValue": {
+          "type": "number",
+          "maximum": 5.25,
+          "minimum": 0,
+          "multipleOf": 0.25
+        },
+        "courseAcademicGradeScaleCode": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 3
+        },
+        "courseCIPCode": {
+          "type": "string",
+          "pattern": "^[0-9]{2}[.][0-9]{4}$"
+        }
+      },
+      "additionalProperties": true,
+      "required": [
+        "@id",
+        "@type",
+        "courseCreditBasis",
+        "courseCreditValue"
+      ]
+    },
+    "StudentCourse": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "type": "string",
+          "const": "StudentCourse"
+        },
+        "numericGrade": {
+          "type": "number",
+          "minimum": 60,
+          "maximum": 95,
+          "multipleOf": 1
+        },
+        "grade": {
+          "type": "string",
+          "enum": [
+            "F",
+            "D-",
+            "D",
+            "D+",
+            "C-",
+            "C",
+            "C+",
+            "B-",
+            "B",
+            "B+",
+            "A-",
+            "A",
+            "A+"
+          ]
+        },
+        "session": {
+          "type": "string"
+        },
+        "student": {
+          "type": "string"
+        },
+        "course": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "@type",
+        "@id",
+        "student",
+        "course",
+        "grade",
+        "numericGrade",
+        "session"
+      ]
+    },
+    "Student": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "type": "string",
+          "const": "Student"
+        },
+        "studentName": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "@id",
+        "@type",
+        "studentName"
+      ]
+    },
+    "Date": {
+      "type": "string",
+      "pattern": "^20[0-9]{2}-(0[1-9])|(1[0-2])-(([012][0-9])|(3[01]))$"
+    }
+  }
+}
+
