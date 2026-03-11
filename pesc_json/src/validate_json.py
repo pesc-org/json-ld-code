@@ -14,7 +14,7 @@ def include_error(message):
 def validate_json(json_instance_fn, json_schema_fn, report_fn):
     schema_fp = open(json_schema_fn, "r")
     instance_fp = open(json_instance_fn, "r")
-    output_fp = open(report_fn, "a")
+    output_fp = open(report_fn, "w")
     instance = json.load(instance_fp)
     output_fp.write("\nDate: " + time.strftime('%c') + "\n")
     schema = json.load(schema_fp)
@@ -32,21 +32,13 @@ def validate_json(json_instance_fn, json_schema_fn, report_fn):
             print(line)
             line += "\n"
             output_fp.write(line)
+        return False
     return success
 
 def main():
-    if not ("\\" in sys.argv[1] or "/" in sys.argv[1]):
-        instance_file = os.getcwd() + "\\json_instance\\HSTranscript_fixed.json"
-    else:
-        instance_file = sys.argv[1]
-    if not ("\\" in sys.argv[2] or "/" in sys.argv[2]):
-        schema_file = os.getcwd() + "\\json_schemas\\HST_schema.json"
-    else:
-        schema_file = sys.argv[2]
-    if not ("\\" in sys.argv[3] or "/" in sys.argv[3]):
-        report_file = os.getcwd() + "\\report\\HSReport.txt"
-    else:
-        report_file = sys.argv[3]
+    instance_file = os.getcwd() + sys.argv[1]
+    schema_file = os.getcwd() + sys.argv[2]
+    report_file = os.getcwd() + sys.argv[3]
     validate_json(instance_file, schema_file, report_file)
 
 
