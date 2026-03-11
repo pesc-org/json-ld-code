@@ -1,0 +1,5 @@
+@prefix pesc: <http://pesc.org/> .
+
+[] pesc:topLevel [ pesc:nextLevel [ pesc:code pesc:c100 ;
+                    pesc:codeDescrption "description" ] ] .
+

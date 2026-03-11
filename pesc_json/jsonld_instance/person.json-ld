@@ -1,0 +1,34 @@
+{
+  "@context": [
+    {
+      "version": 1.1,
+      "ceds": "http://ceds.org/",
+      "pesc": "http://pesc.org/",
+      "@base": "http://top-level-base.org/",
+      "topLevel": {
+        "@id": "pesc:topLevel",
+        "@type": "Level1"
+      },
+      "nextLevel": {
+        "@id": "pesc:nextLevel",
+        "@type": "CodeObject"
+      },
+      "code": {
+        "@id": "pesc:code",
+        "@type": "@id"
+      },
+      "codeDescription": {
+        "@id": "pesc:codeDescrption",
+        "@type": "string"
+      }
+    }
+  ],
+  "topLevel": {
+    "nextLevel" : {
+      "code": "pesc:c100",
+      "codeDescription": "description"
+    }
+  }
+}
+
+

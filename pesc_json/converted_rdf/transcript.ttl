@@ -1,0 +1,833 @@
+@prefix ceds: <http://ceds.ed.gov/terms#> .
+@prefix ceterms: <https://purl.org/ctdl/terms/> .
+@prefix elm: <http://data.europa.eu/snb/model/elm/> .
+@prefix pesc: <https://pesc.org/terms/> .
+@prefix pescAcademicProgramTypes: <https://pesc.org/vocabs/AcademicProgramTypes#> .
+@prefix pescAcademicSummaryTypes: <https://pesc.org/vocabs/AcademicSummaryTypes#> .
+@prefix pescAccreditationBodyCodes: <https://pesc.org/vocabs/AccreditationBodyCodes#> .
+@prefix pescConditionsMetCodes: <https://pesc.org/vocabs/ConditionsMetCodes#> .
+@prefix pescCreditLevels: <https://pesc.org/vocabs/CreditLevels#> .
+@prefix pescDelinquencyCodes: <https://pesc.org/vocabs/DelinquencyCodes#> .
+@prefix pescDocumentCompleteCodes: <https://pesc.org/vocabs/DocumentCompleteCodes#> .
+@prefix pescDocumentOfficialCodes: <https://pesc.org/vocabs/DocumentOfficialCodes#> .
+@prefix pescDocumentProcessCodes: <https://pesc.org/vocabs/DocumentProcessCodes#> .
+@prefix pescDocumentTypeCodes: <https://pesc.org/vocabs/DocumentTypeCodes#> .
+@prefix pescGenderCodes: <https://pesc.org/vocabs/Gender#> .
+@prefix pescGradeStatusCodes: <https://pesc.org/vocabs/GradeStatusCodes#> .
+@prefix pescHonorsLevels: <https://pesc.org/vocabs/HonorsLevels#> .
+@prefix pescIdentifierTypes: <https://pesc.org/vocabs/IdentifierTypes#> .
+@prefix pescLanguageProficiencyCodes: <https://pesc.org/vocabs/LanguageProficiencyCodes#> .
+@prefix pescNameCodes: <https://pesc.org/vocabs/NameCodes#> .
+@prefix pescResidencyStatusCodes: <https://pesc.org/vocabs/ResidencyStatusCodes#> .
+@prefix pescSchoolLevels: <https://pesc.org/vocabs/SchoolLevels#> .
+@prefix pescStudentLevelCodes: <https://pesc.org/vocabs/StudentLevelCodes#> .
+@prefix pescSupplementalGradeCodes: <https://pesc.org/vocabs/SupplementalGradeCodes#> .
+@prefix pescTransmissionTypes: <https://pesc.org/vocabs/TransmissionTypes#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pesc.org/college-transcript/instance/CollegeTranscript00> a pesc:CollegeTranscript,
+        "pesc:CollegeTranscript" ;
+    pesc:createdDateTime "2024-08-02T08:00:00+00:00"^^xsd:dateTime ;
+    pesc:describesAchievement <https://pesc.org/college-transcript/instance/AcademicAward00>,
+        <https://pesc.org/college-transcript/instance/AdditionalStudentAchievement00>,
+        <https://pesc.org/college-transcript/instance/CourseAchievement00>,
+        <https://pesc.org/college-transcript/instance/LicensureAchievement00>,
+        <https://pesc.org/college-transcript/instance/TestScore00> ;
+    pesc:destination <https://pesc.org/college-transcript/instance/Organization00> ;
+    pesc:documentCompleteCode [ pesc:code pescDocumentCompleteCodes:Partial ;
+            pesc:codeDescription "Partial"^^<xs:string> ] ;
+    pesc:documentID "12345"^^xsd:string ;
+    pesc:documentOfficialCode [ pesc:code pescDocumentOfficialCodes:Official ;
+            pesc:codeDescription "Official"^^<xs:string> ] ;
+    pesc:documentProcessCode [ pesc:code pescDocumentProcessCodes:TEST ;
+            pesc:codeDescription "TEST"^^<xs:string> ] ;
+    pesc:documentTypeCode [ pesc:code pescDocumentTypeCodes:Response ;
+            pesc:codeDescription "Response"^^<xs:string> ] ;
+    pesc:requestTrackingID "12345"^^xsd:string ;
+    pesc:source <https://pesc.org/college-transcript/instance/Organization01> ;
+    pesc:student <https://pesc.org/college-transcript/instance/Student00> ;
+    pesc:transmissionType [ pesc:code pescTransmissionTypes:Reissue ;
+            pesc:codeDescription "Reissue"^^<xs:string> ] ;
+    ceterms:hasPart <https://pesc.org/college-transcript/instance/AcademicSummary00>,
+        <https://pesc.org/college-transcript/instance/AwardSummary00>,
+        <https://pesc.org/college-transcript/instance/ProgramSummary00>,
+        <https://pesc.org/college-transcript/instance/SessionSummary00>,
+        <https://pesc.org/college-transcript/instance/SessionSummary01> .
+
+<https://pesc.org/college-transcript/instance/Course03> a ceds:C200328,
+        "ceds:C200328" ;
+    ceds:P000043 "14.0503"^^xsd:string ;
+    ceds:P000057 [ pesc:code ceds:NI000057116841 ;
+            pesc:codeDescription "Semester"^^<xs:string> ] ;
+    ceds:P000058 3.0 ;
+    ceds:P000060 [ pesc:code ceds:NI000060115254 ;
+            pesc:codeDescription "Applicable"^^<xs:string> ] ;
+    ceds:P000066 "CHEM"^^xsd:string ;
+    ceds:P000068 "Into to Psychology"^^xsd:string ;
+    ceds:P000448 "ENG"^^xsd:string ;
+    ceds:P001298 ""^^xsd:string ;
+    ceds:P001303 [ pesc:code ceds:NI001303115213 ;
+            pesc:codeDescription "Advanced Standing"^^<xs:string> ] ;
+    ceds:P001304 [ pesc:code ceds:NI001304116619 ;
+            pesc:codeDescription "Professional"^^<xs:string> ] ;
+    ceds:P001312 [ pesc:code ceds:NI001312127895 ;
+            pesc:codeDescription "Non Academic"^^<xs:string> ] ;
+    ceds:P001314 "1115"^^xsd:string ;
+    ceds:P001420 "115"^^xsd:string ;
+    ceds:P001517 "02058"^^xsd:string ;
+    ceds:P600267 <https://pesc.org/college-transcript/instance/PostsecondarySection00> ;
+    pesc:agencyCourseID "1115"^^xsd:string ;
+    pesc:attribute <https://pesc.org/college-transcript/instance/RAP00> ;
+    pesc:courseOverrideSchool <https://pesc.org/college-transcript/instance/Organization00> ;
+    pesc:licensure <https://pesc.org/college-transcript/instance/Licensure00> ;
+    pesc:overrideSchoolCourseNumber "1145"^^xsd:string ;
+    pesc:proficiency <https://pesc.org/college-transcript/instance/RAP00> ;
+    pesc:requirement <https://pesc.org/college-transcript/instance/RAP00> ;
+    ceterms:offeredBy <https://pesc.org/college-transcript/instance/Organization01> .
+
+<https://pesc.org/college-transcript/instance/Course04> a ceds:C200328,
+        "ceds:C200328" ;
+    ceds:P000043 "14.0502"^^xsd:string ;
+    ceds:P000057 [ pesc:code ceds:NI000057116669 ;
+            pesc:codeDescription "Quarter"^^<xs:string> ] ;
+    ceds:P000058 3.0 ;
+    ceds:P000060 [ pesc:code ceds:NI000060115254 ;
+            pesc:codeDescription "Applicable"^^<xs:string> ] ;
+    ceds:P000066 "CHEM"^^xsd:string ;
+    ceds:P000068 "Intro to Enlgish Literature"^^xsd:string ;
+    ceds:P000448 "ENG"^^xsd:string ;
+    ceds:P001298 ""^^xsd:string ;
+    ceds:P001303 [ pesc:code ceds:NI001303115979 ;
+            pesc:codeDescription "Junior High School Credit"^^<xs:string> ] ;
+    ceds:P001304 [ pesc:code ceds:NI001304117161 ;
+            pesc:codeDescription "Vocational"^^<xs:string> ] ;
+    ceds:P001312 [ pesc:code ceds:NI001312127900 ;
+            pesc:codeDescription "Upper Division"^^<xs:string> ] ;
+    ceds:P001314 "1114"^^xsd:string ;
+    ceds:P001420 "114"^^xsd:string ;
+    ceds:P001517 "02057"^^xsd:string ;
+    ceds:P600267 <https://pesc.org/college-transcript/instance/PostsecondarySection00> ;
+    pesc:agencyCourseID "1114"^^xsd:string ;
+    pesc:attribute <https://pesc.org/college-transcript/instance/RAP00> ;
+    pesc:courseOverrideSchool <https://pesc.org/college-transcript/instance/Organization00> ;
+    pesc:licensure <https://pesc.org/college-transcript/instance/Licensure00> ;
+    pesc:overrideSchoolCourseNumber "1145"^^xsd:string ;
+    pesc:proficiency <https://pesc.org/college-transcript/instance/RAP00> ;
+    pesc:requirement <https://pesc.org/college-transcript/instance/RAP00> ;
+    ceterms:offeredBy <https://pesc.org/college-transcript/instance/Organization01> .
+
+<https://pesc.org/college-transcript/instance/Course05> a ceds:C200328,
+        "ceds:C200328" ;
+    ceds:P000043 "14.0501"^^xsd:string ;
+    ceds:P000057 [ pesc:code ceds:NI000057117114 ;
+            pesc:codeDescription "Units"^^<xs:string> ] ;
+    ceds:P000058 3.0 ;
+    ceds:P000060 [ pesc:code ceds:NI000060116257 ;
+            pesc:codeDescription "Not Applicable"^^<xs:string> ] ;
+    ceds:P000066 "CHEM"^^xsd:string ;
+    ceds:P000068 "Intro to Chemistry"^^xsd:string ;
+    ceds:P000448 "ENG"^^xsd:string ;
+    ceds:P001298 ""^^xsd:string ;
+    ceds:P001303 [ pesc:code ceds:NI001303116736 ;
+            pesc:codeDescription "Remedial"^^<xs:string> ] ;
+    ceds:P001304 [ pesc:code ceds:NI001304116050 ;
+            pesc:codeDescription "Lower Division"^^<xs:string> ] ;
+    ceds:P001312 [ pesc:code ceds:NI001312127896 ;
+            pesc:codeDescription "Regents"^^<xs:string> ] ;
+    ceds:P001314 "1113"^^xsd:string ;
+    ceds:P001420 "113"^^xsd:string ;
+    ceds:P001517 "02056"^^xsd:string ;
+    ceds:P600267 <https://pesc.org/college-transcript/instance/PostsecondarySection00> ;
+    pesc:agencyCourseID "1113"^^xsd:string ;
+    pesc:attribute <https://pesc.org/college-transcript/instance/RAP00> ;
+    pesc:courseOverrideSchool <https://pesc.org/college-transcript/instance/Organization00> ;
+    pesc:licensure <https://pesc.org/college-transcript/instance/Licensure00> ;
+    pesc:overrideSchoolCourseNumber "1145"^^xsd:string ;
+    pesc:proficiency <https://pesc.org/college-transcript/instance/RAP00> ;
+    pesc:requirement <https://pesc.org/college-transcript/instance/RAP00> ;
+    ceterms:offeredBy <https://pesc.org/college-transcript/instance/Organization01> .
+
+<https://pesc.org/college-transcript/instance/Organization02> a ceds:C200239,
+        "ceds:C200239" ;
+    ceds:P600472 <https://pesc.org/college-transcript/instance/Accreditation00> ;
+    ceds:P600502 [ a ceds:C200252,
+                "ceds:C200252" ;
+            ceds:P000826 "001892"^^xsd:token ;
+            ceds:P000827 [ pesc:code pescIdentifierTypes:PSISid ;
+                    pesc:codeDescription "PSISid"^^<xs:string> ] ] ;
+    pesc:schoolLevel [ pesc:code pescSchoolLevels:Other ;
+            pesc:codeDescription "Other"^^<xs:string> ] ;
+    ceterms:name "Purdue University"@en ;
+    ceterms:targetContactPoint <https://pesc.org/college-transcript/instance/Contact02> .
+
+<https://pesc.org/college-transcript/instance/Organization03> a ceds:C200239,
+        "ceds:C200239" ;
+    ceds:P600472 <https://pesc.org/college-transcript/instance/Accreditation00> ;
+    ceds:P600502 [ a ceds:C200252,
+                "ceds:C200252" ;
+            ceds:P000826 "001892"^^xsd:token ;
+            ceds:P000827 [ pesc:code pescIdentifierTypes:PSISid ;
+                    pesc:codeDescription "PSISid"^^<xs:string> ] ] ;
+    pesc:schoolLevel [ pesc:code pescSchoolLevels:HighSchool ;
+            pesc:codeDescription "High School"^^<xs:string> ] ;
+    ceterms:name "University of Iowa"@en ;
+    ceterms:targetContactPoint <https://pesc.org/college-transcript/instance/Contact03> .
+
+<https://pesc.org/college-transcript/instance/Contact00> a ceterms:ContactPoint,
+        "ceterms:ContactPoint" ;
+    pesc:attentionLine "John Student"@en ;
+    pesc:email "j.student@gmail.com"^^xsd:string ;
+    pesc:faxPhone [ a pesc:Phone,
+                "pesc:Phone" ;
+            pesc:countryPrefixCode "1"^^xsd:string ;
+            pesc:phoneNumber "15553143456"^^xsd:string ;
+            pesc:phoneNumberExtension "N/A"^^xsd:string ] ;
+    pesc:phone [ a pesc:Phone,
+                "pesc:Phone" ;
+            pesc:countryPrefixCode "1"^^xsd:string ;
+            pesc:phoneNumber "13142136110"^^xsd:string ;
+            pesc:phoneNumberExtension "N/A"^^xsd:string ] ;
+    pesc:url "N/A"^^xsd:anyURI ;
+    ceterms:address [ a ceterms:PostalAddress,
+                "ceterms:PostalAddress" ;
+            ceterms:addressCountry "US"^^xsd:token ;
+            ceterms:addressLocality "Glendale"@en ;
+            ceterms:addressRegion "MO"^^xsd:token ;
+            ceterms:postalCode "63122"^^xsd:token ;
+            ceterms:streetAddress "48 Austin Pl."@en ] ;
+    ceterms:contactType "John Student"@en .
+
+<https://pesc.org/college-transcript/instance/Contact01> a ceterms:ContactPoint,
+        "ceterms:ContactPoint" ;
+    pesc:attentionLine "Principal"@en ;
+    pesc:email "principal@khs.edu"^^xsd:string ;
+    pesc:faxPhone [ a pesc:Phone,
+                "pesc:Phone" ;
+            pesc:countryPrefixCode "1"^^xsd:string ;
+            pesc:phoneNumber "13193398000"^^xsd:string ;
+            pesc:phoneNumberExtension "N/A"^^xsd:string ] ;
+    pesc:phone [ a pesc:Phone,
+                "pesc:Phone" ;
+            pesc:countryPrefixCode "1"^^xsd:string ;
+            pesc:phoneNumber "17654941777"^^xsd:string ;
+            pesc:phoneNumberExtension "N/A"^^xsd:string ] ;
+    pesc:url "https://www.khs.edu"^^xsd:anyURI ;
+    ceterms:address [ a ceterms:PostalAddress,
+                "ceterms:PostalAddress" ;
+            ceterms:addressCountry "US"^^xsd:token ;
+            ceterms:addressLocality "Kirkwood"@en ;
+            ceterms:addressRegion "MO"^^xsd:token ;
+            ceterms:postalCode "63122"^^xsd:token ;
+            ceterms:streetAddress "800 Dougherty Rd."@en ] ;
+    ceterms:contactType "Principal"@en .
+
+<https://pesc.org/college-transcript/instance/Contact02> a ceterms:ContactPoint,
+        "ceterms:ContactPoint" ;
+    pesc:attentionLine "Registrar"@en ;
+    pesc:email "registrar@coe.edu"^^xsd:string ;
+    pesc:faxPhone [ a pesc:Phone,
+                "pesc:Phone" ;
+            pesc:countryPrefixCode "1"^^xsd:string ;
+            pesc:phoneNumber "13193372324"^^xsd:string ;
+            pesc:phoneNumberExtension "N/A"^^xsd:string ] ;
+    pesc:phone [ a pesc:Phone,
+                "pesc:Phone" ;
+            pesc:countryPrefixCode "1"^^xsd:string ;
+            pesc:phoneNumber "13193372324"^^xsd:string ;
+            pesc:phoneNumberExtension "N/A"^^xsd:string ] ;
+    pesc:url "https://www.coecollege.edu/registrar"^^xsd:anyURI ;
+    ceterms:address [ a ceterms:PostalAddress,
+                "ceterms:PostalAddress" ;
+            ceterms:addressCountry "US"^^xsd:token ;
+            ceterms:addressLocality "Cedar Rapid"@en ;
+            ceterms:addressRegion "IA"^^xsd:token ;
+            ceterms:postalCode "52402"^^xsd:token ;
+            ceterms:streetAddress "1220 First Avenue NW"@en ] ;
+    ceterms:contactType "Registrar"@en .
+
+<https://pesc.org/college-transcript/instance/Contact03> a ceterms:ContactPoint,
+        "ceterms:ContactPoint" ;
+    pesc:attentionLine "Registrar"@en ;
+    pesc:email "registrar@purdue.edu"^^xsd:string ;
+    pesc:faxPhone [ a pesc:Phone,
+                "pesc:Phone" ;
+            pesc:countryPrefixCode "1"^^xsd:string ;
+            pesc:phoneNumber "13193372324"^^xsd:string ;
+            pesc:phoneNumberExtension "N/A"^^xsd:string ] ;
+    pesc:phone [ a pesc:Phone,
+                "pesc:Phone" ;
+            pesc:countryPrefixCode "1"^^xsd:string ;
+            pesc:phoneNumber "13193372324"^^xsd:string ;
+            pesc:phoneNumberExtension "N/A"^^xsd:string ] ;
+    pesc:url "https://pudue.edu/registrar"^^xsd:anyURI ;
+    ceterms:address [ a ceterms:PostalAddress,
+                "ceterms:PostalAddress" ;
+            ceterms:addressCountry "US"^^xsd:token ;
+            ceterms:addressLocality "W. Lafayette"@en ;
+            ceterms:addressRegion "IN"^^xsd:token ;
+            ceterms:postalCode "47907"^^xsd:token ;
+            ceterms:streetAddress "610 Pudue Mall"@en ] ;
+    ceterms:contactType "Registrar"@en .
+
+<https://pesc.org/college-transcript/instance/Contact04> a ceterms:ContactPoint,
+        "ceterms:ContactPoint" ;
+    pesc:attentionLine "Registrar"@en ;
+    pesc:email "registrar@uiowa.edu"^^xsd:string ;
+    pesc:faxPhone [ a pesc:Phone,
+                "pesc:Phone" ;
+            pesc:countryPrefixCode "1"^^xsd:string ;
+            pesc:phoneNumber "13193372324"^^xsd:string ;
+            pesc:phoneNumberExtension "N/A"^^xsd:string ] ;
+    pesc:phone [ a pesc:Phone,
+                "pesc:Phone" ;
+            pesc:countryPrefixCode "1"^^xsd:string ;
+            pesc:phoneNumber "13193372324"^^xsd:string ;
+            pesc:phoneNumberExtension "N/A"^^xsd:string ] ;
+    pesc:url "https://uiowa.edu/registrar"^^xsd:anyURI ;
+    ceterms:address [ a ceterms:PostalAddress,
+                "ceterms:PostalAddress" ;
+            ceterms:addressCountry "US"^^xsd:token ;
+            ceterms:addressLocality "Iowa City"@en ;
+            ceterms:addressRegion "IA"^^xsd:token ;
+            ceterms:postalCode "52242"^^xsd:token ;
+            ceterms:streetAddress "101 Jessup Hall"@en ] ;
+    ceterms:contactType "Registrar"@en .
+
+<https://pesc.org/college-transcript/instance/Course01> a ceds:C200328,
+        "ceds:C200328" ;
+    ceds:P000043 "14.0505"^^xsd:string ;
+    ceds:P000057 [ pesc:code ceds:NI000057116841 ;
+            pesc:codeDescription "Semester"^^<xs:string> ] ;
+    ceds:P000058 3.0 ;
+    ceds:P000060 [ pesc:code ceds:NI000060115254 ;
+            pesc:codeDescription "Applicable"^^<xs:string> ] ;
+    ceds:P000066 "CHEM"^^xsd:string ;
+    ceds:P000068 "Computer Science 1"^^xsd:string ;
+    ceds:P000448 "ENG"^^xsd:string ;
+    ceds:P001298 ""^^xsd:string ;
+    ceds:P001303 [ pesc:code ceds:NI001303115857 ;
+            pesc:codeDescription "High School Credit Only"^^<xs:string> ] ;
+    ceds:P001304 [ pesc:code ceds:NI001304115600 ;
+            pesc:codeDescription "Dual"^^<xs:string> ] ;
+    ceds:P001312 [ pesc:code ceds:NI001312127891 ;
+            pesc:codeDescription "Graduate Professional"^^<xs:string> ] ;
+    ceds:P001314 "1117"^^xsd:string ;
+    ceds:P001420 "117"^^xsd:string ;
+    ceds:P001517 "02060"^^xsd:string ;
+    ceds:P600267 <https://pesc.org/college-transcript/instance/PostsecondarySection00> ;
+    pesc:agencyCourseID "1117"^^xsd:string ;
+    pesc:attribute <https://pesc.org/college-transcript/instance/RAP00> ;
+    pesc:courseOverrideSchool <https://pesc.org/college-transcript/instance/Organization00> ;
+    pesc:licensure <https://pesc.org/college-transcript/instance/Licensure00> ;
+    pesc:overrideSchoolCourseNumber "1145"^^xsd:string ;
+    pesc:proficiency <https://pesc.org/college-transcript/instance/RAP00> ;
+    pesc:requirement <https://pesc.org/college-transcript/instance/RAP00> ;
+    ceterms:offeredBy <https://pesc.org/college-transcript/instance/Organization01> .
+
+<https://pesc.org/college-transcript/instance/Course02> a ceds:C200328,
+        "ceds:C200328" ;
+    ceds:P000043 "14.0504"^^xsd:string ;
+    ceds:P000057 [ pesc:code ceds:NI000057116669 ;
+            pesc:codeDescription "Quarter"^^<xs:string> ] ;
+    ceds:P000058 3.0 ;
+    ceds:P000060 [ pesc:code ceds:NI000060116257 ;
+            pesc:codeDescription "Not Applicable"^^<xs:string> ] ;
+    ceds:P000066 "CHEM"^^xsd:string ;
+    ceds:P000068 "Test and Measurement"^^xsd:string ;
+    ceds:P000448 "ENG"^^xsd:string ;
+    ceds:P001298 ""^^xsd:string ;
+    ceds:P001303 [ pesc:code ceds:NI001303116728 ;
+            pesc:codeDescription "Regular"^^<xs:string> ] ;
+    ceds:P001304 [ pesc:code ceds:NI001304117129 ;
+            pesc:codeDescription "Upper Division"^^<xs:string> ] ;
+    ceds:P001312 [ pesc:code ceds:NI001312127890 ;
+            pesc:codeDescription "Gifted Talented"^^<xs:string> ] ;
+    ceds:P001314 "1116"^^xsd:string ;
+    ceds:P001420 "116"^^xsd:string ;
+    ceds:P001517 "02059"^^xsd:string ;
+    ceds:P600267 <https://pesc.org/college-transcript/instance/PostsecondarySection00> ;
+    pesc:agencyCourseID "1116"^^xsd:string ;
+    pesc:attribute <https://pesc.org/college-transcript/instance/RAP00> ;
+    pesc:courseOverrideSchool <https://pesc.org/college-transcript/instance/Organization00> ;
+    pesc:licensure <https://pesc.org/college-transcript/instance/Licensure00> ;
+    pesc:overrideSchoolCourseNumber "1145"^^xsd:string ;
+    pesc:proficiency <https://pesc.org/college-transcript/instance/RAP00> ;
+    pesc:requirement <https://pesc.org/college-transcript/instance/RAP00> ;
+    ceterms:offeredBy <https://pesc.org/college-transcript/instance/Organization01> .
+
+<https://pesc.org/college-transcript/instance/GPA00> a pesc:GPA,
+        "pesc:GPA" ;
+    ceds:P000057 [ pesc:code ceds:NI000057115440 ;
+            pesc:codeDescription "Clock Hours"^^<xs:string> ] ;
+    pesc:creditHoursAttempted 45.2 ;
+    pesc:creditHoursEarned 45.2 ;
+    pesc:creditHoursForGPA 45.2 ;
+    pesc:gpaRangeMaximum 4.0 ;
+    pesc:gpaRangeMinimum 1.0 ;
+    pesc:gradePointAverage 3.58 ;
+    pesc:totalQualityPoints 29.0 .
+
+<https://pesc.org/college-transcript/instance/Note00> a elm:Note,
+        "elm:Note" ;
+    elm:noteLiteral "note "^^xsd:string .
+
+<https://pesc.org/college-transcript/instance/PostsecondarySectionLocation00> a ceds:C200333,
+        "ceds:C200333" ;
+    ceds:P001309 "West Lafayette IN"^^xsd:string ;
+    ceds:P001310 [ pesc:code ceds:NI001310116965 ;
+            pesc:codeDescription "Study Abroad"^^<xs:string> ] .
+
+<https://pesc.org/college-transcript/instance/Student00> a ceds:C200275,
+        "ceds:C200275" ;
+    ceds:P000033 "2002-10-07"^^xsd:date ;
+    ceds:P600049 [ a ceds:C200291,
+                "ceds:C200291" ;
+            ceds:P001075 [ pesc:code ceds:NI001075173041 ;
+                    pesc:codeDescription "ceds:NI001075173041"^^<xs:string> ] ;
+            ceds:P001572 "1234567"^^xsd:string ] ;
+    ceds:P600052 [ a ceds:C200293,
+                "ceds:C200293" ;
+            ceds:P000316 [ pesc:code ceds:NI000316151876 ;
+                    pesc:codeDescription "First Spokenlanguage"^^<xs:string> ] ;
+            ceds:P000317 "eng"^^xsd:string ;
+            pesc:languageProficiency [ pesc:code pescLanguageProficiencyCodes:Excellent ;
+                    pesc:codeDescription "Excellent"^^<xs:string> ] ] ;
+    ceds:P600101 [ a ceds:C200377,
+                "ceds:C200377" ;
+            ceds:P000115 "FirstName"^^xsd:token ;
+            ceds:P000121 "III"^^xsd:string ;
+            ceds:P000172 "LastName"^^xsd:token ;
+            ceds:P000184 "MIddleName"^^xsd:token ;
+            pesc:nameCode [ pesc:code pescNameCodes:MedicalSchoolApplicationSource ;
+                    pesc:codeDescription "Medical School Application Source"^^<xs:string> ] ] ;
+    ceds:P600336 [ a ceds:C200377,
+                "ceds:C200377" ;
+            ceds:P000115 "FirstName"^^xsd:token ;
+            ceds:P000121 "II"^^xsd:string ;
+            ceds:P000172 "LastName"^^xsd:token ;
+            ceds:P000184 "MIddleName"^^xsd:token ;
+            pesc:nameCode [ pesc:code pescNameCodes:MedicalSchoolApplicationSource ;
+                    pesc:codeDescription "Medical School Application Source"^^<xs:string> ] ] ;
+    pesc:birthCity "Cedar Rapids"^^xsd:string ;
+    pesc:birthCountry ""^^xsd:string ;
+    pesc:birthStateProvinceCode ""^^xsd:string ;
+    pesc:birthday "10-07"^^xsd:gMonthDay ;
+    pesc:deceasedIndicator true ;
+    pesc:genderCode [ pesc:code pescGenderCodes:Male ;
+            pesc:codeDescription "Male"^^<xs:string> ] ;
+    pesc:hasAchievement <https://pesc.org/college-transcript/instance/AcademicAward00>,
+        <https://pesc.org/college-transcript/instance/AcademicSummary00>,
+        <https://pesc.org/college-transcript/instance/AdditionalStudentAchievement00>,
+        <https://pesc.org/college-transcript/instance/CourseAchievement00>,
+        <https://pesc.org/college-transcript/instance/GPA00>,
+        <https://pesc.org/college-transcript/instance/LicensureAchievement00>,
+        <https://pesc.org/college-transcript/instance/ProgramSummary00>,
+        <https://pesc.org/college-transcript/instance/TestScore00> ;
+    pesc:hasResidency [ a pesc:Residency,
+                "pesc:Residency" ;
+            pesc:country "United States"^^xsd:string ;
+            pesc:countryCode "US"^^xsd:string ;
+            pesc:county "Johnson"^^xsd:string ;
+            pesc:countyCode "JSN"^^xsd:string ;
+            pesc:residencyStatusCode [ pesc:code pescResidencyStatusCodes:NonResident ;
+                    pesc:codeDescription "Non Resident"^^<xs:string> ] ;
+            pesc:stateProvince "Iowa"^^xsd:string ;
+            pesc:stateProvinceCode "IA"^^xsd:string ] ;
+    pesc:hasSummary <https://pesc.org/college-transcript/instance/AcademicSummary00>,
+        <https://pesc.org/college-transcript/instance/AwardSummary00>,
+        <https://pesc.org/college-transcript/instance/ProgramSummary00>,
+        <https://pesc.org/college-transcript/instance/SessionSummary00>,
+        <https://pesc.org/college-transcript/instance/SessionSummary01> ;
+    pesc:highSchoolAttended <https://pesc.org/college-transcript/instance/Organization00> ;
+    pesc:studentLevel [ pesc:code pescStudentLevelCodes:GraduateNonDegree ;
+            pesc:codeDescription "Graduate Non Degree"^^<xs:string> ] ;
+    ceterms:targetContactPoint <https://pesc.org/college-transcript/instance/Contact04> .
+
+<https://pesc.org/college-transcript/instance/Test00> a ceds:C200010,
+        "ceds:C200010" ;
+    ceds:P000028 "SAT"^^xsd:string ;
+    ceds:P001067 "SAT"^^xsd:string ;
+    pesc:hasSubtest <https://pesc.org/college-transcript/instance/Subtest00> .
+
+<https://pesc.org/college-transcript/instance/AdditionalStudentAchievement00> a pesc:AdditionalStudentAchievement,
+        "pesc:AdditionalStudentAchievement" ;
+    pesc:attributeAchieved <https://pesc.org/college-transcript/instance/RAP00> ;
+    pesc:conditionsMetCode [ pesc:code pescConditionsMetCodes:Yes ;
+            pesc:codeDescription "Yes"^^<xs:string> ] ;
+    pesc:conditionsMetDate "2025-05-01"^^xsd:date ;
+    pesc:inCourse <https://pesc.org/college-transcript/instance/Course00> ;
+    pesc:languageAchieved [ a ceds:C200293,
+                "ceds:C200293" ;
+            ceds:P000316 [ pesc:code ceds:NI000316151877 ;
+                    pesc:codeDescription "Speaking"^^<xs:string> ] ;
+            ceds:P000317 "eng"^^xsd:string ;
+            pesc:languageProficiency [ pesc:code pescLanguageProficiencyCodes:Poor ;
+                    pesc:codeDescription "Poor"^^<xs:string> ] ] ;
+    pesc:proficiencyAchieved <https://pesc.org/college-transcript/instance/RAP00> ;
+    pesc:requirementAchieved <https://pesc.org/college-transcript/instance/RAP00> .
+
+<https://pesc.org/college-transcript/instance/AwardSummary00> a pesc:AwardSummary,
+        "pesc:AwardSummary" ;
+    pesc:academicHonors [ a pesc:AcademicHonors,
+                "pesc:AcademicHonors" ;
+            pesc:honorsLevel [ pesc:code pescHonorsLevels:FirstHighest ;
+                    pesc:codeDescription "First Highest"^^<xs:string> ] ;
+            pesc:honorsTitle "My Honor"^^xsd:string ] ;
+    pesc:academicSummaryLevel [ pesc:code pescCreditLevels:TechnicalPreparatory ;
+            pesc:codeDescription "Technical Preparatory"^^<xs:string> ] ;
+    pesc:academicSummaryType [ pesc:code pescAcademicSummaryTypes:ConvertedTo ;
+            pesc:codeDescription "Converted To"^^<xs:string> ] ;
+    pesc:gpaSummary [ a pesc:GPA,
+                "pesc:GPA" ;
+            ceds:P000057 [ pesc:code ceds:NI000057116219 ;
+                    pesc:codeDescription "No Credit"^^<xs:string> ] ;
+            pesc:creditHoursAttempted 45.2 ;
+            pesc:creditHoursEarned 45.2 ;
+            pesc:creditHoursForGPA 45.2 ;
+            pesc:gpaRangeMaximum 4.0 ;
+            pesc:gpaRangeMinimum 1.0 ;
+            pesc:gradePointAverage 3.58 ;
+            pesc:totalQualityPoints 29.0 ] ;
+    pesc:isSummaryForAward <https://pesc.org/college-transcript/instance/AcademicAward00> ;
+    pesc:source <https://pesc.org/college-transcript/instance/Organization01> .
+
+<https://pesc.org/college-transcript/instance/Course00> a ceds:C200328,
+        "ceds:C200328" ;
+    ceds:P000043 "14.0506"^^xsd:string ;
+    ceds:P000057 [ pesc:code ceds:NI000057117127 ;
+            pesc:codeDescription "Unreported"^^<xs:string> ] ;
+    ceds:P000058 3.0 ;
+    ceds:P000060 [ pesc:code ceds:NI000060116257 ;
+            pesc:codeDescription "Not Applicable"^^<xs:string> ] ;
+    ceds:P000066 "ENG"^^xsd:string ;
+    ceds:P000068 "Introduction to Geology"^^xsd:string ;
+    ceds:P000448 "ENG"^^xsd:string ;
+    ceds:P001298 ""^^xsd:string ;
+    ceds:P001303 [ pesc:code ceds:NI001303115957 ;
+            pesc:codeDescription "International Baccalaureate"^^<xs:string> ] ;
+    ceds:P001304 [ pesc:code ceds:NI001304117014 ;
+            pesc:codeDescription "Technical Preparatory"^^<xs:string> ] ;
+    ceds:P001312 [ pesc:code ceds:NI001312127886 ;
+            pesc:codeDescription "Basic"^^<xs:string> ] ;
+    ceds:P001314 "1118"^^xsd:string ;
+    ceds:P001420 "118"^^xsd:string ;
+    ceds:P001517 "02061"^^xsd:string ;
+    ceds:P600267 <https://pesc.org/college-transcript/instance/PostsecondarySection00> ;
+    pesc:agencyCourseID "1118"^^xsd:string ;
+    pesc:attribute <https://pesc.org/college-transcript/instance/RAP00> ;
+    pesc:courseOverrideSchool <https://pesc.org/college-transcript/instance/Organization00> ;
+    pesc:licensure <https://pesc.org/college-transcript/instance/Licensure00> ;
+    pesc:overrideSchoolCourseNumber "1145"^^xsd:string ;
+    pesc:proficiency <https://pesc.org/college-transcript/instance/RAP00> ;
+    pesc:requirement <https://pesc.org/college-transcript/instance/RAP00> ;
+    ceterms:offeredBy <https://pesc.org/college-transcript/instance/Organization01> .
+
+<https://pesc.org/college-transcript/instance/CourseAchievement00> a ceds:C200346,
+        "ceds:C200346" ;
+    ceds:P000064 3.0 ;
+    ceds:P000065 [ pesc:code ceds:NI000065116744 ;
+            pesc:codeDescription "Repeat Counted"^^<xs:string> ] ;
+    ceds:P000200 3.0 ;
+    ceds:P001300 "2022-08-03"^^xsd:date ;
+    ceds:P001305 "2022-10-07"^^xsd:date ;
+    pesc:courseEquivalentGrade [ a pesc:Grade,
+                "pesc:Grade" ;
+            ceds:P000053 "A"^^xsd:string ;
+            ceds:P001298 "code 2"^^xsd:string ;
+            ceds:P001299 [ pesc:code ceds:NI001299117195 ;
+                    pesc:codeDescription "Withdrew No Penalty"^^<xs:string> ] ;
+            pesc:supplementalGrade [ a pesc:CourseSupplementalGrade,
+                        "pesc:CourseSupplementalGrade" ;
+                    pesc:courseAcademicSupplementalGradeStatusCode [ pesc:code pescGradeStatusCodes:TransferNoGrade ;
+                            pesc:codeDescription "Transfer No Grade"^^<xs:string> ] ;
+                    pesc:supplementalGradeCode [ pesc:code pescSupplementalGradeCodes:BiCourseGrade ;
+                            pesc:codeDescription "Bi Course Grade"^^<xs:string> ] ;
+                    pesc:supplementalGradeSubSession "001"^^xsd:string ] ] ;
+    pesc:courseGrade [ a pesc:Grade,
+                "pesc:Grade" ;
+            ceds:P000053 "A"^^xsd:string ;
+            ceds:P001298 "code 2"^^xsd:string ;
+            ceds:P001299 [ pesc:code pescGradeStatusCodes:PlanningToTake ;
+                    pesc:codeDescription "Planning To Take"^^<xs:string> ] ;
+            pesc:supplementalGrade [ a pesc:CourseSupplementalGrade,
+                        "pesc:CourseSupplementalGrade" ;
+                    pesc:courseAcademicSupplementalGradeStatusCode [ pesc:code pescGradeStatusCodes:OtherPass ;
+                            pesc:codeDescription "Other Pass"^^<xs:string> ] ;
+                    pesc:supplementalGradeCode [ pesc:code pescSupplementalGradeCodes:ExamGrade ;
+                            pesc:codeDescription "Exam Grade"^^<xs:string> ] ;
+                    pesc:supplementalGradeSubSession "001"^^xsd:string ] ] ;
+    pesc:courseSupplementalGrade [ a pesc:CourseSupplementalGrade,
+                "pesc:CourseSupplementalGrade" ;
+            pesc:courseAcademicSupplementalGradeStatusCode [ pesc:code pescGradeStatusCodes:InProgress ;
+                    pesc:codeDescription "In Progress"^^<xs:string> ] ;
+            pesc:supplementalGradeCode [ pesc:code pescSupplementalGradeCodes:ExamGrade ;
+                    pesc:codeDescription "Exam Grade"^^<xs:string> ] ;
+            pesc:supplementalGradeSubSession "001"^^xsd:string ] ;
+    pesc:inCourse <https://pesc.org/college-transcript/instance/Course00> ;
+    pesc:inSection <https://pesc.org/college-transcript/instance/PostsecondarySection00> ;
+    pesc:inSession <https://pesc.org/college-transcript/instance/AcademicSession00> .
+
+<https://pesc.org/college-transcript/instance/LicensureAchievement00> a pesc:LicensureAchievement,
+        "pesc:LicensureAchievement" ;
+    pesc:inCourse <https://pesc.org/college-transcript/instance/Course01> ;
+    pesc:licensureAchieved <https://pesc.org/college-transcript/instance/Licensure00> ;
+    pesc:licensurePassageDate "2025-05-10"^^xsd:date .
+
+<https://pesc.org/college-transcript/instance/SessionSummary00> a pesc:SessionSummary,
+        "pesc:SessionSummary" ;
+    pesc:academicHonors [ a pesc:AcademicHonors,
+                "pesc:AcademicHonors" ;
+            pesc:honorsLevel [ pesc:code pescHonorsLevels:SecondHighest ;
+                    pesc:codeDescription "Second Highest"^^<xs:string> ] ;
+            pesc:honorsTitle "My Honor"^^xsd:string ] ;
+    pesc:academicSummaryLevel [ pesc:code pescCreditLevels:LowerDivision ;
+            pesc:codeDescription "Lower Division"^^<xs:string> ] ;
+    pesc:academicSummaryType [ pesc:code pescAcademicSummaryTypes:NonDegreeApplicable ;
+            pesc:codeDescription "Non Degree Applicable"^^<xs:string> ] ;
+    pesc:delinquencies [ pesc:code pescDelinquencyCodes:ExclusionAcademic ;
+            pesc:codeDescription "Exclusion Academic"^^<xs:string> ] ;
+    pesc:entryDate "2022-08-30"^^xsd:date ;
+    pesc:exitDate "2022-12-22"^^xsd:date ;
+    pesc:gpaSummary [ a pesc:GPA,
+                "pesc:GPA" ;
+            ceds:P000057 [ pesc:code ceds:NI000057116841 ;
+                    pesc:codeDescription "Semester"^^<xs:string> ] ;
+            pesc:creditHoursAttempted 45.2 ;
+            pesc:creditHoursEarned 45.2 ;
+            pesc:creditHoursForGPA 45.2 ;
+            pesc:gpaRangeMaximum 4.0 ;
+            pesc:gpaRangeMinimum 1.0 ;
+            pesc:gradePointAverage 3.58 ;
+            pesc:totalQualityPoints 29.0 ] ;
+    pesc:isSummaryForSession <https://pesc.org/college-transcript/instance/AcademicSession00> ;
+    pesc:source <https://pesc.org/college-transcript/instance/Organization01> .
+
+<https://pesc.org/college-transcript/instance/SessionSummary01> a pesc:SessionSummary,
+        "pesc:SessionSummary" ;
+    pesc:academicHonors [ a pesc:AcademicHonors,
+                "pesc:AcademicHonors" ;
+            pesc:honorsLevel [ pesc:code pescHonorsLevels:FirstHighest ;
+                    pesc:codeDescription "First Highest"^^<xs:string> ] ;
+            pesc:honorsTitle "My Honor"^^xsd:string ] ;
+    pesc:academicSummaryLevel [ pesc:code pescCreditLevels:Undergraduate ;
+            pesc:codeDescription "Undergraduate"^^<xs:string> ] ;
+    pesc:academicSummaryType [ pesc:code pescAcademicSummaryTypes:ConvertedTo ;
+            pesc:codeDescription "Converted To"^^<xs:string> ] ;
+    pesc:delinquencies [ pesc:code pescDelinquencyCodes:Unknown ;
+            pesc:codeDescription "Unknown"^^<xs:string> ] ;
+    pesc:entryDate "2021-08-31"^^xsd:date ;
+    pesc:exitDate "2021-12-22"^^xsd:date ;
+    pesc:gpaSummary [ a pesc:GPA,
+                "pesc:GPA" ;
+            ceds:P000057 [ pesc:code ceds:NI000057117114 ;
+                    pesc:codeDescription "Units"^^<xs:string> ] ;
+            pesc:creditHoursAttempted 45.2 ;
+            pesc:creditHoursEarned 45.2 ;
+            pesc:creditHoursForGPA 45.2 ;
+            pesc:gpaRangeMaximum 4.0 ;
+            pesc:gpaRangeMinimum 1.0 ;
+            pesc:gradePointAverage 3.58 ;
+            pesc:totalQualityPoints 29.0 ] ;
+    pesc:isSummaryForSession <https://pesc.org/college-transcript/instance/AcademicSession00> ;
+    pesc:source <https://pesc.org/college-transcript/instance/Organization01> .
+
+<https://pesc.org/college-transcript/instance/Subtest00> a ceds:C200051,
+        "ceds:C200051" ;
+    ceds:P000275 "English"^^xsd:string ;
+    ceds:P000367 "English"^^xsd:string .
+
+<https://pesc.org/college-transcript/instance/TestScore00> a ceds:C200047,
+        "ceds:C200047" ;
+    ceds:P000369 [ pesc:code ceds:NI000027162371 ;
+            pesc:codeDescription "ceds:NI000027162371"^^<xs:string> ] ;
+    pesc:inSubtest <https://pesc.org/college-transcript/instance/Subtest00> ;
+    pesc:inTest <https://pesc.org/college-transcript/instance/Test00> ;
+    pesc:scoreInvalidatedIndicator true ;
+    pesc:scoreRevisedIndicator true ;
+    pesc:scoreSelfRportedIndicator true ;
+    pesc:scoreValue "34"^^xsd:string ;
+    pesc:studentLevel [ pesc:code pescStudentLevelCodes:CollegeJunior ;
+            pesc:codeDescription "College Junior"^^<xs:string> ] ;
+    pesc:testDate "2020-03-15"^^xsd:date ;
+    pesc:testYear "2020"^^xsd:gYear ;
+    pesc:testYearMonth "2020-03"^^xsd:gYearMonth .
+
+<https://pesc.org/college-transcript/instance/AcademicAward00> a ceds:C200335,
+        "ceds:C200335" ;
+    ceds:P000001 "2024-03-05"^^xsd:date ;
+    ceds:P000003 "Bachelor of Science"^^xsd:string ;
+    ceds:P001668 [ pesc:code ceds:NI001668151669 ;
+            pesc:codeDescription "ceds:NI001668151669"^^<xs:string> ] ;
+    pesc:academicCompletionDate "2025-03-15"^^xsd:date ;
+    pesc:academicCompletionIndicator true ;
+    pesc:academicDegreeRequirement [ a pesc:AcademicDegreeRequirement,
+                "pesc:AcademicDegreeRequirement" ;
+            pesc:thesisDIssertationTitle "The Effects of Partial Reinforcement in Differential Conditioning"^^xsd:string ;
+            pesc:thesisDissertationAdvisor "John Capaldi"^^xsd:string ;
+            pesc:urlAddress "https://purdue .edu/"^^xsd:anyURI ] ;
+    pesc:academicHonors [ a pesc:AcademicHonors,
+                "pesc:AcademicHonors" ;
+            pesc:honorsLevel [ pesc:code pescHonorsLevels:FirstHighest ;
+                    pesc:codeDescription "First Highest"^^<xs:string> ] ;
+            pesc:honorsTitle "My Honor"^^xsd:string ] ;
+    pesc:inProgram <https://pesc.org/college-transcript/instance/AcademicProgram00> .
+
+<https://pesc.org/college-transcript/instance/AcademicProgram00> a ceds:C200331,
+        "ceds:C200331" ;
+    pesc:academicProgramType [ pesc:code pescAcademicProgramTypes:Focus ;
+            pesc:codeDescription "Focus"^^<xs:string> ] ;
+    pesc:programHEGISCode "402.005"^^xsd:string ;
+    ceterms:hasPart <https://pesc.org/college-transcript/instance/Course02> ;
+    ceterms:name "en-us"@en ;
+    ceterms:offeredBy <https://pesc.org/college-transcript/instance/Organization00> .
+
+<https://pesc.org/college-transcript/instance/AcademicSession00> a ceds:C200245,
+        "ceds:C200245" ;
+    ceds:P000251 "2022-08-15"^^xsd:date ;
+    ceds:P000252 "2025-05"^^xsd:gYearMonth ;
+    ceds:P000253 "2022-12-14"^^xsd:date ;
+    ceds:P000254 [ pesc:code ceds:NI000254116843 ;
+            pesc:codeDescription "Semester"^^<xs:string> ] ;
+    pesc:sessionDesignatorSuffix "Mini Term"^^xsd:string ;
+    pesc:sessionSchoolYear "2022-2023"^^xsd:string ;
+    ceterms:name "Fall-2022"@en .
+
+<https://pesc.org/college-transcript/instance/AcademicSummary00> a pesc:AcademicSummary,
+        "pesc:AcademicSummary" ;
+    elm:additionalNote <https://pesc.org/college-transcript/instance/Note00> ;
+    pesc:academicHonors [ a pesc:AcademicHonors,
+                "pesc:AcademicHonors" ;
+            pesc:honorsLevel [ pesc:code pescHonorsLevels:FirstHighest ;
+                    pesc:codeDescription "First Highest"^^<xs:string> ] ;
+            pesc:honorsTitle "My Honor"^^xsd:string ] ;
+    pesc:academicSummaryLevel [ pesc:code pescCreditLevels:Secondary ;
+            pesc:codeDescription "Secondary"^^<xs:string> ] ;
+    pesc:academicSummaryType [ pesc:code pescAcademicSummaryTypes:UserDefined ;
+            pesc:codeDescription "User Defined"^^<xs:string> ] ;
+    pesc:entryDate "2021-08-25"^^xsd:date ;
+    pesc:exitDate "2025-05-05"^^xsd:date ;
+    pesc:gpaSummary [ a pesc:GPA,
+                "pesc:GPA" ;
+            ceds:P000057 [ pesc:code ceds:NI000057115440 ;
+                    pesc:codeDescription "Clock Hours"^^<xs:string> ] ;
+            pesc:creditHoursAttempted 45.2 ;
+            pesc:creditHoursEarned 45.2 ;
+            pesc:creditHoursForGPA 45.2 ;
+            pesc:gpaRangeMaximum 4.0 ;
+            pesc:gpaRangeMinimum 1.0 ;
+            pesc:gradePointAverage 3.58 ;
+            pesc:totalQualityPoints 29.0 ] ;
+    pesc:isSummaryForProgram <https://pesc.org/college-transcript/instance/AcademicProgram00> ;
+    pesc:source <https://pesc.org/college-transcript/instance/Organization00> .
+
+<https://pesc.org/college-transcript/instance/ProgramSummary00> a pesc:ProgramSummary,
+        "pesc:ProgramSummary" ;
+    pesc:academicHonors [ a pesc:AcademicHonors,
+                "pesc:AcademicHonors" ;
+            pesc:honorsLevel [ pesc:code pescHonorsLevels:SecondHighest ;
+                    pesc:codeDescription "Second Highest"^^<xs:string> ] ;
+            pesc:honorsTitle "My Honor"^^xsd:string ] ;
+    pesc:academicSummaryType [ pesc:code pescAcademicSummaryTypes:DegreeApplicable ;
+            pesc:codeDescription "Degree Applicable"^^<xs:string> ] ;
+    pesc:gpaSummary [ a pesc:GPA,
+                "pesc:GPA" ;
+            ceds:P000057 [ pesc:code ceds:NI000057115440 ;
+                    pesc:codeDescription "Clock Hours"^^<xs:string> ] ;
+            pesc:creditHoursAttempted 45.2 ;
+            pesc:creditHoursEarned 45.2 ;
+            pesc:creditHoursForGPA 45.2 ;
+            pesc:gpaRangeMaximum 4.0 ;
+            pesc:gpaRangeMinimum 1.0 ;
+            pesc:gradePointAverage 3.58 ;
+            pesc:totalQualityPoints 29.0 ] ;
+    pesc:isSummaryForProgram <https://pesc.org/college-transcript/instance/AcademicProgram00> ;
+    pesc:source <https://pesc.org/college-transcript/instance/Organization01> .
+
+<https://pesc.org/college-transcript/instance/Accreditation00> a ceds:C200240,
+        "ceds:C200240" ;
+    ceds:P001526 "Higher Learning Commission"^^xsd:string ;
+    pesc:accreditationBodyCode [ pesc:code pescAccreditationBodyCodes:WASC-ACSCU ;
+            pesc:codeDescription "WASC-ACSCU"^^<xs:string> ] .
+
+<https://pesc.org/college-transcript/instance/Licensure00> a pesc:Licensure,
+        "pesc:Licensure" ;
+    pesc:licensureName "Occupational Therapy Assistant"^^xsd:string .
+
+<https://pesc.org/college-transcript/instance/PostsecondarySection00> a ceds:C200332,
+        "ceds:C200332" ;
+    ceds:P000054 "2024-08-18"^^xsd:date ;
+    ceds:P000059 "2024-12-18"^^xsd:date ;
+    ceds:P001315 "001"^^xsd:string ;
+    ceds:P600108 <https://pesc.org/college-transcript/instance/PostsecondarySectionLocation00> .
+
+<https://pesc.org/college-transcript/instance/Organization00> a ceds:C200239,
+        "ceds:C200239" ;
+    ceds:P600472 <https://pesc.org/college-transcript/instance/Accreditation00> ;
+    ceds:P600502 [ a ceds:C200252,
+                "ceds:C200252" ;
+            ceds:P000826 "001892"^^xsd:token ;
+            ceds:P000827 [ pesc:code pescIdentifierTypes:GEOCode ;
+                    pesc:codeDescription "GEOCode"^^<xs:string> ] ] ;
+    pesc:schoolLevel [ pesc:code pescSchoolLevels:HighSchool ;
+            pesc:codeDescription "High School"^^<xs:string> ] ;
+    ceterms:name "Kirkwood HS"@en ;
+    ceterms:targetContactPoint <https://pesc.org/college-transcript/instance/Contact00> .
+
+<https://pesc.org/college-transcript/instance/Organization01> a ceds:C200239,
+        "ceds:C200239" ;
+    ceds:P600472 <https://pesc.org/college-transcript/instance/Accreditation00> ;
+    ceds:P600502 [ a ceds:C200252,
+                "ceds:C200252" ;
+            ceds:P000826 "001892"^^xsd:token ;
+            ceds:P000827 [ pesc:code pescIdentifierTypes:PSISid ;
+                    pesc:codeDescription "PSISid"^^<xs:string> ] ] ;
+    pesc:schoolLevel [ pesc:code pescSchoolLevels:HighSchool ;
+            pesc:codeDescription "High School"^^<xs:string> ] ;
+    ceterms:name "Coe College"@en ;
+    ceterms:targetContactPoint <https://pesc.org/college-transcript/instance/Contact01> .
+
+<https://pesc.org/college-transcript/instance/RAP00> a ceds:C200065,
+        "ceds:C200065" ;
+    pesc:rapCode "9TX"^^xsd:string ;
+    pesc:rapName "TXDegReq"^^xsd:string ;
+    pesc:rapSubName "UT Austin Writing Component"^^xsd:string .
+
+[] ceds:C200010 <https://pesc.org/college-transcript/instance/Test00> ;
+    ceds:C200047 <https://pesc.org/college-transcript/instance/TestScore00> ;
+    ceds:C200051 <https://pesc.org/college-transcript/instance/Subtest00> ;
+    ceds:C200065 <https://pesc.org/college-transcript/instance/RAP00> ;
+    ceds:C200239 <https://pesc.org/college-transcript/instance/Organization00>,
+        <https://pesc.org/college-transcript/instance/Organization01>,
+        <https://pesc.org/college-transcript/instance/Organization02>,
+        <https://pesc.org/college-transcript/instance/Organization03> ;
+    ceds:C200240 <https://pesc.org/college-transcript/instance/Accreditation00> ;
+    ceds:C200245 <https://pesc.org/college-transcript/instance/AcademicSession00> ;
+    ceds:C200275 <https://pesc.org/college-transcript/instance/Student00> ;
+    ceds:C200328 <https://pesc.org/college-transcript/instance/Course00>,
+        <https://pesc.org/college-transcript/instance/Course01>,
+        <https://pesc.org/college-transcript/instance/Course02>,
+        <https://pesc.org/college-transcript/instance/Course03>,
+        <https://pesc.org/college-transcript/instance/Course04>,
+        <https://pesc.org/college-transcript/instance/Course05> ;
+    ceds:C200331 <https://pesc.org/college-transcript/instance/AcademicProgram00> ;
+    ceds:C200332 <https://pesc.org/college-transcript/instance/PostsecondarySection00> ;
+    ceds:C200333 <https://pesc.org/college-transcript/instance/PostsecondarySectionLocation00> ;
+    ceds:C200335 <https://pesc.org/college-transcript/instance/AcademicAward00> ;
+    ceds:C200346 <https://pesc.org/college-transcript/instance/CourseAchievement00> ;
+    elm:Note <https://pesc.org/college-transcript/instance/Note00> ;
+    pesc:AcademicSummary <https://pesc.org/college-transcript/instance/AcademicSummary00> ;
+    pesc:AdditionalStudentAchievement <https://pesc.org/college-transcript/instance/AdditionalStudentAchievement00> ;
+    pesc:AwardSummary <https://pesc.org/college-transcript/instance/AwardSummary00> ;
+    pesc:CollegeTranscript <https://pesc.org/college-transcript/instance/CollegeTranscript00> ;
+    pesc:GPA <https://pesc.org/college-transcript/instance/GPA00> ;
+    pesc:Licensure <https://pesc.org/college-transcript/instance/Licensure00> ;
+    pesc:LicensureAchievement <https://pesc.org/college-transcript/instance/LicensureAchievement00> ;
+    pesc:ProgramSummary <https://pesc.org/college-transcript/instance/ProgramSummary00> ;
+    pesc:SessionSummary <https://pesc.org/college-transcript/instance/SessionSummary00>,
+        <https://pesc.org/college-transcript/instance/SessionSummary01> ;
+    ceterms:ContactPoint <https://pesc.org/college-transcript/instance/Contact00>,
+        <https://pesc.org/college-transcript/instance/Contact01>,
+        <https://pesc.org/college-transcript/instance/Contact02>,
+        <https://pesc.org/college-transcript/instance/Contact03>,
+        <https://pesc.org/college-transcript/instance/Contact04> .
+

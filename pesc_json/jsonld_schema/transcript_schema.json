@@ -1,0 +1,2829 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pesc.org/transcript/schema",
+  "$vocabulary": {
+    "https://json-schema.org/draft/2020-12/vocab/format-assertion": true,
+    "https://json-schema.org/draft/2020-12/vocab/core": true
+  },
+  "anyOf": [
+    {
+      "$ref": "https://json-schema.org/draft/2020-12/meta/format-assertion"
+    },
+    {
+      "$ref": "https://json-schema.org/draft/2020-12/meta/core"
+    }
+  ],
+  "type": "object",
+  "description": "schema",
+  "properties": {
+    "@context": {
+      "type": "array"
+    },
+    "CollegeTranscript": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/CollegeTranscriptType"
+      }
+    },
+    "Note": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/NoteType"
+      }
+    },
+    "AwardSummary": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/AwardSummaryType"
+      }
+    },
+    "ProgramSummary": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/ProgramSummaryType"
+      }
+    },
+    "SessionSummary": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/SessionSummaryType"
+      }
+    },
+    "AcademicSummary": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/AcademicSummaryType"
+      }
+    },
+    "GPA": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/GPAType"
+      }
+    },
+    "Student": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/StudentType"
+      }
+    },
+    "AcademicAward": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/AcademicAwardType"
+      }
+    },
+    "AdditionalStudentAchievement": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/AdditionalStudentAchievementType"
+      }
+    },
+    "CourseAchievement": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/CourseAchievementType"
+      }
+    },
+    "LicensureAchievement": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/LicensureAchievementType"
+      }
+    },
+    "TestScore": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/TestScoreType"
+      }
+    },
+    "AcademicProgram": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/AcademicProgramType"
+      }
+    },
+    "AcademicSession": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/AcademicSessionType"
+      }
+    },
+    "Course": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/CourseType"
+      }
+    },
+    "PostsecondarySectionLocation": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/PostsecondarySectionLocationType"
+      }
+    },
+    "PostsecondarySection": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/PostsecondarySectionType"
+      }
+    },
+    "Test": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/TestType"
+      }
+    },
+    "RAP": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/RAPType"
+      }
+    },
+    "Licensure": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/LicensureType"
+      }
+    },
+    "Subtest": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/SubtestType"
+      }
+    },
+    "Accreditation": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/AccreditationType"
+      }
+    },
+    "Organization": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/OrganizationType"
+      }
+    },
+    "Contact": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/ContactType"
+      }
+    }
+  },
+  "required": [
+    "CollegeTranscript",
+    "Organization",
+    "AwardSummary",
+    "AcademicAward",
+    "ProgramSummary",
+    "AcademicProgram",
+    "SessionSummary",
+    "AcademicSession",
+    "AdditionalStudentAchievement",
+    "Course",
+    "CourseAchievement",
+    "LicensureAchievement",
+    "TestScore",
+    "Subtest",
+    "PostsecondarySection",
+    "PostsecondarySectionLocation"
+  ],
+  "$defs": {
+    "CollegeTranscriptType": {
+      "description": "CollegeTranscript from class undefined",
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "type": "string"
+        },
+        "hasPart": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "additionalNote": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "createdDateTime": {
+          "$ref": "#/$defs/DateTime"
+        },
+        "describesAchievement": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "destination": {
+          "type": "string"
+        },
+        "documentCompleteCode": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "enum": [
+                "pescDocumentCompleteCodes:Partial",
+                "pescDocumentCompleteCodes:Complete"
+              ]
+            },
+            "codeDescription": {
+              "type": "string"
+            }
+          }
+        },
+        "documentID": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 35
+        },
+        "documentOfficialCode": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "enum": [
+                "pescDocumentOfficialCodes:Official",
+                "pescDocumentOfficialCodes:Unofficial"
+              ]
+            },
+            "codeDescription": {
+              "type": "string"
+            }
+          }
+        },
+        "documentProcessCode": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "enum": [
+                "pescDocumentProcessCodes:TEST",
+                "pescDocumentProcessCodes:PRODUCTION"
+              ]
+            },
+            "codeDescription": {
+              "type": "string"
+            }
+          }
+        },
+        "documentTypeCode": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "enum": [
+                "pescDocumentTypeCodes:Cancel",
+                "pescDocumentTypeCodes:Change",
+                "pescDocumentTypeCodes:InstitutionRequest",
+                "pescDocumentTypeCodes:RequestedRecord",
+                "pescDocumentTypeCodes:Response",
+                "pescDocumentTypeCodes:StudentRequest",
+                "pescDocumentTypeCodes:TermEnroll",
+                "pescDocumentTypeCodes:TermGrade",
+                "pescDocumentTypeCodes:ThirdPartyRequest"
+              ]
+            },
+            "codeDescription": {
+              "type": "string"
+            }
+          }
+        },
+        "requestTrackingID": {
+          "type": "string",
+          "maxLength": 35
+        },
+        "source": {
+          "type": "string"
+        },
+        "student": {
+          "type": "string"
+        },
+        "transmissionType": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "enum": [
+                "pescTransmissionTypes:Original",
+                "pescTransmissionTypes:Replace",
+                "pescTransmissionTypes:Duplicate",
+                "pescTransmissionTypes:Resubmission",
+                "pescTransmissionTypes:Reissue",
+                "pescTransmissionTypes:MutuallyDefined"
+              ]
+            },
+            "codeDescription": {
+              "type": "string"
+            }
+          }
+        },
+        "rdf:type": {
+          "type": "string",
+          "const": "pesc:CollegeTranscript"
+        }
+      },
+      "required": [
+        "createdDateTime",
+        "destination",
+        "documentID",
+        "documentTypeCode",
+        "source",
+        "student",
+        "transmissionType"
+      ]
+    },
+    "NoteType": {
+      "description": "Note from class undefined",
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "type": "string"
+        },
+        "noteLiteral": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "rdf:type": {
+          "type": "string",
+          "const": "elm:Note"
+        }
+      },
+      "required": [
+        "noteLiteral"
+      ]
+    },
+    "AwardSummaryType": {
+      "description": "AwardSummary from class undefined",
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "type": "string"
+        },
+        "additionalNote": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "academicHonors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/AcademicHonorsType"
+          }
+        },
+        "academicSummaryLevel": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "enum": [
+                "pescCreditLevels:Dual",
+                "pescCreditLevels:DualGraduate",
+                "pescCreditLevels:Undergraduate",
+                "pescCreditLevels:Grade13",
+                "pescCreditLevels:Ungraded",
+                "pescCreditLevels:DualHighSchoolCollege",
+                "pescCreditLevels:Graduate",
+                "pescCreditLevels:GraduateProfessional",
+                "pescCreditLevels:LowerDivision",
+                "pescCreditLevels:Professional",
+                "pescCreditLevels:Secondary",
+                "pescCreditLevels:TechnicalPreparatory",
+                "pescCreditLevels:Undergraduate",
+                "pescCreditLevels:UpperDivision",
+                "pescCreditLevels:Vocational"
+              ]
+            },
+            "codeDescription": {
+              "type": "string"
+            }
+          }
+        },
+        "academicSummaryType": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "enum": [
+                "pescAcademicSummaryTypes:All",
+                "pescAcademicSummaryTypes:SenderOnly",
+                "pescAcademicSummaryTypes:TransferOnly",
+                "pescAcademicSummaryTypes:AllNotRepeated",
+                "pescAcademicSummaryTypes:SenderNotRepeated",
+                "pescAcademicSummaryTypes:TransferNotRepeated",
+                "pescAcademicSummaryTypes:AcademicRenewal",
+                "pescAcademicSummaryTypes:CarryoverCredit",
+                "pescAcademicSummaryTypes:DegreeApplicable",
+                "pescAcademicSummaryTypes:NonDegreeApplicable",
+                "pescAcademicSummaryTypes:ConvertedFrom",
+                "pescAcademicSummaryTypes:ConvertedTo",
+                "pescAcademicSummaryTypes:UserDefined",
+                "pescAcademicSummaryTypes:Weighted",
+                "pescAcademicSummaryTypes:NonWeighted",
+                "pescAcademicSummaryTypes:Cumulative"
+              ]
+            },
+            "codeDescription": {
+              "type": "string"
+            }
+          }
+        },
+        "gpaSummary": {
+          "$ref": "#/$defs/GPAType"
+        },
+        "isSummaryForAward": {
+          "type": "string"
+        },
+        "isSummaryForProgram": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        },
+        "rdf:type": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "const": "pesc:AwardSummary"
+          }
+        }
+      },
+      "required": [
+        "isSummaryForAward",
+        "rdf:type"
+      ]
+    },
+    "ProgramSummaryType": {
+      "description": "ProgramSummary from class undefined",
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "type": "string"
+        },
+        "additionalNote": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "academicHonors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/AcademicHonorsType"
+          }
+        },
+        "academicSummaryLevel": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "enum": [
+                "pescCreditLevels:Dual",
+                "pescCreditLevels:DualGraduateUndergraduate",
+                "pescCreditLevels:Grade13",
+                "pescCreditLevels:Ungraded",
+                "pescCreditLevels:DualHighSchoolCollege",
+                "pescCreditLevels:Graduate",
+                "pescCreditLevels:GraduateProfessional",
+                "pescCreditLevels:LowerDivision",
+                "pescCreditLevels:Professional",
+                "pescCreditLevels:Secondary",
+                "pescCreditLevels:TechnicalPreparatory",
+                "pescCreditLevels:Undergraduate",
+                "pescCreditLevels:UpperDivision",
+                "pescCreditLevels:Vocational"
+              ]
+            },
+            "codeDescription": {
+              "type": "string"
+            }
+          }
+        },
+        "academicSummaryType": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "enum": [
+                "pescAcademicSummaryTypes:All",
+                "pescAcademicSummaryTypes:SenderOnly",
+                "pescAcademicSummaryTypes:TransferOnly",
+                "pescAcademicSummaryTypes:AllNotRepeated",
+                "pescAcademicSummaryTypes:SenderNotRepeated",
+                "pescAcademicSummaryTypes:TransferNotRepeated",
+                "pescAcademicSummaryTypes:AcademicRenewal",
+                "pescAcademicSummaryTypes:CarryoverCredit",
+                "pescAcademicSummaryTypes:DegreeApplicable",
+                "pescAcademicSummaryTypes:NonDegreeApplicable",
+                "pescAcademicSummaryTypes:ConvertedFrom",
+                "pescAcademicSummaryTypes:ConvertedTo",
+                "pescAcademicSummaryTypes:UserDefined",
+                "pescAcademicSummaryTypes:Weighted",
+                "pescAcademicSummaryTypes:NonWeighted",
+                "pescAcademicSummaryTypes:Cumulative"
+              ]
+            },
+            "codeDescription": {
+              "type": "string"
+            }
+          }
+        },
+        "delinquencies": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string",
+                "enum": [
+                  "pescDelinquencyCodes:ExclusionAcademic",
+                  "pescDelinquencyCodes:ExclusionDiscipline",
+                  "pescDelinquencyCodes:GoodStanding",
+                  "pescDelinquencyCodes:ProbationGPA",
+                  "pescDelinquencyCodes:ProbationHours",
+                  "pescDelinquencyCodes:SuspensionGPA",
+                  "pescDelinquencyCodes:SuspensionHours",
+                  "pescDelinquencyCodes:ProbationDiscipline",
+                  "pescDelinquencyCodes:SuspensionDiscipline",
+                  "pescDelinquencyCodes:Unknown",
+                  "pescDelinquencyCodes:Other"
+                ]
+              },
+              "codeDescription": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "exitDate": {
+          "$ref": "#/$defs/Date"
+        },
+        "gpaSummary": {
+          "$ref": "#/$defs/GPAType"
+        },
+        "isSummaryForProgram": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        },
+        "rdf:type": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "const": "pesc:ProgramSummary"
+          }
+        }
+      },
+      "required": [
+        "isSummaryForProgram",
+        "rdf:type"
+      ]
+    },
+    "SessionSummaryType": {
+      "description": "SessionSummary from class undefined",
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "type": "string"
+        },
+        "additionalNote": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "academicHonors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/AcademicHonorsType"
+          }
+        },
+        "academicSummaryLevel": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "enum": [
+                "pescCreditLevels:Dual",
+                "pescCreditLevels:DualGraduate",
+                "pescCreditLevels:Undergraduate",
+                "pescCreditLevels:Grade13",
+                "pescCreditLevels:Ungraded",
+                "pescCreditLevels:DualHighSchoolCollege",
+                "pescCreditLevels:Graduate",
+                "pescCreditLevels:GraduateProfessional",
+                "pescCreditLevels:LowerDivision",
+                "pescCreditLevels:Professional",
+                "pescCreditLevels:Secondary",
+                "pescCreditLevels:TechnicalPreparatory",
+                "pescCreditLevels:Undergraduate",
+                "pescCreditLevels:UpperDivision",
+                "pescCreditLevels:Vocational"
+              ]
+            },
+            "codeDescription": {
+              "type": "string"
+            }
+          }
+        },
+        "academicSummaryType": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "enum": [
+                "pescAcademicSummaryTypes:All",
+                "pescAcademicSummaryTypes:SenderOnly",
+                "pescAcademicSummaryTypes:TransferOnly",
+                "pescAcademicSummaryTypes:AllNotRepeated",
+                "pescAcademicSummaryTypes:SenderNotRepeated",
+                "pescAcademicSummaryTypes:TransferNotRepeated",
+                "pescAcademicSummaryTypes:AcademicRenewal",
+                "pescAcademicSummaryTypes:CarryoverCredit",
+                "pescAcademicSummaryTypes:DegreeApplicable",
+                "pescAcademicSummaryTypes:NonDegreeApplicable",
+                "pescAcademicSummaryTypes:ConvertedFrom",
+                "pescAcademicSummaryTypes:ConvertedTo",
+                "pescAcademicSummaryTypes:UserDefined",
+                "pescAcademicSummaryTypes:Weighted",
+                "pescAcademicSummaryTypes:NonWeighted",
+                "pescAcademicSummaryTypes:Cumulative"
+              ]
+            },
+            "codeDescription": {
+              "type": "string"
+            }
+          }
+        },
+        "delinquencies": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string",
+                "enum": [
+                  "pescDelinquencyCodes:ExclusionAcademic",
+                  "pescDelinquencyCodes:ExclusionDiscipline",
+                  "pescDelinquencyCodes:GoodStanding",
+                  "pescDelinquencyCodes:ProbationGPA",
+                  "pescDelinquencyCodes:ProbationHours",
+                  "pescDelinquencyCodes:SuspensionGPA",
+                  "pescDelinquencyCodes:SuspensionHours",
+                  "pescDelinquencyCodes:ProbationDiscipline",
+                  "pescDelinquencyCodes:SuspensionDiscipline",
+                  "pescDelinquencyCodes:Unknown",
+                  "pescDelinquencyCodes:Other"
+                ]
+              },
+              "codeDescription": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "entryDate": {
+          "$ref": "#/$defs/Date"
+        },
+        "exitDate": {
+          "$ref": "#/$defs/Date"
+        },
+        "gpaSummary": {
+          "$ref": "#/$defs/GPAType"
+        },
+        "isSummaryForProgram": {
+          "type": "string"
+        },
+        "isSummaryForSession": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        },
+        "rdf:type": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "const": "pesc:SessionSummary"
+          }
+        }
+      },
+      "required": [
+        "isSummaryForSession",
+        "rdf:type"
+      ]
+    },
+    "AcademicSummaryType": {
+      "description": "AcademicSummary from class undefined",
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "type": "string"
+        },
+        "additionalNote": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "academicHonors": {
+          "$ref": "#/$defs/AcademicHonorsType"
+        },
+        "academicSummaryLevel": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "enum": [
+                "pescCreditLevels:Dual",
+                "pescCreditLevels:DualGraduate",
+                "pescCreditLevels:Undergraduate",
+                "pescCreditLevels:Grade13",
+                "pescCreditLevels:Ungraded",
+                "pescCreditLevels:DualHighSchoolCollege",
+                "pescCreditLevels:Graduate",
+                "pescCreditLevels:GraduateProfessional",
+                "pescCreditLevels:LowerDivision",
+                "pescCreditLevels:Professional",
+                "pescCreditLevels:Secondary",
+                "pescCreditLevels:TechnicalPreparatory",
+                "pescCreditLevels:Undergraduate",
+                "pescCreditLevels:UpperDivision",
+                "pescCreditLevels:Vocational"
+              ]
+            },
+            "codeDescription": {
+              "type": "string"
+            }
+          }
+        },
+        "academicSummaryType": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "enum": [
+                "pescAcademicSummaryTypes:All",
+                "pescAcademicSummaryTypes:SenderOnly",
+                "pescAcademicSummaryTypes:TransferOnly",
+                "pescAcademicSummaryTypes:AllNotRepeated",
+                "pescAcademicSummaryTypes:SenderNotRepeated",
+                "pescAcademicSummaryTypes:TransferNotRepeated",
+                "pescAcademicSummaryTypes:AcademicRenewal",
+                "pescAcademicSummaryTypes:CarryoverCredit",
+                "pescAcademicSummaryTypes:DegreeApplicable",
+                "pescAcademicSummaryTypes:NonDegreeApplicable",
+                "pescAcademicSummaryTypes:ConvertedFrom",
+                "pescAcademicSummaryTypes:ConvertedTo",
+                "pescAcademicSummaryTypes:UserDefined",
+                "pescAcademicSummaryTypes:Weighted",
+                "pescAcademicSummaryTypes:NonWeighted",
+                "pescAcademicSummaryTypes:Cumulative"
+              ]
+            },
+            "codeDescription": {
+              "type": "string"
+            }
+          }
+        },
+        "delinquencies": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string",
+                "enum": [
+                  "pescDelinquencyCodes:ExclusionAcademic",
+                  "pescDelinquencyCodes:ExclusionDiscipline",
+                  "pescDelinquencyCodes:GoodStanding",
+                  "pescDelinquencyCodes:ProbationGPA",
+                  "pescDelinquencyCodes:ProbationHours",
+                  "pescDelinquencyCodes:SuspensionGPA",
+                  "pescDelinquencyCodes:SuspensionHours",
+                  "pescDelinquencyCodes:ProbationDiscipline",
+                  "pescDelinquencyCodes:SuspensionDiscipline",
+                  "pescDelinquencyCodes:Unknown",
+                  "pescDelinquencyCodes:Other"
+                ]
+              },
+              "codeDescription": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "entryDate": {
+          "$ref": "#/$defs/Date"
+        },
+        "exitDate": {
+          "$ref": "#/$defs/Date"
+        },
+        "gpaSummary": {
+          "$ref": "#/$defs/GPAType"
+        },
+        "isSummaryForProgram": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        },
+        "rdf:type": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "const": "pesc:AcademicSummary"
+          }
+        }
+      },
+      "required": [
+        "rdf:type"
+      ]
+    },
+    "GPAType": {
+      "description": "GPA from class undefined",
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string"
+        },
+        "creditHoursAttempted": {
+          "type": "number"
+        },
+        "creditHoursEarned": {
+          "type": "number"
+        },
+        "creditHoursForGPA": {
+          "type": "number"
+        },
+        "hasCourseCreditUnits": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "enum": [
+                "ceds:NI000057116219",
+                "ceds:NI000057116669",
+                "ceds:NI000057116841",
+                "ceds:NI000057117114",
+                "ceds:NI000057115440",
+                "ceds:NI000057115402",
+                "ceds:NI000057115492",
+                "ceds:NI000057117127",
+                "ceds:NI000057116368"
+              ]
+            },
+            "codeDescription": {
+              "type": "string"
+            }
+          }
+        },
+        "gpaRangeMaximum": {
+          "type": "number"
+        },
+        "gpaRangeMinimum": {
+          "type": "number"
+        },
+        "gradePointAverage": {
+          "type": "number"
+        },
+        "totalQualityPoints": {
+          "type": "number"
+        },
+        "rdf:type": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "const": "pesc:GPA"
+          }
+        }
+      },
+      "required": [
+        "rdf:type"
+      ]
+    },
+    "StudentType": {
+      "description": "Student from class undefined",
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "type": "string"
+        },
+        "hasSummary": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "birthDate": {
+          "$ref": "#/$defs/Date"
+        },
+        "hasPersonIdentifier": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/PersonIdentifierType"
+          }
+        },
+        "hasPersonLanguage": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/LanguageType"
+          }
+        },
+        "hasOtherPersonName": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/PersonNameType"
+          }
+        },
+        "hasPersonName": {
+          "$ref": "#/$defs/PersonNameType"
+        },
+        "targetContactPoint": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "additionalNote": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "birthCity": {
+          "type": "string",
+          "maxLength": 25
+        },
+        "birthCountry": {
+          "type": "string"
+        },
+        "birthday": {
+          "$ref": "#/$defs/MonthDay"
+        },
+        "birthStateProvinceCode": {
+          "type": "string"
+        },
+        "birthYear": {
+          "$ref": "#/$defs/Year"
+        },
+        "cohortGraduationYear": {
+          "$ref": "#/$defs/Year"
+        },
+        "deceasedIndicator": {
+          "type": "boolean"
+        },
+        "genderCode": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "enum": [
+                "pescGenderCodes:Female",
+                "pescGenderCodes:Male",
+                "pescGenderCodes:Unreported"
+              ]
+            },
+            "codeDescription": {
+              "type": "string"
+            }
+          }
+        },
+        "hasAchievement": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "hasResidency": {
+          "$ref": "#/$defs/ResidencyType"
+        },
+        "studentLevel": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "enum": [
+                "pescStudentLevelCodes:Postsecondary",
+                "pescStudentLevelCodes:PostsecondaryBachelorPreliminaryYear",
+                "pescStudentLevelCodes:NonDegree",
+                "pescStudentLevelCodes:Grade13",
+                "pescStudentLevelCodes:Ungraded",
+                "pescStudentLevelCodes:CollegeFirstYear",
+                "pescStudentLevelCodes:CollegeFirstYearAttendedBefore",
+                "pescStudentLevelCodes:CollegeSophomore",
+                "pescStudentLevelCodes:CollegeJunior",
+                "pescStudentLevelCodes:CollegeSenior",
+                "pescStudentLevelCodes:CollegeFifthYear",
+                "pescStudentLevelCodes:PostBaccalaureate",
+                "pescStudentLevelCodes:GraduateNonDegree",
+                "pescStudentLevelCodes:GraduateFirstYear",
+                "pescStudentLevelCodes:GraduateSecondYear",
+                "pescStudentLevelCodes:GraduateThirdYear",
+                "pescStudentLevelCodes:GraduateBeyondThirdYear",
+                "pescStudentLevelCodes:Professional",
+                "pescStudentLevelCodes:ProfessionalFirstYear",
+                "pescStudentLevelCodes:ProfessionalSecondYear",
+                "pescStudentLevelCodes:ProfessionalThirdYear",
+                "pescStudentLevelCodes:ProfessionalBeyondThirdYear",
+                "pescStudentLevelCodes:MastersQualifying",
+                "pescStudentLevelCodes:Masters",
+                "pescStudentLevelCodes:Doctoral",
+                "pescStudentLevelCodes:Postdoctoral"
+              ]
+            },
+            "codeDescription": {
+              "type": "string"
+            }
+          }
+        },
+        "highSchoolAttended": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "rdf:type": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "const": "ceds:C200275"
+          }
+        }
+      },
+      "required": [
+        "hasPersonName",
+        "rdf:type"
+      ]
+    },
+    "AcademicHonorsType": {
+      "description": "AcademicHonors from class undefined",
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string"
+        },
+        "honorsLevel": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "enum": [
+                "pescHonorsLevels:FirstHighest",
+                "pescHonorsLevels:SecondHighest",
+                "pescHonorsLevels:ThirdHighest"
+              ]
+            },
+            "codeDescription": {
+              "type": "string"
+            }
+          }
+        },
+        "honorsTitle": {
+          "type": "string",
+          "maxLength": 30
+        },
+        "rdf:type": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "const": "pesc:AcademicHonors"
+          }
+        }
+      },
+      "required": [
+        "rdf:type"
+      ]
+    },
+    "AcademicAwardType": {
+      "description": "AcademicAward from class undefined",
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "type": "string"
+        },
+        "academicAwardDate": {
+          "$ref": "#/$defs/Date"
+        },
+        "academicAwardTitle": {
+          "type": "string",
+          "maxLength": 400
+        },
+        "academicAwardLevelType": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "enum": [
+                "ceds:NI001668151655",
+                "ceds:NI001668151657",
+                "ceds:NI001668151658",
+                "ceds:NI001668151659",
+                "ceds:NI001668151660",
+                "ceds:NI001668151661",
+                "ceds:NI001668151662",
+                "ceds:NI001668151663",
+                "ceds:NI001668151664",
+                "ceds:NI001668151665",
+                "ceds:NI001668151666",
+                "ceds:NI001668151667",
+                "ceds:NI001668151668",
+                "ceds:NI001668151669",
+                "ceds:NI001668151670",
+                "ceds:NI001668151671",
+                "ceds:NI001668151687",
+                "ceds:NI001668151686"
+              ]
+            },
+            "codeDescription": {
+              "type": "string"
+            }
+          }
+        },
+        "academicCompletionDate": {
+          "$ref": "#/$defs/Date"
+        },
+        "academicCompletionIndicator": {
+          "type": "boolean"
+        },
+        "academicDegreeRequirement": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/AcademicDegreeRequirementType"
+          }
+        },
+        "academicHonors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/AcademicHonorsType"
+          }
+        },
+        "inProgram": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "rdf:type": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "const": "ceds:C200335"
+          }
+        }
+      },
+      "required": [
+        "inProgram",
+        "rdf:type"
+      ]
+    },
+    "AcademicDegreeRequirementType": {
+      "description": "AcademicDegreeRequirement from class undefined",
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string"
+        },
+        "thesisDissertationAdvisor": {
+          "type": "string",
+          "maxLength": 45
+        },
+        "thesisDIssertationTitle": {
+          "type": "string",
+          "maxLength": 400
+        },
+        "urlAddress": {
+          "type": "string",
+          "maxLength": 512
+        },
+        "rdf:type": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "const": "pesc:AcademicDegreeRequirement"
+          }
+        }
+      },
+      "required": [
+        "rdf:type"
+      ]
+    },
+    "AdditionalStudentAchievementType": {
+      "description": "AdditionalStudentAchievement from class undefined",
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "type": "string"
+        },
+        "attributeAchieved": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "conditionsMetCode": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string",
+                "enum": [
+                  "pescConditionsMetCodes:Yes",
+                  "pescConditionsMetCodes:No",
+                  "pescConditionsMetCodes:Conditional",
+                  "pescConditionsMetCodes:MutuallyDefined"
+                ]
+              },
+              "codeDescription": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "conditionsMetDate": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Date"
+          }
+        },
+        "inCourse": {
+          "type": "string"
+        },
+        "languageAchieved": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/LanguageType"
+          }
+        },
+        "proficiencyAchieved": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "requirementAchieved": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "rdf:type": {
+          "type": "string",
+          "const": "pesc:AdditionalStudentAchievement"
+        }
+      },
+      "required": [
+        "inCourse",
+        "rdf:type"
+      ]
+    },
+    "CourseAchievementType": {
+      "description": "CourseAchievement from class undefined",
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "type": "string"
+        },
+        "courseQualityPointsEarned": {
+          "type": "number"
+        },
+        "hasCourseRepeatCode": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "enum": [
+                "ceds:NI000065116744",
+                "ceds:NI000065116745",
+                "ceds:NI000065116748",
+                "ceds:NI000065116747",
+                "ceds:NI000065116746",
+                "ceds:NI000065116260"
+              ]
+            },
+            "codeDescription": {
+              "type": "string"
+            }
+          }
+        },
+        "numberofCreditsEarned": {
+          "type": "number"
+        },
+        "courseAddDate": {
+          "$ref": "#/$defs/Date"
+        },
+        "courseDropDate": {
+          "$ref": "#/$defs/Date"
+        },
+        "courseEquivalentGrade": {
+          "$ref": "#/$defs/GradeType"
+        },
+        "courseGrade": {
+          "$ref": "#/$defs/GradeType"
+        },
+        "courseSupplementalGrade": {
+          "$ref": "#/$defs/CourseSupplementalGradeType"
+        },
+        "inCourse": {
+          "type": "string"
+        },
+        "inSection": {
+          "type": "string"
+        },
+        "inSession": {
+          "type": "string"
+        },
+        "rdf:type": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "const": "ceds:C200346"
+          }
+        }
+      },
+      "required": [
+        "inCourse",
+        "inSession",
+        "rdf:type"
+      ]
+    },
+    "CourseSupplementalGradeType": {
+      "description": "CourseSupplementalGrade from class undefined",
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string"
+        },
+        "courseAcademicSupplementalGradeStatusCode": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "enum": [
+                "pescGradeStatusCodes:AuditedCourse",
+                "pescGradeStatusCodes:HonorsGrade",
+                "pescGradeStatusCodes:Incomplete",
+                "pescGradeStatusCodes:IncompleteNotResolvedFail",
+                "pescGradeStatusCodes:InProgress",
+                "pescGradeStatusCodes:NotYetReported",
+                "pescGradeStatusCodes:OtherFail",
+                "pescGradeStatusCodes:OtherPass",
+                "pescGradeStatusCodes:PassFailFail",
+                "pescGradeStatusCodes:PassFailPass",
+                "pescGradeStatusCodes:TransferNoGrade",
+                "pescGradeStatusCodes:Withdrew",
+                "pescGradeStatusCodes:WithdrewFailing",
+                "pescGradeStatusCodes:WithdrewNoPenalty",
+                "pescGradeStatusCodes:WithdrewPassing"
+              ]
+            },
+            "codeDescription": {
+              "type": "string"
+            }
+          }
+        },
+        "supplementalGradeCode": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "enum": [
+                "pescSupplementalGradeCodes:BiCourseGrade",
+                "pescSupplementalGradeCodes:BlendedFinalGrade",
+                "pescSupplementalGradeCodes:ExamGrade",
+                "pescSupplementalGradeCodes:InstructorAssignedGrade",
+                "pescSupplementalGradeCodes:SubSessionGrade",
+                "pescSupplementalGradeCodes:TriCourseGrade"
+              ]
+            },
+            "codeDescription": {
+              "type": "string"
+            }
+          }
+        },
+        "supplementalGradeSubSession": {
+          "type": "string",
+          "maxLength": 3
+        },
+        "rdf:type": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "const": "pesc:CourseSupplementalGrade"
+          }
+        }
+      },
+      "required": [
+        "rdf:type"
+      ]
+    },
+    "GradeType": {
+      "description": "Grade from class undefined",
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string"
+        },
+        "courseAcademicGrade": {
+          "type": "string",
+          "maxLength": 10
+        },
+        "courseAcademicGradeScaleCode": {
+          "type": "string"
+        },
+        "hasCourseAcademicGradeStatusCode": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "enum": [
+                "pescGradeStatusCodes:Completed",
+                "pescGradeStatusCodes:PlanningToTake",
+                "ceds:NI001299115324",
+                "ceds:NI001299115877",
+                "ceds:NI001299115916",
+                "ceds:NI001299115918",
+                "ceds:NI001299115931",
+                "ceds:NI001299116290",
+                "ceds:NI001299116438",
+                "ceds:NI001299116457",
+                "ceds:NI001299116507",
+                "ceds:NI001299116508",
+                "ceds:NI001299117075",
+                "ceds:NI001299117192",
+                "ceds:NI001299117194",
+                "ceds:NI001299117195",
+                "ceds:NI001299117196"
+              ]
+            },
+            "codeDescription": {
+              "type": "string"
+            }
+          }
+        },
+        "supplementalGrade": {
+          "$ref": "#/$defs/CourseSupplementalGradeType"
+        },
+        "rdf:type": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "const": "pesc:Grade"
+          }
+        }
+      },
+      "required": [
+        "rdf:type"
+      ]
+    },
+    "LicensureAchievementType": {
+      "description": "LicensureAchievement from class undefined",
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "type": "string"
+        },
+        "inCourse": {
+          "type": "string"
+        },
+        "licensureAchieved": {
+          "type": "string"
+        },
+        "licensurePassageDate": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Date"
+          }
+        },
+        "rdf:type": {
+          "type": "string",
+          "const": "pesc:LicensureAchievement"
+        }
+      },
+      "required": [
+        "inCourse",
+        "licensureAchieved",
+        "rdf:type"
+      ]
+    },
+    "TestScoreType": {
+      "description": "TestScore from class undefined",
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "type": "string"
+        },
+        "assessmentScoreMetricType": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "enum": [
+                "ceds:NI000027162378",
+                "ceds:NI000027162361",
+                "ceds:NI000027162379",
+                "ceds:NI000027162377",
+                "ceds:NI000027162366",
+                "ceds:NI000027162380",
+                "ceds:NI000027162371",
+                "ceds:NI000027162367",
+                "ceds:NI000027162355",
+                "pescTestScoreMethods:Equated",
+                "pescTestScoreMethods:Percent"
+              ]
+            },
+            "codeDescription": {
+              "type": "string"
+            }
+          }
+        },
+        "inSubtest": {
+          "type": "string"
+        },
+        "inTest": {
+          "type": "string"
+        },
+        "scoreInvalidatedIndicator": {
+          "type": "boolean"
+        },
+        "scoreRevisedIndicator": {
+          "type": "boolean"
+        },
+        "scoreSelfRportedIndicator": {
+          "type": "boolean"
+        },
+        "scoreValue": {
+          "type": "string",
+          "maxLength": 80
+        },
+        "studentLevel": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "enum": [
+                "pescStudentLevelCodes:Postsecondary",
+                "pescStudentLevelCodes:PostsecondaryBachelorPreliminaryYear",
+                "pescStudentLevelCodes:NonDegree",
+                "pescStudentLevelCodes:Grade13",
+                "pescStudentLevelCodes:Ungraded",
+                "pescStudentLevelCodes:CollegeFirstYear",
+                "pescStudentLevelCodes:CollegeFirstYearAttendedBefore",
+                "pescStudentLevelCodes:CollegeSophomore",
+                "pescStudentLevelCodes:CollegeJunior",
+                "pescStudentLevelCodes:CollegeSenior",
+                "pescStudentLevelCodes:CollegeFifthYear",
+                "pescStudentLevelCodes:PostBaccalaureate",
+                "pescStudentLevelCodes:GraduateNonDegree",
+                "pescStudentLevelCodes:GraduateFirstYear",
+                "pescStudentLevelCodes:GraduateSecondYear",
+                "pescStudentLevelCodes:GraduateThirdYear",
+                "pescStudentLevelCodes:GraduateBeyondThirdYear",
+                "pescStudentLevelCodes:Professional",
+                "pescStudentLevelCodes:ProfessionalFirstYear",
+                "pescStudentLevelCodes:ProfessionalSecondYear",
+                "pescStudentLevelCodes:ProfessionalThirdYear",
+                "pescStudentLevelCodes:ProfessionalBeyondThirdYear",
+                "pescStudentLevelCodes:MastersQualifying",
+                "pescStudentLevelCodes:Masters",
+                "pescStudentLevelCodes:Doctoral",
+                "pescStudentLevelCodes:Postdoctoral"
+              ]
+            },
+            "codeDescription": {
+              "type": "string"
+            }
+          }
+        },
+        "testDate": {
+          "$ref": "#/$defs/Date"
+        },
+        "testYear": {
+          "$ref": "#/$defs/Year"
+        },
+        "testYearMonth": {
+          "$ref": "#/$defs/YearMonth"
+        },
+        "rdf:type": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "const": "ceds:C200047"
+          }
+        }
+      },
+      "required": [
+        "inSubtest",
+        "scoreValue",
+        "rdf:type"
+      ]
+    },
+    "AcademicProgramType": {
+      "description": "AcademicProgram from class undefined",
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "type": "string"
+        },
+        "rdf:type": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "const": "ceds:C200331"
+          }
+        },
+        "hasPart": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "offeredBy": {
+          "type": "string"
+        },
+        "hasClassificationofInstructionalProgramCode": {
+          "type": "string",
+          "pattern": "^\\d{2}\\.\\d{4}$"
+        },
+        "programHEGISCode": {
+          "type": "string",
+          "minLength": 6,
+          "maxLength": 20
+        },
+        "academicProgramType": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "enum": [
+                "pescAcademicProgramTypes:Concentration",
+                "pescAcademicProgramTypes:Focus",
+                "pescAcademicProgramTypes:Major",
+                "pescAcademicProgramTypes:Minor",
+                "pescAcademicProgramTypes:SecondMajor",
+                "pescAcademicProgramTypes:Specialization"
+              ]
+            },
+            "codeDescription": {
+              "type": "string"
+            }
+          }
+        },
+        "name": {
+          "$ref": "#/$defs/LanguageString"
+        }
+      },
+      "required": [
+        "rdf:type",
+        "offeredBy"
+      ]
+    },
+    "AcademicSessionType": {
+      "description": "AcademicSession from class undefined",
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "type": "string"
+        },
+        "rdf:type": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "const": "ceds:C200245"
+          }
+        },
+        "sessionDesignator": {
+          "$ref": "#/$defs/YearMonth"
+        },
+        "sessionDesignatorSuffix": {
+          "type": "string",
+          "maxLength": 10
+        },
+        "name": {
+          "$ref": "#/$defs/LanguageString"
+        },
+        "hasSessionType": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "enum": [
+                "ceds:NI000254115787",
+                "ceds:NI000254116843",
+                "ceds:NI000254117085",
+                "ceds:NI000254116671",
+                "ceds:NI000254116676",
+                "ceds:NI000254116125",
+                "ceds:NI000254116976",
+                "ceds:NI000254115964",
+                "ceds:NI000254116047",
+                "pescSessionTypes:FallSession",
+                "pescSessionTypes:FourOneFourPlan",
+                "pescSessionTypes:Continuous",
+                "pescSessionTypes:DiffersByProgram",
+                "pescSessionTypes:Other",
+                "ceds:NI000254117090"
+              ]
+            },
+            "codeDescription": {
+              "type": "string"
+            }
+          }
+        },
+        "sessionSchoolYear": {
+          "type": "string",
+          "pattern": "\\d{4}-\\d{4}"
+        },
+        "sessionBeginDate": {
+          "$ref": "#/$defs/Date"
+        },
+        "sessionEndDate": {
+          "$ref": "#/$defs/Date"
+        }
+      },
+      "required": [
+        "rdf:type",
+        "sessionDesignator"
+      ]
+    },
+    "CourseType": {
+      "description": "Course from class undefined",
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "type": "string"
+        },
+        "rdf:type": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "const": "ceds:C200328"
+          }
+        },
+        "hasCourseCreditBasisType": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "enum": [
+                "ceds:NI001303116728",
+                "ceds:NI001303115164",
+                "ceds:NI001303115209",
+                "ceds:NI001303115213",
+                "ceds:NI001303115491",
+                "ceds:NI001303115507",
+                "ceds:NI001303115675",
+                "ceds:NI001303115664",
+                "ceds:NI001303115957",
+                "pescCreditBasis:LifeExperience",
+                "ceds:NI001303116120",
+                "ceds:NI001303116736",
+                "ceds:NI001303115519",
+                "ceds:NI001303115860",
+                "ceds:NI001303115857",
+                "ceds:NI001303115859",
+                "ceds:NI001303115979",
+                "ceds:NI001303116065",
+                "ceds:NI001303115203"
+              ]
+            },
+            "codeDescription": {
+              "type": "string"
+            }
+          }
+        },
+        "offeredBy": {
+          "type": "string"
+        },
+        "hasCourseCreditUnits": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "enum": [
+                "ceds:NI000057116219",
+                "ceds:NI000057116669",
+                "ceds:NI000057116841",
+                "ceds:NI000057117114",
+                "ceds:NI000057115440",
+                "ceds:NI000057115402",
+                "ceds:NI000057115492",
+                "ceds:NI000057117127",
+                "ceds:NI000057116368"
+              ]
+            },
+            "codeDescription": {
+              "type": "string"
+            }
+          }
+        },
+        "hasCourseCreditLevelType": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "enum": [
+                "ceds:NI001304117105",
+                "ceds:NI001304116050",
+                "ceds:NI001304117129",
+                "ceds:NI001304117161",
+                "ceds:NI001304117014",
+                "ceds:NI001304115808",
+                "ceds:NI001304116619",
+                "ceds:NI001304115600",
+                "ceds:NI001304115810",
+                "pescCreditLevels:Grade13",
+                "pescCreditLevels:DualGraduateUndergraduate"
+              ]
+            },
+            "codeDescription": {
+              "type": "string"
+            }
+          }
+        },
+        "courseCreditValue": {
+          "type": "number"
+        },
+        "courseAcademicGradeScaleCode": {
+          "type": "string"
+        },
+        "hasClassificationofInstructionalProgramCode": {
+          "type": "string",
+          "pattern": "^\\d{2}\\.\\d{4}$"
+        },
+        "courseFiveDigitSCEDCode": {
+          "type": "string",
+          "pattern": "^[\\dPKG]{5}$"
+        },
+        "hasCourseLevelType": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "enum": [
+                "ceds:NI001312127883",
+                "ceds:NI001312127884",
+                "ceds:NI001312127885",
+                "ceds:NI001312127886",
+                "ceds:NI001312127893",
+                "ceds:NI001312127887",
+                "ceds:NI001312127888",
+                "ceds:NI001312127889",
+                "ceds:NI001312127890",
+                "ceds:NI001312127891",
+                "ceds:NI001312127892",
+                "ceds:NI001312127894",
+                "ceds:NI001312127895",
+                "ceds:NI001312127896",
+                "ceds:NI001312127897",
+                "ceds:NI001312127898",
+                "ceds:NI001312127899",
+                "ceds:NI001312127900",
+                "ceds:NI001312127901"
+              ]
+            },
+            "codeDescription": {
+              "type": "string"
+            }
+          }
+        },
+        "hasCourseGradePointAverageApplicability": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "enum": [
+                "ceds:NI000060115254",
+                "ceds:NI000060116257",
+                "ceds:NI000060117182"
+              ]
+            },
+            "codeDescription": {
+              "type": "string"
+            }
+          }
+        },
+        "courseSubjectAbbreviation": {
+          "type": "string",
+          "maxLength": 10
+        },
+        "courseNumber": {
+          "type": "string",
+          "maxLength": 15
+        },
+        "originalCourseIdentifier": {
+          "type": "string",
+          "maxLength": 30
+        },
+        "agencyCourseID": {
+          "type": "string",
+          "maxLength": 30
+        },
+        "courseTitle": {
+          "type": "string",
+          "maxLength": 60
+        },
+        "courseOverrideSchool": {
+          "type": "string"
+        },
+        "overrideSchoolCourseNumber": {
+          "type": "string",
+          "maxLength": 35
+        },
+        "requirement": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "attribute": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "proficiency": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "licensure": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "hasPostsecondarySection": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "hasInstructionLanguage": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 3
+        }
+      },
+      "required": [
+        "rdf:type",
+        "hasCourseCreditBasisType",
+        "offeredBy"
+      ]
+    },
+    "PostsecondarySectionLocationType": {
+      "description": "PostsecondarySectionLocation from class undefined",
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "type": "string"
+        },
+        "rdf:type": {
+          "type": "string",
+          "const": "ceds:C200333"
+        },
+        "hasCourseInstructionSiteType": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "enum": [
+                "ceds:NI001310116323",
+                "ceds:NI001310116309",
+                "ceds:NI001310115690",
+                "ceds:NI001310116965",
+                "ceds:NI001310115501",
+                "ceds:NI001310116118",
+                "ceds:NI001310117017",
+                "ceds:NI001310115328",
+                "ceds:NI001310115439"
+              ]
+            },
+            "codeDescription": {
+              "type": "string"
+            }
+          }
+        },
+        "courseInstructionSiteName": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "rdf:type"
+      ]
+    },
+    "PostsecondarySectionType": {
+      "description": "PostsecondarySection from class undefined",
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "type": "string"
+        },
+        "courseSectionNumber": {
+          "type": "string",
+          "maxLength": 10
+        },
+        "rdf:type": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "const": "ceds:C200332"
+          }
+        },
+        "hasPostsecondarySectionLocation": {
+          "type": "string"
+        },
+        "courseBeginDate": {
+          "$ref": "#/$defs/Date"
+        },
+        "courseEndDate": {
+          "$ref": "#/$defs/Date"
+        }
+      },
+      "required": [
+        "rdf:type",
+        "hasPostsecondarySectionLocation"
+      ]
+    },
+    "TestType": {
+      "description": "Test from class undefined",
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "type": "string"
+        },
+        "rdf:type": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "const": "ceds:C200010"
+          }
+        },
+        "assessmentIdentifier": {
+          "type": "string"
+        },
+        "assessmentTitle": {
+          "type": "string"
+        },
+        "hasSubtest": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "rdf:type",
+        "assessmentIdentifier"
+      ]
+    },
+    "RAPType": {
+      "description": "RAP from class undefined",
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "type": "string"
+        },
+        "rapCode": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 3
+          }
+        },
+        "rapName": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 60
+          }
+        },
+        "rapSubName": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 60
+          }
+        },
+        "rdf:type": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "const": "ceds:C200065"
+          }
+        }
+      },
+      "required": [
+        "rdf:type"
+      ]
+    },
+    "LicensureType": {
+      "description": "Licensure from class undefined",
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "type": "string"
+        },
+        "rdf:type": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "const": "pesc:Licensure"
+          }
+        },
+        "licensureName": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 60
+          }
+        }
+      },
+      "required": [
+        "rdf:type"
+      ]
+    },
+    "SubtestType": {
+      "description": "Subtest from class undefined",
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "type": "string"
+        },
+        "rdf:type": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "const": "ceds:C200051"
+          }
+        },
+        "subtestIdentifier": {
+          "type": "string"
+        },
+        "subtestTitle": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "rdf:type",
+        "subtestIdentifier"
+      ]
+    },
+    "PersonNameType": {
+      "description": "PersonName from class undefined",
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string",
+          "maxLength": 35
+        },
+        "nameSuffix": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string",
+          "maxLength": 35
+        },
+        "middleName": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 35
+          }
+        },
+        "namePrefix": {
+          "type": "string",
+          "maxLength": 30
+        },
+        "compositeName": {
+          "type": "string",
+          "maxLength": 45
+        },
+        "nameCode": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "enum": [
+                "pescNameCodes:Casual",
+                "pescNameCodes:Formal",
+                "pescNameCodes:Former",
+                "pescNameCodes:LawSchoolApplicationSource",
+                "pescNameCodes:Legal",
+                "pescNameCodes:MedicalSchoolApplicationSource",
+                "pescNameCodes:Nickname",
+                "pescNameCodes:Other"
+              ]
+            },
+            "codeDescription": {
+              "type": "string"
+            }
+          }
+        },
+        "rdf:type": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "const": "ceds:C200377"
+          }
+        }
+      },
+      "required": [
+        "rdf:type"
+      ]
+    },
+    "LanguageType": {
+      "description": "Language from class undefined",
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string"
+        },
+        "languageUsage": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string",
+                "enum": [
+                  "ceds:NI000316151876",
+                  "ceds:NI000316151874",
+                  "pescLanguageUsageCodes:Reading",
+                  "ceds:NI000316151877",
+                  "ceds:NI000316151875",
+                  "pescLanguageUsageCodes:Writing",
+                  "ceds:NI000316151878"
+                ]
+              },
+              "codeDescription": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "hasISO669-2LanguageCode": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 3
+        },
+        "languageProficiency": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "enum": [
+                "pescLanguageProficiencyCodes:EnglishOnly",
+                "pescLanguageProficiencyCodes:FullyEnglishProficient",
+                "pescLanguageProficiencyCodes:LimitedEnglishProficiency",
+                "pescLanguageProficiencyCodes:NonEnglishSpeaking",
+                "pescLanguageProficiencyCodes:RedesignatedFluentEnglishProficient",
+                "pescLanguageProficiencyCodes:Excellent",
+                "pescLanguageProficiencyCodes:Good",
+                "pescLanguageProficiencyCodes:Fair",
+                "pescLanguageProficiencyCodes:Poor",
+                "pescLanguageProficiencyCodes:Unacceptable",
+                "pescLanguageProficiencyCodes:Unknown"
+              ]
+            },
+            "codeDescription": {
+              "type": "string"
+            }
+          }
+        },
+        "rdf:type": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "const": "ceds:C200293"
+          }
+        }
+      },
+      "required": [
+        "rdf:type"
+      ]
+    },
+    "PersonIdentifierType": {
+      "description": "PersonIdentifier from class undefined",
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string"
+        },
+        "hasStudentIdentificationSystem": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "enum": [
+                "ceds:NI001075173041",
+                "ceds:NI001075173046",
+                "ceds:NI001075173047",
+                "ceds:NI001075173048"
+              ]
+            },
+            "codeDescription": {
+              "type": "string"
+            }
+          }
+        },
+        "personIdentifier": {
+          "type": "string"
+        },
+        "rdf:type": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "const": "ceds:C200291"
+          }
+        }
+      },
+      "required": [
+        "hasStudentIdentificationSystem",
+        "personIdentifier",
+        "rdf:type"
+      ]
+    },
+    "ResidencyType": {
+      "description": "Residency from class undefined",
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string",
+          "maxLength": 30
+        },
+        "countryCode": {
+          "type": "string"
+        },
+        "county": {
+          "type": "string",
+          "maxLength": 30
+        },
+        "countyCode": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 3
+        },
+        "residencyStatusCode": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "enum": [
+                "pescResidencyStatusCodes:InCity",
+                "pescResidencyStatusCodes:InCounty",
+                "pescResidencyStatusCodes:InDistrict",
+                "pescResidencyStatusCodes:InState",
+                "pescResidencyStatusCodes:NonResident",
+                "pescResidencyStatusCodes:NotReported",
+                "pescResidencyStatusCodes:OtherResident",
+                "pescResidencyStatusCodes:Resident"
+              ]
+            },
+            "codeDescription": {
+              "type": "string"
+            }
+          }
+        },
+        "stateProvince": {
+          "type": "string",
+          "maxLength": 30
+        },
+        "stateProvinceCode": {
+          "type": "string"
+        },
+        "rdf:type": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "const": "pesc:Residency"
+          }
+        }
+      },
+      "required": [
+        "rdf:type"
+      ]
+    },
+    "OrganizationIdentifierType": {
+      "description": "OrganizationIdentifier from class undefined",
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string"
+        },
+        "organizationIdentifier": {
+          "type": "string"
+        },
+        "hasOrganizationIdentificationSystem": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "enum": [
+                "ceds:NI000827151968",
+                "pescIdentifierTypes:OPEid",
+                "pescIdentifierTypes:PSISid",
+                "pescIdentifierTypes:GEOCode",
+                "pescIdentifierTypes:ACT",
+                "pescIdentifierTypes:MutuallyDefined"
+              ]
+            },
+            "codeDescription": {
+              "type": "string"
+            }
+          }
+        },
+        "rdf:type": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "const": "ceds:C200252"
+          }
+        }
+      },
+      "required": [
+        "organizationIdentifier",
+        "hasOrganizationIdentificationSystem",
+        "rdf:type"
+      ]
+    },
+    "AccreditationType": {
+      "description": "Accreditation from class undefined",
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "type": "string"
+        },
+        "accreditationAgencyName": {
+          "type": "string",
+          "maxLength": 80
+        },
+        "additionalNote": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "accreditationBodyCode": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "enum": [
+                "pescAccreditationBodyCodes:MSA",
+                "pescAccreditationBodyCodes:NCA-HLC",
+                "pescAccreditationBodyCodes:NCA-CASI",
+                "pescAccreditationBodyCodes:NEASC-CIHE",
+                "pescAccreditationBodyCodes:NEASC-CTCI",
+                "pescAccreditationBodyCodes:NWCCU",
+                "pescAccreditationBodyCodes:SACS",
+                "pescAccreditationBodyCodes:WASC-ACCJC",
+                "pescAccreditationBodyCodes:WASC-ACSCU",
+                "pescAccreditationBodyCodes:Other"
+              ]
+            },
+            "codeDescription": {
+              "type": "string"
+            }
+          }
+        },
+        "rdf:type": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "const": "ceds:C200240"
+          }
+        }
+      },
+      "required": [
+        "rdf:type"
+      ]
+    },
+    "OrganizationType": {
+      "description": "Organization from class undefined",
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "type": "string"
+        },
+        "hasOrganizationAccreditation": {
+          "type": "string"
+        },
+        "hasOrganizationIdentification": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/OrganizationIdentifierType"
+          }
+        },
+        "name": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/LanguageString"
+          }
+        },
+        "targetContactPoint": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "additionalNote": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "schoolLevel": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "enum": [
+                "pescSchoolLevels:Elementary",
+                "pescSchoolLevels:HighSchool",
+                "pescSchoolLevels:JuniorHigh",
+                "pescSchoolLevels:Middle",
+                "pescSchoolLevels:Other",
+                "pescSchoolLevels:Postsecondary",
+                "pescSchoolLevels:Secondary"
+              ]
+            },
+            "codeDescription": {
+              "type": "string"
+            }
+          }
+        },
+        "rdf:type": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "const": "ceds:C200239"
+          }
+        }
+      },
+      "required": [
+        "rdf:type"
+      ]
+    },
+    "ContactType": {
+      "description": "Contact from class undefined",
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "type": "string"
+        },
+        "address": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/PostalAddressType"
+          }
+        },
+        "contactType": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/LanguageString"
+          }
+        },
+        "additionalNote": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "attentionLine": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/LanguageString"
+          }
+        },
+        "email": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "faxPhone": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/PhoneType"
+          }
+        },
+        "phone": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/PhoneType"
+          }
+        },
+        "url": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "rdf:type": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "const": "ceterms:ContactPoint"
+          }
+        }
+      },
+      "required": [
+        "rdf:type"
+      ]
+    },
+    "PostalAddressType": {
+      "description": "PostalAddress from class undefined",
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string"
+        },
+        "addressCountry": {
+          "type": "string"
+        },
+        "addressLocality": {
+          "$ref": "#/$defs/LanguageString"
+        },
+        "addressRegion": {
+          "type": "string"
+        },
+        "postalCode": {
+          "type": "string"
+        },
+        "streetAddress": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/LanguageString"
+          }
+        },
+        "rdf:type": {
+          "type": "string",
+          "const": "ceterms:PostalAddress"
+        }
+      },
+      "required": [
+        "addressCountry",
+        "addressLocality",
+        "addressRegion",
+        "streetAddress",
+        "rdf:type"
+      ]
+    },
+    "PhoneType": {
+      "description": "Phone from class undefined",
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string"
+        },
+        "countryPrefixCode": {
+          "type": "string",
+          "maxLength": 3
+        },
+        "phoneNumber": {
+          "type": "string",
+          "maxLength": 11
+        },
+        "phoneNumberExtension": {
+          "type": "string",
+          "maxLength": 5
+        },
+        "rdf:type": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "const": "pesc:Phone"
+          }
+        }
+      },
+      "required": [
+        "phoneNumber",
+        "rdf:type"
+      ]
+    },
+    "Date": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-((01|03|05|07|08|10|12)-(0[1-9]|[12][0-9]|3[01])|(04|06|09|11)-(0[1-9]|[12][0-9]|3[01])|02-[0-9])$"
+    },
+    "Year": {
+      "type": "string",
+      "pattern": "^[0-9]{4}$"
+    },
+    "MonthDay": {
+      "type": "string",
+      "pattern": "^((01|03|05|07|08|10|12)-(0[1-9]|[12][0-9]|3[01])|(04|06|09|11)-(0[1-9]|[12][0-9]|3[01])|02-[0-9])$"
+    },
+    "DateTime": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-((01|03|05|07|08|10|12)-(0[1-9]|[12][0-9]|3[01])|(04|06|09|11)-(0[1-9]|[12][0-9]|3[01])|02-[0-9])T(0[1-9]|1[0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](Z|[+-]([0-1][0-9]|2[0-3]):[0-5][0-9])$"
+    },
+    "YearMonth": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])$"
+    },
+    "LanguageString": {
+      "type": "object",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@languge": {
+          "type": "string",
+          "maxLength": 2,
+          "minLength": 2
+        }
+      }
+    }
+  }
+}
