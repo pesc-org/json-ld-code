@@ -67,9 +67,9 @@ pesc:SessionShape
         sh:datatype xsd:date ;
 
     ]  .
-pesc:StudentCourseShape
+pesc:StudentGradeShape
     a sh:NodeShape ;
-    sh:targetClass pesc:StudentCourse ;
+    sh:targetClass pesc:StudentGrade ;
     sh:property [
         sh:path pesc:student ;
         sh:minCount 1 ;

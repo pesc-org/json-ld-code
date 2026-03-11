@@ -24,8 +24,8 @@
   },
   "@graph": [
     {
-      "@id": "uiCourses:CS-360",
       "@type": "Course",
+      "@id": "uiCourses:CS-360",
       "courseCreditBasis": "Regular",
       "courseCreditUnits": "Semester",
       "courseCreditLevel": "LowerDivision",
@@ -40,12 +40,12 @@
       "courseInstructionMethodType": "Lecture"
     },
     {
-      "@id": "uiCourses:CS-370",
       "@type": "Course",
+      "@id": "uiCourses:CS-370",
       "courseCreditBasis": "Regular",
       "courseCreditUnits": "Semester",
       "courseCreditLevel": "LowerDivision",
-      "courseCreditValue": 5.0,
+      "courseCreditValue": 4.25,
       "courseAcademicGradeScaleCode": "25",
       "courseCIPCode": "11.0103",
       "courseLevel": "LowerDivision",
@@ -59,7 +59,7 @@
       "@type": "Session",
       "@id": "uiSessions:FALL20-21",
       "startDate": "2021-08-16",
-      "endDate": "2021-12-22"
+      "endDate": "2021-02-27"
     },
     {
       "@type": "Session",
@@ -81,13 +81,14 @@
       "@id": "uiStudent:20-15674634/CS-360",
       "student": "uiStudents:20-15674634",
       "course": "uiCourses:CS-360",
-      "grade":"C",
+      "grade":"D",
       "numericGrade": 80,
       "session": "uiSessions:SPRING21-22"
     },
     {
       "@type": "Student",
-      "@id": "uiStudents:20-15674634"
+      "@id": "uiStudents:20-15674634",
+      "studentName": "LastName, FirstName M"
     }
-]
+  ]
 }

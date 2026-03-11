@@ -23,9 +23,9 @@
     }
   },
   "@type": "StudentCourse",
-  "@contains": {
-    "@type": "Course",
-    "@type": "Session"
-    "@type": "Student"
-  }
+  "grade": "D",
+  "@requireAll": "true",
+  "student": {"@type": "Student"},
+  "session": {"@type": "Session"},
+  "course": {"@type": "Course"}
 }

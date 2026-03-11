@@ -2,82 +2,54 @@
   "@context": [
     "file://../jsonld_context/transcript_context.json-ld",
     {
-      "@base": "https://example.edu/instance/"
+      "@base": "https://pesc.org/college-transcript/instance/"
     }
   ],
   "CollegeTranscript": [
     {
-      "@id": "CollegeTranscript00",
+      "@id": "CollegeTranscript000",
       "@type": "pesc:CollegeTranscript",
       "hasPart": [
-        "AcademicSummary00",
-        "AwardSummary00",
-        "ProgramSummary00",
-        "SessionSummary00",
-        "SessionSummary01"
+        "AcademicSummary000",
+        "AwardSummary000",
+        "ProgramSummary000",
+        "SessionSummary000",
+        "SessionSummary001"
       ],
       "createdDateTime": "2024-08-02T08:00:00Z",
       "describesAchievement": [
-        "AdditionalStudentAchievement00",
-        "AcademicAward00",
-        "CourseAchievement00",
-        "LicensureAchievement00",
-        "TestScore00"
+        "AdditionalStudentAchievement000",
+        "AcademicAward000",
+        "CourseAchievement000",
+        "LicensureAchievement000",
+        "TestScore000"
       ],
-      "destination": "Organization00",
-      "documentCompleteCode": {
-        "code": "pescDocumentCompleteCodes:Partial",
-        "codeDescription": "Partial"
-      },
+      "destination": "Organization000",
+      "documentCompleteCode": "pescDocumentCompleteCodes:Partial",
       "documentID": "12345",
-      "documentOfficialCode": {
-        "code": "pescDocumentOfficialCodes:Official",
-        "codeDescription": "Official"
-      },
-      "documentProcessCode": {
-        "code": "pescDocumentProcessCodes:TEST",
-        "codeDescription": "TEST"
-      },
-      "documentTypeCode": {
-        "code": "pescDocumentTypeCodes:Response",
-        "codeDescription": "Response"
-      },
+      "documentOfficialCode": "pescDocumentOfficialCodes:Official",
+      "documentProcessCode": "pescDocumentProcessCodes:TEST",
+      "documentTypeCode": "pescDocumentTypeCodes:InstitutionRequest",
       "requestTrackingID": "12345",
-      "source": "Organization01",
-      "student": "Student00",
-      "transmissionType": {
-        "code": "pescTransmissionTypes:Reissue",
-        "codeDescription": "Reissue"
-      },
-      "rdf:type": "pesc:CollegeTranscript"
+      "source": "Organization001",
+      "student": "Student000",
+      "transmissionType": "pescTransmissionTypes:Reissue"
     }
   ],
   "AcademicSummary": [
     {
-      "@id": "AcademicSummary00",
+      "@id": "AcademicSummary000",
       "@type": "pesc:AcademicSummary",
       "additionalNote": [
-        "Note00"
+        "Note000"
       ],
       "academicHonors": {
         "@type": "pesc:AcademicHonors",
-        "honorsLevel": {
-          "code": "pescHonorsLevels:FirstHighest",
-          "codeDescription": "First Highest"
-        },
-        "honorsTitle": "My Honor",
-        "rdf:type": [
-          "pesc:AcademicHonors"
-        ]
+        "honorsLevel": "pescHonorsLevels:FirstHighest",
+        "honorsTitle": "My Honor"
       },
-      "academicSummaryLevel": {
-        "code": "pescCreditLevels:Secondary",
-        "codeDescription": "Secondary"
-      },
-      "academicSummaryType": {
-        "code": "pescAcademicSummaryTypes:UserDefined",
-        "codeDescription": "User Defined"
-      },
+      "academicSummaryLevel": "pescCreditLevels:GraduateProfessional",
+      "academicSummaryType": "pescAcademicSummaryTypes:DegreeApplicable",
       "entryDate": "2021-08-25",
       "exitDate": "2025-05-05",
       "gpaSummary": {
@@ -85,51 +57,35 @@
         "creditHoursAttempted": 45.2,
         "creditHoursEarned": 45.2,
         "creditHoursForGPA": 45.2,
-        "hasCourseCreditUnits": {
-          "code": "ceds:NI000057115440",
-          "codeDescription": "Clock Hours"
-        },
+        "hasCourseCreditUnits": "ceds:NI000057115402",
         "gpaRangeMaximum": 4,
         "gpaRangeMinimum": 1,
         "gradePointAverage": 3.58,
-        "totalQualityPoints": 29,
-        "rdf:type": [
-          "pesc:GPA"
-        ]
+        "totalQualityPoints": 29
       },
-      "isSummaryForProgram": "AcademicProgram00",
-      "source": "Organization00",
-      "rdf:type": [
-        "pesc:AcademicSummary"
-      ]
+      "isSummaryForProgram": "AcademicProgram000",
+      "source": "Organization000"
     }
   ],
   "Note": [
     {
-      "@id": "Note00",
+      "@id": "Note000",
       "@type": "elm:Note",
       "noteLiteral": [
         "note "
-      ],
-      "rdf:type": "elm:Note"
+      ]
     }
   ],
   "AcademicProgram": [
     {
-      "@id": "AcademicProgram00",
+      "@id": "AcademicProgram000",
       "@type": "ceds:C200331",
-      "rdf:type": [
-        "ceds:C200331"
-      ],
       "hasPart": [
-        "Course02"
+        "Course002"
       ],
-      "offeredBy": "Organization00",
+      "offeredBy": "Organization000",
       "programHEGISCode": "402.005",
-      "academicProgramType": {
-        "code": "pescAcademicProgramTypes:Focus",
-        "codeDescription": "Focus"
-      },
+      "academicProgramType": "pescAcademicProgramTypes:Minor",
       "name": {
         "@value": "en-us",
         "@language": "en"
@@ -138,509 +94,346 @@
   ],
   "Course": [
     {
-      "@id": "Course00",
+      "@id": "Course000",
       "@type": "ceds:C200328",
-      "rdf:type": [
-        "ceds:C200328"
-      ],
-      "hasCourseCreditBasisType": {
-        "code": "ceds:NI001303115957",
-        "codeDescription": "International Baccalaureate"
-      },
-      "offeredBy": "Organization01",
-      "hasCourseCreditUnits": {
-        "code": "ceds:NI000057117127",
-        "codeDescription": "Unreported"
-      },
-      "hasCourseCreditLevelType": {
-        "code": "ceds:NI001304117014",
-        "codeDescription": "Technical Preparatory"
-      },
+      "hasCourseCreditBasisType": "ceds:NI001303115860",
+      "offeredBy": "Organization001",
+      "hasCourseCreditUnits": "ceds:NI000057115440",
+      "hasCourseCreditLevelType": "ceds:NI001304115808",
       "courseCreditValue": 3,
       "courseAcademicGradeScaleCode": "",
       "hasClassificationofInstructionalProgramCode": "14.0506",
       "courseFiveDigitSCEDCode": "02061",
-      "hasCourseLevelType": {
-        "code": "ceds:NI001312127886",
-        "codeDescription": "Basic"
-      },
-      "hasCourseGradePointAverageApplicability": {
-        "code": "ceds:NI000060116257",
-        "codeDescription": "Not Applicable"
-      },
+      "hasCourseLevelType": "ceds:NI001312127893",
+      "hasCourseGradePointAverageApplicability": "ceds:NI000060115254",
       "courseSubjectAbbreviation": "ENG",
       "courseNumber": "1118",
       "originalCourseIdentifier": "118",
       "agencyCourseID": "1118",
       "courseTitle": "Introduction to Geology",
-      "courseOverrideSchool": "Organization00",
+      "courseOverrideSchool": "Organization000",
       "overrideSchoolCourseNumber": "1145",
       "requirement": [
-        "RAP00"
+        "RAP000"
       ],
       "attribute": [
-        "RAP00"
+        "RAP000"
       ],
       "proficiency": [
-        "RAP00"
+        "RAP000"
       ],
       "licensure": [
-        "Licensure00"
+        "Licensure000"
       ],
       "hasPostsecondarySection": [
-        "PostsecondarySection00"
+        "PostsecondarySection000"
       ],
       "hasInstructionLanguage": "ENG"
     },
     {
-      "@id": "Course01",
+      "@id": "Course001",
       "@type": "ceds:C200328",
-      "rdf:type": [
-        "ceds:C200328"
-      ],
-      "hasCourseCreditBasisType": {
-        "code": "ceds:NI001303115857",
-        "codeDescription": "High School Credit Only"
-      },
-      "offeredBy": "Organization01",
-      "hasCourseCreditUnits": {
-        "code": "ceds:NI000057116841",
-        "codeDescription": "Semester"
-      },
-      "hasCourseCreditLevelType": {
-        "code": "ceds:NI001304115600",
-        "codeDescription": "Dual"
-      },
+      "hasCourseCreditBasisType": "ceds:NI001303116065",
+      "offeredBy": "Organization001",
+      "hasCourseCreditUnits": "ceds:NI000057116841",
+      "hasCourseCreditLevelType": "ceds:NI001304117161",
       "courseCreditValue": 3,
       "courseAcademicGradeScaleCode": "",
       "hasClassificationofInstructionalProgramCode": "14.0505",
       "courseFiveDigitSCEDCode": "02060",
-      "hasCourseLevelType": {
-        "code": "ceds:NI001312127891",
-        "codeDescription": "Graduate Professional"
-      },
-      "hasCourseGradePointAverageApplicability": {
-        "code": "ceds:NI000060115254",
-        "codeDescription": "Applicable"
-      },
+      "hasCourseLevelType": "ceds:NI001312127887",
+      "hasCourseGradePointAverageApplicability": "ceds:NI000060115254",
       "courseSubjectAbbreviation": "CHEM",
       "courseNumber": "1117",
       "originalCourseIdentifier": "117",
       "agencyCourseID": "1117",
       "courseTitle": "Computer Science 1",
-      "courseOverrideSchool": "Organization00",
+      "courseOverrideSchool": "Organization000",
       "overrideSchoolCourseNumber": "1145",
       "requirement": [
-        "RAP00"
+        "RAP000"
       ],
       "attribute": [
-        "RAP00"
+        "RAP000"
       ],
       "proficiency": [
-        "RAP00"
+        "RAP000"
       ],
       "licensure": [
-        "Licensure00"
+        "Licensure000"
       ],
       "hasPostsecondarySection": [
-        "PostsecondarySection00"
+        "PostsecondarySection000"
       ],
       "hasInstructionLanguage": "ENG"
     },
     {
-      "@id": "Course02",
+      "@id": "Course002",
       "@type": "ceds:C200328",
-      "rdf:type": [
-        "ceds:C200328"
-      ],
-      "hasCourseCreditBasisType": {
-        "code": "ceds:NI001303116728",
-        "codeDescription": "Regular"
-      },
-      "offeredBy": "Organization01",
-      "hasCourseCreditUnits": {
-        "code": "ceds:NI000057116669",
-        "codeDescription": "Quarter"
-      },
-      "hasCourseCreditLevelType": {
-        "code": "ceds:NI001304117129",
-        "codeDescription": "Upper Division"
-      },
+      "hasCourseCreditBasisType": "ceds:NI001303115979",
+      "offeredBy": "Organization001",
+      "hasCourseCreditUnits": "ceds:NI000057115492",
+      "hasCourseCreditLevelType": "pescCreditLevels:Grade13",
       "courseCreditValue": 3,
       "courseAcademicGradeScaleCode": "",
       "hasClassificationofInstructionalProgramCode": "14.0504",
       "courseFiveDigitSCEDCode": "02059",
-      "hasCourseLevelType": {
-        "code": "ceds:NI001312127890",
-        "codeDescription": "Gifted Talented"
-      },
-      "hasCourseGradePointAverageApplicability": {
-        "code": "ceds:NI000060116257",
-        "codeDescription": "Not Applicable"
-      },
+      "hasCourseLevelType": "ceds:NI001312127898",
+      "hasCourseGradePointAverageApplicability": "ceds:NI000060116257",
       "courseSubjectAbbreviation": "CHEM",
       "courseNumber": "1116",
       "originalCourseIdentifier": "116",
       "agencyCourseID": "1116",
       "courseTitle": "Test and Measurement",
-      "courseOverrideSchool": "Organization00",
+      "courseOverrideSchool": "Organization000",
       "overrideSchoolCourseNumber": "1145",
       "requirement": [
-        "RAP00"
+        "RAP000"
       ],
       "attribute": [
-        "RAP00"
+        "RAP000"
       ],
       "proficiency": [
-        "RAP00"
+        "RAP000"
       ],
       "licensure": [
-        "Licensure00"
+        "Licensure000"
       ],
       "hasPostsecondarySection": [
-        "PostsecondarySection00"
+        "PostsecondarySection000"
       ],
       "hasInstructionLanguage": "ENG"
     },
     {
-      "@id": "Course03",
+      "@id": "Course003",
       "@type": "ceds:C200328",
-      "rdf:type": [
-        "ceds:C200328"
-      ],
-      "hasCourseCreditBasisType": {
-        "code": "ceds:NI001303115213",
-        "codeDescription": "Advanced Standing"
-      },
-      "offeredBy": "Organization01",
-      "hasCourseCreditUnits": {
-        "code": "ceds:NI000057116841",
-        "codeDescription": "Semester"
-      },
-      "hasCourseCreditLevelType": {
-        "code": "ceds:NI001304116619",
-        "codeDescription": "Professional"
-      },
+      "hasCourseCreditBasisType": "ceds:NI001303115507",
+      "offeredBy": "Organization001",
+      "hasCourseCreditUnits": "ceds:NI000057116219",
+      "hasCourseCreditLevelType": "ceds:NI001304115600",
       "courseCreditValue": 3,
       "courseAcademicGradeScaleCode": "",
       "hasClassificationofInstructionalProgramCode": "14.0503",
       "courseFiveDigitSCEDCode": "02058",
-      "hasCourseLevelType": {
-        "code": "ceds:NI001312127895",
-        "codeDescription": "Non Academic"
-      },
-      "hasCourseGradePointAverageApplicability": {
-        "code": "ceds:NI000060115254",
-        "codeDescription": "Applicable"
-      },
+      "hasCourseLevelType": "ceds:NI001312127888",
+      "hasCourseGradePointAverageApplicability": "ceds:NI000060115254",
       "courseSubjectAbbreviation": "CHEM",
       "courseNumber": "1115",
       "originalCourseIdentifier": "115",
       "agencyCourseID": "1115",
       "courseTitle": "Into to Psychology",
-      "courseOverrideSchool": "Organization00",
+      "courseOverrideSchool": "Organization000",
       "overrideSchoolCourseNumber": "1145",
       "requirement": [
-        "RAP00"
+        "RAP000"
       ],
       "attribute": [
-        "RAP00"
+        "RAP000"
       ],
       "proficiency": [
-        "RAP00"
+        "RAP000"
       ],
       "licensure": [
-        "Licensure00"
+        "Licensure000"
       ],
       "hasPostsecondarySection": [
-        "PostsecondarySection00"
+        "PostsecondarySection000"
       ],
       "hasInstructionLanguage": "ENG"
     },
     {
-      "@id": "Course04",
+      "@id": "Course004",
       "@type": "ceds:C200328",
-      "rdf:type": [
-        "ceds:C200328"
-      ],
-      "hasCourseCreditBasisType": {
-        "code": "ceds:NI001303115979",
-        "codeDescription": "Junior High School Credit"
-      },
-      "offeredBy": "Organization01",
-      "hasCourseCreditUnits": {
-        "code": "ceds:NI000057116669",
-        "codeDescription": "Quarter"
-      },
-      "hasCourseCreditLevelType": {
-        "code": "ceds:NI001304117161",
-        "codeDescription": "Vocational"
-      },
+      "hasCourseCreditBasisType": "ceds:NI001303115675",
+      "offeredBy": "Organization001",
+      "hasCourseCreditUnits": "ceds:NI000057116841",
+      "hasCourseCreditLevelType": "ceds:NI001304116619",
       "courseCreditValue": 3,
       "courseAcademicGradeScaleCode": "",
       "hasClassificationofInstructionalProgramCode": "14.0502",
       "courseFiveDigitSCEDCode": "02057",
-      "hasCourseLevelType": {
-        "code": "ceds:NI001312127900",
-        "codeDescription": "Upper Division"
-      },
-      "hasCourseGradePointAverageApplicability": {
-        "code": "ceds:NI000060115254",
-        "codeDescription": "Applicable"
-      },
+      "hasCourseLevelType": "ceds:NI001312127884",
+      "hasCourseGradePointAverageApplicability": "ceds:NI000060115254",
       "courseSubjectAbbreviation": "CHEM",
       "courseNumber": "1114",
       "originalCourseIdentifier": "114",
       "agencyCourseID": "1114",
       "courseTitle": "Intro to Enlgish Literature",
-      "courseOverrideSchool": "Organization00",
+      "courseOverrideSchool": "Organization000",
       "overrideSchoolCourseNumber": "1145",
       "requirement": [
-        "RAP00"
+        "RAP000"
       ],
       "attribute": [
-        "RAP00"
+        "RAP000"
       ],
       "proficiency": [
-        "RAP00"
+        "RAP000"
       ],
       "licensure": [
-        "Licensure00"
+        "Licensure000"
       ],
       "hasPostsecondarySection": [
-        "PostsecondarySection00"
+        "PostsecondarySection000"
       ],
       "hasInstructionLanguage": "ENG"
     },
     {
-      "@id": "Course05",
+      "@id": "Course005",
       "@type": "ceds:C200328",
-      "rdf:type": [
-        "ceds:C200328"
-      ],
-      "hasCourseCreditBasisType": {
-        "code": "ceds:NI001303116736",
-        "codeDescription": "Remedial"
-      },
-      "offeredBy": "Organization01",
-      "hasCourseCreditUnits": {
-        "code": "ceds:NI000057117114",
-        "codeDescription": "Units"
-      },
-      "hasCourseCreditLevelType": {
-        "code": "ceds:NI001304116050",
-        "codeDescription": "Lower Division"
-      },
+      "hasCourseCreditBasisType": "ceds:NI001303115507",
+      "offeredBy": "Organization001",
+      "hasCourseCreditUnits": "ceds:NI000057116669",
+      "hasCourseCreditLevelType": "ceds:NI001304116050",
       "courseCreditValue": 3,
       "courseAcademicGradeScaleCode": "",
       "hasClassificationofInstructionalProgramCode": "14.0501",
       "courseFiveDigitSCEDCode": "02056",
-      "hasCourseLevelType": {
-        "code": "ceds:NI001312127896",
-        "codeDescription": "Regents"
-      },
-      "hasCourseGradePointAverageApplicability": {
-        "code": "ceds:NI000060116257",
-        "codeDescription": "Not Applicable"
-      },
+      "hasCourseLevelType": "ceds:NI001312127899",
+      "hasCourseGradePointAverageApplicability": "ceds:NI000060115254",
       "courseSubjectAbbreviation": "CHEM",
       "courseNumber": "1113",
       "originalCourseIdentifier": "113",
       "agencyCourseID": "1113",
       "courseTitle": "Intro to Chemistry",
-      "courseOverrideSchool": "Organization00",
+      "courseOverrideSchool": "Organization000",
       "overrideSchoolCourseNumber": "1145",
       "requirement": [
-        "RAP00"
+        "RAP000"
       ],
       "attribute": [
-        "RAP00"
+        "RAP000"
       ],
       "proficiency": [
-        "RAP00"
+        "RAP000"
       ],
       "licensure": [
-        "Licensure00"
+        "Licensure000"
       ],
       "hasPostsecondarySection": [
-        "PostsecondarySection00"
+        "PostsecondarySection000"
       ],
       "hasInstructionLanguage": "ENG"
     }
   ],
   "Organization": [
     {
-      "@id": "Organization00",
+      "@id": "Organization000",
       "@type": "ceds:C200239",
-      "hasOrganizationAccreditation": "Accreditation00",
+      "hasOrganizationAccreditation": "Accreditation000",
       "hasOrganizationIdentification": [
         {
           "@type": "ceds:C200252",
           "organizationIdentifier": "001892",
-          "hasOrganizationIdentificationSystem": {
-            "code": "pescIdentifierTypes:GEOCode",
-            "codeDescription": "GEOCode"
-          },
-          "rdf:type": [
-            "ceds:C200252"
-          ]
+          "hasOrganizationIdentificationSystem": "pescIdentifierTypes:OPEid"
         }
       ],
       "name": [
         {
-          "@value": "Kirkwood HS",
+          "@value": "Example HS",
           "@language": "en"
         }
       ],
       "targetContactPoint": [
-        "Contact00"
+        "Contact000"
       ],
-      "schoolLevel": {
-        "code": "pescSchoolLevels:HighSchool",
-        "codeDescription": "High School"
-      },
-      "rdf:type": [
-        "ceds:C200239"
-      ]
+      "schoolLevel": "pescSchoolLevels:Other"
     },
     {
-      "@id": "Organization01",
+      "@id": "Organization001",
       "@type": "ceds:C200239",
-      "hasOrganizationAccreditation": "Accreditation00",
+      "hasOrganizationAccreditation": "Accreditation000",
       "hasOrganizationIdentification": [
         {
           "@type": "ceds:C200252",
           "organizationIdentifier": "001892",
-          "hasOrganizationIdentificationSystem": {
-            "code": "pescIdentifierTypes:PSISid",
-            "codeDescription": "PSISid"
-          },
-          "rdf:type": [
-            "ceds:C200252"
-          ]
+          "hasOrganizationIdentificationSystem": "pescIdentifierTypes:PSISid"
         }
       ],
       "name": [
         {
-          "@value": "Coe College",
+          "@value": "Example College",
           "@language": "en"
         }
       ],
       "targetContactPoint": [
-        "Contact01"
+        "Contact001"
       ],
-      "schoolLevel": {
-        "code": "pescSchoolLevels:HighSchool",
-        "codeDescription": "High School"
-      },
-      "rdf:type": [
-        "ceds:C200239"
-      ]
+      "schoolLevel": "pescSchoolLevels:Postsecondary"
     },
     {
-      "@id": "Organization02",
+      "@id": "Organization002",
       "@type": "ceds:C200239",
-      "hasOrganizationAccreditation": "Accreditation00",
+      "hasOrganizationAccreditation": "Accreditation000",
       "hasOrganizationIdentification": [
         {
           "@type": "ceds:C200252",
           "organizationIdentifier": "001892",
-          "hasOrganizationIdentificationSystem": {
-            "code": "pescIdentifierTypes:PSISid",
-            "codeDescription": "PSISid"
-          },
-          "rdf:type": [
-            "ceds:C200252"
-          ]
+          "hasOrganizationIdentificationSystem": "ceds:NI000827151968"
         }
       ],
       "name": [
         {
-          "@value": "Purdue University",
+          "@value": "Example University 2",
           "@language": "en"
         }
       ],
       "targetContactPoint": [
-        "Contact02"
+        "Contact002"
       ],
-      "schoolLevel": {
-        "code": "pescSchoolLevels:Other",
-        "codeDescription": "Other"
-      },
-      "rdf:type": [
-        "ceds:C200239"
-      ]
+      "schoolLevel": "pescSchoolLevels:Elementary"
     },
     {
-      "@id": "Organization03",
+      "@id": "Organization003",
       "@type": "ceds:C200239",
-      "hasOrganizationAccreditation": "Accreditation00",
+      "hasOrganizationAccreditation": "Accreditation000",
       "hasOrganizationIdentification": [
         {
           "@type": "ceds:C200252",
           "organizationIdentifier": "001892",
-          "hasOrganizationIdentificationSystem": {
-            "code": "pescIdentifierTypes:PSISid",
-            "codeDescription": "PSISid"
-          },
-          "rdf:type": [
-            "ceds:C200252"
-          ]
+          "hasOrganizationIdentificationSystem": "pescIdentifierTypes:OPEid"
         }
       ],
       "name": [
         {
-          "@value": "University of Iowa",
+          "@value": "University of Example1",
           "@language": "en"
         }
       ],
       "targetContactPoint": [
-        "Contact03"
+        "Contact003"
       ],
-      "schoolLevel": {
-        "code": "pescSchoolLevels:HighSchool",
-        "codeDescription": "High School"
-      },
-      "rdf:type": [
-        "ceds:C200239"
-      ]
+      "schoolLevel": "pescSchoolLevels:Postsecondary"
     }
   ],
   "Accreditation": [
     {
-      "@id": "Accreditation00",
+      "@id": "Accreditation000",
       "@type": "ceds:C200240",
       "accreditationAgencyName": "Higher Learning Commission",
-      "accreditationBodyCode": {
-        "code": "pescAccreditationBodyCodes:WASC-ACSCU",
-        "codeDescription": "WASC-ACSCU"
-      },
-      "rdf:type": [
-        "ceds:C200240"
-      ]
+      "accreditationBodyCode": "pescAccreditationBodyCodes:WASC-ACSCU"
     }
   ],
   "Contact": [
     {
-      "@id": "Contact00",
+      "@id": "Contact000",
       "@type": "ceterms:ContactPoint",
       "address": [
         {
           "@type": "ceterms:PostalAddress",
           "addressCountry": "US",
           "addressLocality": {
-            "@value": "Glendale",
+            "@value": "Example 5 City",
             "@language": "en"
           },
           "addressRegion": "MO",
           "postalCode": "63122",
           "streetAddress": [
             {
-              "@value": "48 Austin Pl.",
+              "@value": "48 Example Address 5",
               "@language": "en"
             }
-          ],
-          "rdf:type": "ceterms:PostalAddress"
+          ]
         }
       ],
       "contactType": [
@@ -656,57 +449,47 @@
         }
       ],
       "email": [
-        "j.student@gmail.com"
+        "examplestudent@my.mail.com"
       ],
       "faxPhone": [
         {
           "@type": "pesc:Phone",
           "countryPrefixCode": "1",
           "phoneNumber": "15553143456",
-          "phoneNumberExtension": "N/A",
-          "rdf:type": [
-            "pesc:Phone"
-          ]
+          "phoneNumberExtension": "N/A"
         }
       ],
       "phone": [
         {
           "@type": "pesc:Phone",
           "countryPrefixCode": "1",
-          "phoneNumber": "13142136110",
-          "phoneNumberExtension": "N/A",
-          "rdf:type": [
-            "pesc:Phone"
-          ]
+          "phoneNumber": "15552136110",
+          "phoneNumberExtension": "N/A"
         }
       ],
       "url": [
-        "N/A"
-      ],
-      "rdf:type": [
-        "ceterms:ContactPoint"
+        "https://examplestudent.me"
       ]
     },
     {
-      "@id": "Contact01",
+      "@id": "Contact001",
       "@type": "ceterms:ContactPoint",
       "address": [
         {
           "@type": "ceterms:PostalAddress",
           "addressCountry": "US",
           "addressLocality": {
-            "@value": "Kirkwood",
+            "@value": "Example 4 City",
             "@language": "en"
           },
           "addressRegion": "MO",
           "postalCode": "63122",
           "streetAddress": [
             {
-              "@value": "800 Dougherty Rd.",
+              "@value": "800 Example Address 4",
               "@language": "en"
             }
-          ],
-          "rdf:type": "ceterms:PostalAddress"
+          ]
         }
       ],
       "contactType": [
@@ -722,57 +505,47 @@
         }
       ],
       "email": [
-        "principal@khs.edu"
+        "principal@example4.edu"
       ],
       "faxPhone": [
         {
           "@type": "pesc:Phone",
           "countryPrefixCode": "1",
-          "phoneNumber": "13193398000",
-          "phoneNumberExtension": "N/A",
-          "rdf:type": [
-            "pesc:Phone"
-          ]
+          "phoneNumber": "1555398000",
+          "phoneNumberExtension": "N/A"
         }
       ],
       "phone": [
         {
           "@type": "pesc:Phone",
           "countryPrefixCode": "1",
-          "phoneNumber": "17654941777",
-          "phoneNumberExtension": "N/A",
-          "rdf:type": [
-            "pesc:Phone"
-          ]
+          "phoneNumber": "17555641777",
+          "phoneNumberExtension": "N/A"
         }
       ],
       "url": [
-        "https://www.khs.edu"
-      ],
-      "rdf:type": [
-        "ceterms:ContactPoint"
+        "https://example4.edu"
       ]
     },
     {
-      "@id": "Contact02",
+      "@id": "Contact002",
       "@type": "ceterms:ContactPoint",
       "address": [
         {
           "@type": "ceterms:PostalAddress",
           "addressCountry": "US",
           "addressLocality": {
-            "@value": "Cedar Rapid",
+            "@value": "Example 3 City",
             "@language": "en"
           },
           "addressRegion": "IA",
           "postalCode": "52402",
           "streetAddress": [
             {
-              "@value": "1220 First Avenue NW",
+              "@value": "1220 Example Address 3",
               "@language": "en"
             }
-          ],
-          "rdf:type": "ceterms:PostalAddress"
+          ]
         }
       ],
       "contactType": [
@@ -788,17 +561,14 @@
         }
       ],
       "email": [
-        "registrar@coe.edu"
+        "registrar@example3.edu"
       ],
       "faxPhone": [
         {
           "@type": "pesc:Phone",
           "countryPrefixCode": "1",
           "phoneNumber": "13193372324",
-          "phoneNumberExtension": "N/A",
-          "rdf:type": [
-            "pesc:Phone"
-          ]
+          "phoneNumberExtension": "N/A"
         }
       ],
       "phone": [
@@ -806,39 +576,32 @@
           "@type": "pesc:Phone",
           "countryPrefixCode": "1",
           "phoneNumber": "13193372324",
-          "phoneNumberExtension": "N/A",
-          "rdf:type": [
-            "pesc:Phone"
-          ]
+          "phoneNumberExtension": "N/A"
         }
       ],
       "url": [
-        "https://www.coecollege.edu/registrar"
-      ],
-      "rdf:type": [
-        "ceterms:ContactPoint"
+        "https://example3.edu/registrar"
       ]
     },
     {
-      "@id": "Contact03",
+      "@id": "Contact003",
       "@type": "ceterms:ContactPoint",
       "address": [
         {
           "@type": "ceterms:PostalAddress",
           "addressCountry": "US",
           "addressLocality": {
-            "@value": "W. Lafayette",
+            "@value": "Example 2 City",
             "@language": "en"
           },
           "addressRegion": "IN",
           "postalCode": "47907",
           "streetAddress": [
             {
-              "@value": "610 Pudue Mall",
+              "@value": "610 Example Address 2",
               "@language": "en"
             }
-          ],
-          "rdf:type": "ceterms:PostalAddress"
+          ]
         }
       ],
       "contactType": [
@@ -854,17 +617,14 @@
         }
       ],
       "email": [
-        "registrar@purdue.edu"
+        "registrar@example2.edu"
       ],
       "faxPhone": [
         {
           "@type": "pesc:Phone",
           "countryPrefixCode": "1",
           "phoneNumber": "13193372324",
-          "phoneNumberExtension": "N/A",
-          "rdf:type": [
-            "pesc:Phone"
-          ]
+          "phoneNumberExtension": "N/A"
         }
       ],
       "phone": [
@@ -872,39 +632,32 @@
           "@type": "pesc:Phone",
           "countryPrefixCode": "1",
           "phoneNumber": "13193372324",
-          "phoneNumberExtension": "N/A",
-          "rdf:type": [
-            "pesc:Phone"
-          ]
+          "phoneNumberExtension": "N/A"
         }
       ],
       "url": [
-        "https://pudue.edu/registrar"
-      ],
-      "rdf:type": [
-        "ceterms:ContactPoint"
+        "https://example2.edu/registrar"
       ]
     },
     {
-      "@id": "Contact04",
+      "@id": "Contact004",
       "@type": "ceterms:ContactPoint",
       "address": [
         {
           "@type": "ceterms:PostalAddress",
           "addressCountry": "US",
           "addressLocality": {
-            "@value": "Iowa City",
+            "@value": "Example1 City",
             "@language": "en"
           },
           "addressRegion": "IA",
           "postalCode": "52242",
           "streetAddress": [
             {
-              "@value": "101 Jessup Hall",
+              "@value": "101 Example Address 1",
               "@language": "en"
             }
-          ],
-          "rdf:type": "ceterms:PostalAddress"
+          ]
         }
       ],
       "contactType": [
@@ -920,17 +673,14 @@
         }
       ],
       "email": [
-        "registrar@uiowa.edu"
+        "registrar@example1.edu"
       ],
       "faxPhone": [
         {
           "@type": "pesc:Phone",
           "countryPrefixCode": "1",
           "phoneNumber": "13193372324",
-          "phoneNumberExtension": "N/A",
-          "rdf:type": [
-            "pesc:Phone"
-          ]
+          "phoneNumberExtension": "N/A"
         }
       ],
       "phone": [
@@ -938,23 +688,17 @@
           "@type": "pesc:Phone",
           "countryPrefixCode": "1",
           "phoneNumber": "13193372324",
-          "phoneNumberExtension": "N/A",
-          "rdf:type": [
-            "pesc:Phone"
-          ]
+          "phoneNumberExtension": "N/A"
         }
       ],
       "url": [
-        "https://uiowa.edu/registrar"
-      ],
-      "rdf:type": [
-        "ceterms:ContactPoint"
+        "https://example1.edu/registrar"
       ]
     }
   ],
   "RAP": [
     {
-      "@id": "RAP00",
+      "@id": "RAP000",
       "@type": "ceds:C200065",
       "rapCode": [
         "9TX"
@@ -964,19 +708,13 @@
       ],
       "rapSubName": [
         "UT Austin Writing Component"
-      ],
-      "rdf:type": [
-        "ceds:C200065"
       ]
     }
   ],
   "Licensure": [
     {
-      "@id": "Licensure00",
+      "@id": "Licensure000",
       "@type": "pesc:Licensure",
-      "rdf:type": [
-        "pesc:Licensure"
-      ],
       "licensureName": [
         "Occupational Therapy Assistant"
       ]
@@ -984,26 +722,19 @@
   ],
   "PostsecondarySection": [
     {
-      "@id": "PostsecondarySection00",
+      "@id": "PostsecondarySection000",
       "@type": "ceds:C200332",
       "courseSectionNumber": "001",
-      "rdf:type": [
-        "ceds:C200332"
-      ],
-      "hasPostsecondarySectionLocation": "PostsecondarySectionLocation00",
+      "hasPostsecondarySectionLocation": "PostsecondarySectionLocation000",
       "courseBeginDate": "2024-08-18",
       "courseEndDate": "2024-12-18"
     }
   ],
   "PostsecondarySectionLocation": [
     {
-      "@id": "PostsecondarySectionLocation00",
+      "@id": "PostsecondarySectionLocation000",
       "@type": "ceds:C200333",
-      "rdf:type": "ceds:C200333",
-      "hasCourseInstructionSiteType": {
-        "code": "ceds:NI001310116965",
-        "codeDescription": "Study Abroad"
-      },
+      "hasCourseInstructionSiteType": "ceds:NI001310115328",
       "courseInstructionSiteName": [
         "West Lafayette IN"
       ]
@@ -1011,63 +742,39 @@
   ],
   "AwardSummary": [
     {
-      "@id": "AwardSummary00",
+      "@id": "AwardSummary000",
       "@type": "pesc:AwardSummary",
       "academicHonors": [
         {
           "@type": "pesc:AcademicHonors",
-          "honorsLevel": {
-            "code": "pescHonorsLevels:FirstHighest",
-            "codeDescription": "First Highest"
-          },
-          "honorsTitle": "My Honor",
-          "rdf:type": [
-            "pesc:AcademicHonors"
-          ]
+          "honorsLevel": "pescHonorsLevels:FirstHighest",
+          "honorsTitle": "My Honor"
         }
       ],
-      "academicSummaryLevel": {
-        "code": "pescCreditLevels:TechnicalPreparatory",
-        "codeDescription": "Technical Preparatory"
-      },
-      "academicSummaryType": {
-        "code": "pescAcademicSummaryTypes:ConvertedTo",
-        "codeDescription": "Converted To"
-      },
+      "academicSummaryLevel": "pescCreditLevels:Undergraduate",
+      "academicSummaryType": "pescAcademicSummaryTypes:All",
       "gpaSummary": {
         "@type": "pesc:GPA",
         "creditHoursAttempted": 45.2,
         "creditHoursEarned": 45.2,
         "creditHoursForGPA": 45.2,
-        "hasCourseCreditUnits": {
-          "code": "ceds:NI000057116219",
-          "codeDescription": "No Credit"
-        },
+        "hasCourseCreditUnits": "ceds:NI000057117127",
         "gpaRangeMaximum": 4,
         "gpaRangeMinimum": 1,
         "gradePointAverage": 3.58,
-        "totalQualityPoints": 29,
-        "rdf:type": [
-          "pesc:GPA"
-        ]
+        "totalQualityPoints": 29
       },
-      "isSummaryForAward": "AcademicAward00",
-      "source": "Organization01",
-      "rdf:type": [
-        "pesc:AwardSummary"
-      ]
+      "isSummaryForAward": "AcademicAward000",
+      "source": "Organization001"
     }
   ],
   "AcademicAward": [
     {
-      "@id": "AcademicAward00",
+      "@id": "AcademicAward000",
       "@type": "ceds:C200335",
       "academicAwardDate": "2024-03-05",
       "academicAwardTitle": "Bachelor of Science",
-      "academicAwardLevelType": {
-        "code": "ceds:NI001668151669",
-        "codeDescription": "ceds:NI001668151669"
-      },
+      "academicAwardLevelType": "ceds:NI001668151668",
       "academicCompletionDate": "2025-03-15",
       "academicCompletionIndicator": true,
       "academicDegreeRequirement": [
@@ -1075,108 +782,63 @@
           "@type": "pesc:AcademicDegreeRequirement",
           "thesisDissertationAdvisor": "John Capaldi",
           "thesisDIssertationTitle": "The Effects of Partial Reinforcement in Differential Conditioning",
-          "urlAddress": "https://purdue .edu/",
-          "rdf:type": [
-            "pesc:AcademicDegreeRequirement"
-          ]
+          "urlAddress": "https://purdue .edu/"
         }
       ],
       "academicHonors": [
         {
           "@type": "pesc:AcademicHonors",
-          "honorsLevel": {
-            "code": "pescHonorsLevels:FirstHighest",
-            "codeDescription": "First Highest"
-          },
-          "honorsTitle": "My Honor",
-          "rdf:type": [
-            "pesc:AcademicHonors"
-          ]
+          "honorsLevel": "pescHonorsLevels:FirstHighest",
+          "honorsTitle": "My Honor"
         }
       ],
       "inProgram": [
-        "AcademicProgram00"
-      ],
-      "rdf:type": [
-        "ceds:C200335"
+        "AcademicProgram000"
       ]
     }
   ],
   "ProgramSummary": [
     {
-      "@id": "ProgramSummary00",
+      "@id": "ProgramSummary000",
       "@type": "pesc:ProgramSummary",
       "academicHonors": [
         {
           "@type": "pesc:AcademicHonors",
-          "honorsLevel": {
-            "code": "pescHonorsLevels:SecondHighest",
-            "codeDescription": "Second Highest"
-          },
-          "honorsTitle": "My Honor",
-          "rdf:type": [
-            "pesc:AcademicHonors"
-          ]
+          "honorsLevel": "pescHonorsLevels:SecondHighest",
+          "honorsTitle": "My Honor"
         }
       ],
-      "academicSummaryType": {
-        "code": "pescAcademicSummaryTypes:DegreeApplicable",
-        "codeDescription": "Degree Applicable"
-      },
+      "academicSummaryType": "pescAcademicSummaryTypes:All",
       "gpaSummary": {
         "@type": "pesc:GPA",
         "creditHoursAttempted": 45.2,
         "creditHoursEarned": 45.2,
         "creditHoursForGPA": 45.2,
-        "hasCourseCreditUnits": {
-          "code": "ceds:NI000057115440",
-          "codeDescription": "Clock Hours"
-        },
+        "hasCourseCreditUnits": "ceds:NI000057117114",
         "gpaRangeMaximum": 4,
         "gpaRangeMinimum": 1,
         "gradePointAverage": 3.58,
-        "totalQualityPoints": 29,
-        "rdf:type": [
-          "pesc:GPA"
-        ]
+        "totalQualityPoints": 29
       },
-      "isSummaryForProgram": "AcademicProgram00",
-      "source": "Organization01",
-      "rdf:type": [
-        "pesc:ProgramSummary"
-      ]
+      "isSummaryForProgram": "AcademicProgram000",
+      "source": "Organization001"
     }
   ],
   "SessionSummary": [
     {
-      "@id": "SessionSummary00",
+      "@id": "SessionSummary000",
       "@type": "pesc:SessionSummary",
       "academicHonors": [
         {
           "@type": "pesc:AcademicHonors",
-          "honorsLevel": {
-            "code": "pescHonorsLevels:SecondHighest",
-            "codeDescription": "Second Highest"
-          },
-          "honorsTitle": "My Honor",
-          "rdf:type": [
-            "pesc:AcademicHonors"
-          ]
+          "honorsLevel": "pescHonorsLevels:SecondHighest",
+          "honorsTitle": "My Honor"
         }
       ],
-      "academicSummaryLevel": {
-        "code": "pescCreditLevels:LowerDivision",
-        "codeDescription": "Lower Division"
-      },
-      "academicSummaryType": {
-        "code": "pescAcademicSummaryTypes:NonDegreeApplicable",
-        "codeDescription": "Non Degree Applicable"
-      },
+      "academicSummaryLevel": "pescCreditLevels:Professional",
+      "academicSummaryType": "pescAcademicSummaryTypes:AllNotRepeated",
       "delinquencies": [
-        {
-          "code": "pescDelinquencyCodes:ExclusionAcademic",
-          "codeDescription": "Exclusion Academic"
-        }
+        "pescDelinquencyCodes:ProbationGPA"
       ],
       "entryDate": "2022-08-30",
       "exitDate": "2022-12-22",
@@ -1185,53 +847,29 @@
         "creditHoursAttempted": 45.2,
         "creditHoursEarned": 45.2,
         "creditHoursForGPA": 45.2,
-        "hasCourseCreditUnits": {
-          "code": "ceds:NI000057116841",
-          "codeDescription": "Semester"
-        },
+        "hasCourseCreditUnits": "ceds:NI000057117127",
         "gpaRangeMaximum": 4,
         "gpaRangeMinimum": 1,
         "gradePointAverage": 3.58,
-        "totalQualityPoints": 29,
-        "rdf:type": [
-          "pesc:GPA"
-        ]
+        "totalQualityPoints": 29
       },
-      "isSummaryForSession": "AcademicSession00",
-      "source": "Organization01",
-      "rdf:type": [
-        "pesc:SessionSummary"
-      ]
+      "isSummaryForSession": "AcademicSession000",
+      "source": "Organization001"
     },
     {
-      "@id": "SessionSummary01",
+      "@id": "SessionSummary001",
       "@type": "pesc:SessionSummary",
       "academicHonors": [
         {
           "@type": "pesc:AcademicHonors",
-          "honorsLevel": {
-            "code": "pescHonorsLevels:FirstHighest",
-            "codeDescription": "First Highest"
-          },
-          "honorsTitle": "My Honor",
-          "rdf:type": [
-            "pesc:AcademicHonors"
-          ]
+          "honorsLevel": "pescHonorsLevels:SecondHighest",
+          "honorsTitle": "My Honor"
         }
       ],
-      "academicSummaryLevel": {
-        "code": "pescCreditLevels:Undergraduate",
-        "codeDescription": "Undergraduate"
-      },
-      "academicSummaryType": {
-        "code": "pescAcademicSummaryTypes:ConvertedTo",
-        "codeDescription": "Converted To"
-      },
+      "academicSummaryLevel": "pescCreditLevels:Secondary",
+      "academicSummaryType": "pescAcademicSummaryTypes:NonDegreeApplicable",
       "delinquencies": [
-        {
-          "code": "pescDelinquencyCodes:Unknown",
-          "codeDescription": "Unknown"
-        }
+        "pescDelinquencyCodes:ProbationHours"
       ],
       "entryDate": "2021-08-31",
       "exitDate": "2021-12-22",
@@ -1240,42 +878,27 @@
         "creditHoursAttempted": 45.2,
         "creditHoursEarned": 45.2,
         "creditHoursForGPA": 45.2,
-        "hasCourseCreditUnits": {
-          "code": "ceds:NI000057117114",
-          "codeDescription": "Units"
-        },
+        "hasCourseCreditUnits": "ceds:NI000057117114",
         "gpaRangeMaximum": 4,
         "gpaRangeMinimum": 1,
         "gradePointAverage": 3.58,
-        "totalQualityPoints": 29,
-        "rdf:type": [
-          "pesc:GPA"
-        ]
+        "totalQualityPoints": 29
       },
-      "isSummaryForSession": "AcademicSession00",
-      "source": "Organization01",
-      "rdf:type": [
-        "pesc:SessionSummary"
-      ]
+      "isSummaryForSession": "AcademicSession000",
+      "source": "Organization001"
     }
   ],
   "AcademicSession": [
     {
-      "@id": "AcademicSession00",
+      "@id": "AcademicSession000",
       "@type": "ceds:C200245",
-      "rdf:type": [
-        "ceds:C200245"
-      ],
       "sessionDesignator": "2025-05",
       "sessionDesignatorSuffix": "Mini Term",
       "name": {
         "@value": "Fall-2022",
         "@language": "en"
       },
-      "hasSessionType": {
-        "code": "ceds:NI000254116843",
-        "codeDescription": "Semester"
-      },
+      "hasSessionType": "ceds:NI000254116047",
       "sessionSchoolYear": "2022-2023",
       "sessionBeginDate": "2022-08-15",
       "sessionEndDate": "2022-12-14"
@@ -1283,58 +906,42 @@
   ],
   "AdditionalStudentAchievement": [
     {
-      "@id": "AdditionalStudentAchievement00",
+      "@id": "AdditionalStudentAchievement000",
       "@type": "pesc:AdditionalStudentAchievement",
       "attributeAchieved": [
-        "RAP00"
+        "RAP000"
       ],
       "conditionsMetCode": [
-        {
-          "code": "pescConditionsMetCodes:Yes",
-          "codeDescription": "Yes"
-        }
+        "pescConditionsMetCodes:No"
       ],
       "conditionsMetDate": [
         "2025-05-01"
       ],
-      "inCourse": "Course00",
+      "inCourse": "Course000",
       "languageAchieved": [
         {
           "@type": "ceds:C200293",
           "languageUsage": [
-            {
-              "code": "ceds:NI000316151877",
-              "codeDescription": "Speaking"
-            }
+            "pescLanguageUsageCodes:Reading"
           ],
           "hasISO669-2LanguageCode": "eng",
-          "languageProficiency": {
-            "code": "pescLanguageProficiencyCodes:Poor",
-            "codeDescription": "Poor"
-          },
-          "rdf:type": [
-            "ceds:C200293"
-          ]
+          "languageProficiency": "pescLanguageProficiencyCodes:RedesignatedFluentEnglishProficient"
         }
       ],
       "proficiencyAchieved": [
-        "RAP00"
+        "RAP000"
       ],
       "requirementAchieved": [
-        "RAP00"
-      ],
-      "rdf:type": "pesc:AdditionalStudentAchievement"
+        "RAP000"
+      ]
     }
   ],
   "CourseAchievement": [
     {
-      "@id": "CourseAchievement00",
+      "@id": "CourseAchievement000",
       "@type": "ceds:C200346",
       "courseQualityPointsEarned": 3,
-      "hasCourseRepeatCode": {
-        "code": "ceds:NI000065116744",
-        "codeDescription": "Repeat Counted"
-      },
+      "hasCourseRepeatCode": "ceds:NI000065116745",
       "numberofCreditsEarned": 3,
       "courseAddDate": "2022-08-03",
       "courseDropDate": "2022-10-07",
@@ -1342,241 +949,153 @@
         "@type": "pesc:Grade",
         "courseAcademicGrade": "A",
         "courseAcademicGradeScaleCode": "code 2",
-        "hasCourseAcademicGradeStatusCode": {
-          "code": "ceds:NI001299117195",
-          "codeDescription": "Withdrew No Penalty"
-        },
+        "hasCourseAcademicGradeStatusCode": "ceds:NI001299117195",
         "supplementalGrade": {
           "@type": "pesc:CourseSupplementalGrade",
-          "courseAcademicSupplementalGradeStatusCode": {
-            "code": "pescGradeStatusCodes:TransferNoGrade",
-            "codeDescription": "Transfer No Grade"
-          },
-          "supplementalGradeCode": {
-            "code": "pescSupplementalGradeCodes:BiCourseGrade",
-            "codeDescription": "Bi Course Grade"
-          },
-          "supplementalGradeSubSession": "001",
-          "rdf:type": [
-            "pesc:CourseSupplementalGrade"
-          ]
-        },
-        "rdf:type": [
-          "pesc:Grade"
-        ]
+          "courseAcademicSupplementalGradeStatusCode": "pescGradeStatusCodes:WithdrewFailing",
+          "supplementalGradeCode": "pescSupplementalGradeCodes:BlendedFinalGrade",
+          "supplementalGradeSubSession": "001"
+        }
       },
       "courseGrade": {
         "@type": "pesc:Grade",
         "courseAcademicGrade": "A",
         "courseAcademicGradeScaleCode": "code 2",
-        "hasCourseAcademicGradeStatusCode": {
-          "code": "pescGradeStatusCodes:PlanningToTake",
-          "codeDescription": "Planning To Take"
-        },
+        "hasCourseAcademicGradeStatusCode": "ceds:NI001299117194",
         "supplementalGrade": {
           "@type": "pesc:CourseSupplementalGrade",
-          "courseAcademicSupplementalGradeStatusCode": {
-            "code": "pescGradeStatusCodes:OtherPass",
-            "codeDescription": "Other Pass"
-          },
-          "supplementalGradeCode": {
-            "code": "pescSupplementalGradeCodes:ExamGrade",
-            "codeDescription": "Exam Grade"
-          },
-          "supplementalGradeSubSession": "001",
-          "rdf:type": [
-            "pesc:CourseSupplementalGrade"
-          ]
-        },
-        "rdf:type": [
-          "pesc:Grade"
-        ]
+          "courseAcademicSupplementalGradeStatusCode": "pescGradeStatusCodes:IncompleteNotResolvedFail",
+          "supplementalGradeCode": "pescSupplementalGradeCodes:BlendedFinalGrade",
+          "supplementalGradeSubSession": "001"
+        }
       },
       "courseSupplementalGrade": {
         "@type": "pesc:CourseSupplementalGrade",
-        "courseAcademicSupplementalGradeStatusCode": {
-          "code": "pescGradeStatusCodes:InProgress",
-          "codeDescription": "In Progress"
-        },
-        "supplementalGradeCode": {
-          "code": "pescSupplementalGradeCodes:ExamGrade",
-          "codeDescription": "Exam Grade"
-        },
-        "supplementalGradeSubSession": "001",
-        "rdf:type": [
-          "pesc:CourseSupplementalGrade"
-        ]
+        "courseAcademicSupplementalGradeStatusCode": "pescGradeStatusCodes:WithdrewNoPenalty",
+        "supplementalGradeCode": "pescSupplementalGradeCodes:InstructorAssignedGrade",
+        "supplementalGradeSubSession": "001"
       },
-      "inCourse": "Course00",
-      "inSection": "PostsecondarySection00",
-      "inSession": "AcademicSession00",
-      "rdf:type": [
-        "ceds:C200346"
-      ]
+      "inCourse": "Course000",
+      "inSection": "PostsecondarySection000",
+      "inSession": "AcademicSession000"
     }
   ],
   "LicensureAchievement": [
     {
-      "@id": "LicensureAchievement00",
+      "@id": "LicensureAchievement000",
       "@type": "pesc:LicensureAchievement",
-      "inCourse": "Course01",
-      "licensureAchieved": "Licensure00",
+      "inCourse": "Course001",
+      "licensureAchieved": "Licensure000",
       "licensurePassageDate": [
         "2025-05-10"
-      ],
-      "rdf:type": "pesc:LicensureAchievement"
+      ]
     }
   ],
   "TestScore": [
     {
-      "@id": "TestScore00",
+      "@id": "TestScore000",
       "@type": "ceds:C200047",
-      "assessmentScoreMetricType": {
-        "code": "ceds:NI000027162371",
-        "codeDescription": "ceds:NI000027162371"
-      },
-      "inSubtest": "Subtest00",
-      "inTest": "Test00",
+      "assessmentScoreMetricType": "ceds:NI000027162380",
+      "inSubtest": "Subtest000",
+      "inTest": "Test000",
       "scoreInvalidatedIndicator": true,
       "scoreRevisedIndicator": true,
       "scoreSelfRportedIndicator": true,
       "scoreValue": "34",
-      "studentLevel": {
-        "code": "pescStudentLevelCodes:CollegeJunior",
-        "codeDescription": "College Junior"
-      },
+      "studentLevel": "pescStudentLevelCodes:GraduateSecondYear",
       "testDate": "2020-03-15",
       "testYear": "2020",
-      "testYearMonth": "2020-03",
-      "rdf:type": [
-        "ceds:C200047"
-      ]
+      "testYearMonth": "2020-03"
     }
   ],
   "Subtest": [
     {
-      "@id": "Subtest00",
+      "@id": "Subtest000",
       "@type": "ceds:C200051",
-      "rdf:type": [
-        "ceds:C200051"
-      ],
       "subtestIdentifier": "English",
       "subtestTitle": "English"
     }
   ],
   "Test": [
     {
-      "@id": "Test00",
+      "@id": "Test000",
       "@type": "ceds:C200010",
-      "rdf:type": [
-        "ceds:C200010"
-      ],
       "assessmentIdentifier": "SAT",
       "assessmentTitle": "SAT",
       "hasSubtest": [
-        "Subtest00"
+        "Subtest000"
       ]
     }
   ],
   "Student": [
     {
-      "@id": "Student00",
+      "@id": "Student000",
       "@type": "ceds:C200275",
       "hasSummary": [
-        "AcademicSummary00",
-        "AwardSummary00",
-        "ProgramSummary00",
-        "SessionSummary00",
-        "SessionSummary01"
+        "AcademicSummary000",
+        "AwardSummary000",
+        "ProgramSummary000",
+        "SessionSummary000",
+        "SessionSummary001"
       ],
       "birthDate": "2002-10-07",
       "hasPersonIdentifier": [
         {
           "@type": "ceds:C200291",
-          "hasStudentIdentificationSystem": {
-            "code": "ceds:NI001075173041",
-            "codeDescription": "ceds:NI001075173041"
-          },
-          "personIdentifier": "1234567",
-          "rdf:type": [
-            "ceds:C200291"
-          ]
+          "hasStudentIdentificationSystem": "ceds:NI001075173047",
+          "personIdentifier": "1234567"
         }
       ],
       "hasPersonLanguage": [
         {
           "@type": "ceds:C200293",
           "languageUsage": [
-            {
-              "code": "ceds:NI000316151876",
-              "codeDescription": "First Spokenlanguage"
-            }
+            "ceds:NI000316151876"
           ],
           "hasISO669-2LanguageCode": "eng",
-          "languageProficiency": {
-            "code": "pescLanguageProficiencyCodes:Excellent",
-            "codeDescription": "Excellent"
-          },
-          "rdf:type": [
-            "ceds:C200293"
-          ]
+          "languageProficiency": "pescLanguageProficiencyCodes:EnglishOnly"
         }
       ],
       "hasOtherPersonName": [
         {
           "@type": "ceds:C200377",
           "firstName": "FirstName",
-          "nameSuffix": "III",
+          "nameSuffix": "VII",
           "lastName": "LastName",
           "middleName": [
             "MIddleName"
           ],
-          "nameCode": {
-            "code": "pescNameCodes:MedicalSchoolApplicationSource",
-            "codeDescription": "Medical School Application Source"
-          },
-          "rdf:type": [
-            "ceds:C200377"
-          ]
+          "nameCode": "pescNameCodes:Formal"
         }
       ],
       "hasPersonName": {
         "@type": "ceds:C200377",
         "firstName": "FirstName",
-        "nameSuffix": "II",
+        "nameSuffix": "III",
         "lastName": "LastName",
         "middleName": [
           "MIddleName"
         ],
-        "nameCode": {
-          "code": "pescNameCodes:MedicalSchoolApplicationSource",
-          "codeDescription": "Medical School Application Source"
-        },
-        "rdf:type": [
-          "ceds:C200377"
-        ]
+        "nameCode": "pescNameCodes:MedicalSchoolApplicationSource"
       },
       "targetContactPoint": [
-        "Contact04"
+        "Contact004"
       ],
       "birthCity": "Cedar Rapids",
       "birthCountry": "",
       "birthday": "10-07",
       "birthStateProvinceCode": "",
       "deceasedIndicator": true,
-      "genderCode": {
-        "code": "pescGenderCodes:Male",
-        "codeDescription": "Male"
-      },
+      "genderCode": "pescGenderCodes:Male",
       "hasAchievement": [
-        "AdditionalStudentAchievement00",
-        "AcademicAward00",
-        "CourseAchievement00",
-        "GPA00",
-        "AcademicSummary00",
-        "ProgramSummary00",
-        "LicensureAchievement00",
-        "TestScore00"
+        "AdditionalStudentAchievement000",
+        "AcademicAward000",
+        "CourseAchievement000",
+        "GPA000",
+        "AcademicSummary000",
+        "ProgramSummary000",
+        "LicensureAchievement000",
+        "TestScore000"
       ],
       "hasResidency": {
         "@type": "pesc:Residency",
@@ -1584,46 +1103,28 @@
         "countryCode": "US",
         "county": "Johnson",
         "countyCode": "JSN",
-        "residencyStatusCode": {
-          "code": "pescResidencyStatusCodes:NonResident",
-          "codeDescription": "Non Resident"
-        },
+        "residencyStatusCode": "pescResidencyStatusCodes:InCounty",
         "stateProvince": "Iowa",
-        "stateProvinceCode": "IA",
-        "rdf:type": [
-          "pesc:Residency"
-        ]
+        "stateProvinceCode": "IA"
       },
-      "studentLevel": {
-        "code": "pescStudentLevelCodes:GraduateNonDegree",
-        "codeDescription": "Graduate Non Degree"
-      },
+      "studentLevel": "pescStudentLevelCodes:GraduateNonDegree",
       "highSchoolAttended": [
-        "Organization00"
-      ],
-      "rdf:type": [
-        "ceds:C200275"
+        "Organization000"
       ]
     }
   ],
   "GPA": [
     {
-      "@id": "GPA00",
+      "@id": "GPA000",
       "@type": "pesc:GPA",
       "creditHoursAttempted": 45.2,
       "creditHoursEarned": 45.2,
       "creditHoursForGPA": 45.2,
-      "hasCourseCreditUnits": {
-        "code": "ceds:NI000057115440",
-        "codeDescription": "Clock Hours"
-      },
+      "hasCourseCreditUnits": "ceds:NI000057115492",
       "gpaRangeMaximum": 4,
       "gpaRangeMinimum": 1,
       "gradePointAverage": 3.58,
-      "totalQualityPoints": 29,
-      "rdf:type": [
-        "pesc:GPA"
-      ]
+      "totalQualityPoints": 29
     }
   ]
 }
