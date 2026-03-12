@@ -2,7 +2,7 @@
   "@context": [
     "file://../jsonld_context/transcript_context.json-ld",
     {
-      "@base": "https://pesc.org/college-transcript/instance/"
+      "@base": "https://example.edu/instance/"
     }
   ],
   "CollegeTranscript": [
